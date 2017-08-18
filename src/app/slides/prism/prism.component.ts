@@ -3,7 +3,7 @@ import * as Prism from 'prismjs';
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    selector: 'wam-prism',
+    selector: 'wac-prism',
     styleUrls: [ './prism.component.css' ],
     templateUrl: './prism.component.html'
 })
