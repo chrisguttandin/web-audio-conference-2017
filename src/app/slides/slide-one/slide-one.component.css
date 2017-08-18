@@ -1,0 +1,11 @@
+a,
+h1,
+h2,
+span {
+    text-align: center;
+}
+
+a,
+span {
+    display: block;
+}

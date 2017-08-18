@@ -1,0 +1,10 @@
+{
+    "directives": {
+        "connect-src": "'self'",
+        "default-src": "'none'",
+        "font-src": "https://fonts.gstatic.com",
+        "img-src": "'self'",
+        "script-src": [ "'self'", "'unsafe-eval'" ],
+        "style-src": [ "https://fonts.googleapis.com", "'self'", "'unsafe-inline'" ]
+    }
+}

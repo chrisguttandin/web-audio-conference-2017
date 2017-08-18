@@ -1,0 +1,4 @@
+*.DS_Store
+.tscache
+build/**
+node_modules/

@@ -1,0 +1,28 @@
+body {
+    background-color: #333;
+    color: #CCF;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    line-height: 8vmin;
+    margin: 4vmin;
+}
+
+a {
+    color: inherit;
+}
+
+div,
+h3,
+li,
+p {
+    font-size: 5vmin;
+}
+
+h1 {
+    font-size: 10vmin;
+    line-height: 16vmin;
+}
+
+h2 {
+    font-size: 8vmin;
+}

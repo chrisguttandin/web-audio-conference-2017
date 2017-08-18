@@ -1,0 +1,8 @@
+code {
+    font-size: 3.5vmin;
+}
+
+pre[class*='language-'] {
+    line-height: 1;
+    padding: 0 0.5em;
+}
