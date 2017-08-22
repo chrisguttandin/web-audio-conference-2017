@@ -1,0 +1,43 @@
+.wrapper {
+    background-color: #FFF;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+svg {
+    display: block;
+    fill: transparent;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    stroke: #000;
+    width: 100vmin;
+}
+
+svg .clickable {
+    cursor: pointer;
+}
+
+svg .black {
+    fill: #000;
+}
+
+svg .blue {
+    fill: #09F;
+}
+
+svg .brown {
+    fill: #933;
+}
+
+svg .grey {
+    fill: #CCC;
+}
+
+svg .red {
+    fill: #F00;
+}
+
+svg .yellow {
+    fill: #FF0;
+}

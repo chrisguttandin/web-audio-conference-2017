@@ -1,0 +1,11 @@
+<h2>AudioContext monkeypatch</h2>
+<wac-prism language="javascript"><!-- htmlmin:ignore -->if (window.hasOwnProperty('webkitAudioContext') &&
+        !window.hasOwnProperty('AudioContext')) &#123;
+    window.AudioContext = webkitAudioContext;
+&#125;<!-- htmlmin:ignore --></wac-prism>
+<ul>
+    <li>generally avoid assigning something to the global scope</li>
+</ul>
+<span>
+    <a href="https://github.com/cwilso/AudioContext-MonkeyPatch">https://github.com/cwilso/AudioContext-MonkeyPatch</a>
+</span>

@@ -1,0 +1,8 @@
+<h2>Patching the prototype</h2>
+<wac-prism language="javascript"><!-- htmlmin:ignore -->if (!AudioContext.prototype.hasOwnProperty('createGain')) &#123;
+    AudioContext.prototype.createGain
+        = AudioContext.prototype.createGainNode;
+&#125;<!-- htmlmin:ignore --></wac-prism>
+<ul>
+    <li>generally avoid patching native prototypes</li>
+</ul>
