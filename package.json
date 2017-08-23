@@ -25,7 +25,7 @@
     "@types/jasmine": "^2.5.54",
     "@types/jasminewd2": "^2.0.2",
     "@types/node": "~6.0.60",
-    "@types/prismjs": "^1.4.17",
+    "@types/prismjs": "^1.6.3",
     "axe-core": "^2.3.1",
     "bundle-buddy": "^0.1.2",
     "content-security-policy-builder": "^1.1.0",
