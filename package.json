@@ -23,7 +23,7 @@
     "@angular/compiler-cli": "^4.3.6",
     "@angular/language-service": "^4.3.6",
     "@types/jasmine": "^2.5.54",
-    "@types/jasminewd2": "^2.0.2",
+    "@types/jasminewd2": "^2.0.3",
     "@types/node": "~6.0.60",
     "@types/prismjs": "^1.6.3",
     "axe-core": "^2.3.1",
