@@ -63,7 +63,7 @@
     "tsconfig-holy-grail": "^2.2.25",
     "tslint": "~5.3.2",
     "tslint-config-holy-grail": "^11.0.0",
-    "typescript": "~2.3.3",
+    "typescript": "~2.5.2",
     "webpack-bundle-analyzer": "^2.9.0"
   },
   "homepage": "https://chrisguttandin.github.io/web-audio-conference-2017",
