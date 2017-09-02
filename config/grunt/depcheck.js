@@ -8,6 +8,7 @@ module.exports = {
             ignoreMatches: [
                 'hammerjs',
                 'prismjs',
+                'tslib',
                 '@angular/cli',
                 '@angular/compiler-cli',
                 '@angular/language-service',
