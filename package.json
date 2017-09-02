@@ -30,7 +30,7 @@
     "axe-core": "^2.3.1",
     "bundle-buddy": "^0.1.2",
     "content-security-policy-builder": "^1.1.0",
-    "eslint-config-holy-grail": "^20.0.0",
+    "eslint-config-holy-grail": "^21.0.0",
     "greenkeeper-lockfile": "^1.8.1",
     "grunt": "^1.0.1",
     "grunt-axe-webdriver": "^0.0.5",
