@@ -71,6 +71,15 @@ module.exports = (grunt) => {
                     replacement: (match, filename) => {
                         return `<script type="text/javascript">${ fs.readFileSync(`build/${ filename }`) }</script>`;
                     }
+                }, {
+                    match: /<script\stype="text\/javascript"\ssrc="(sw-register\.[a-z0-9]*\.bundle\.js)"><\/script>/g,
+                    replacement: (match, filename) => {
+                        const content = fs
+                            .readFileSync(`build/${ filename }`, { encoding: 'utf8' })
+                            .replace(/register\("worker-basic\.min\.js"\)/, 'register("web-audio-conference-2017/worker-basic.min.js")');
+
+                        return `<script type="text/javascript">${ content }</script>`;
+                    }
                 } ]
             }
         },
@@ -82,11 +91,11 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /\/assets\/(apple-touch-icon-[1-9][0-9]{1,2}\.png)/g,
-                    replacement: (_, filename) => grunt.file.expand({ cwd: 'build' }, `/assets/*.${ filename }`)[0]
+                    match: /assets\/(apple-touch-icon-[1-9][0-9]{1,2}\.png)/g,
+                    replacement: (_, filename) => grunt.file.expand({ cwd: 'build' }, `assets/*.${ filename }`)[0]
                 }, {
-                    match: /\/assets\/favicon\.ico/g,
-                    replacement: () => grunt.file.expand({ cwd: 'build' }, '/assets/*.favicon.ico')[0]
+                    match: /assets\/favicon\.ico/g,
+                    replacement: () => grunt.file.expand({ cwd: 'build' }, 'assets/*.favicon.ico')[0]
                 }, {
                     match: /\/([a-z0-9-]+\.[a-z0-9]*\.bundle\.css)"/g,
                     replacement: (_, filename) => `/styles/${ filename }"`
@@ -96,19 +105,9 @@ module.exports = (grunt) => {
                 }, {
                     match: /[\s]*"\/web-audio-conference-2017(\/scripts)?\/inline\.[a-z0-9]+.bundle.js":\s"[a-z0-9]+",/g,
                     replacement: ''
-                } ]
-            }
-        },
-        'register': {
-            files: {
-                './': [
-                    'build/scripts/sw-register.*.bundle.js'
-                ]
-            },
-            options: {
-                patterns: [ {
-                    match: /register\("worker-basic\.min\.js"\)/,
-                    replacement: 'register("web-audio-conference-2017/scripts/worker-basic.min.js")'
+                }, {
+                    match: /[\s]*"\/web-audio-conference-2017(\/scripts)?\/sw-register\.[a-z0-9]+.bundle.js":\s"[a-z0-9]+",/g,
+                    replacement: ''
                 } ]
             }
         },
@@ -139,19 +138,6 @@ module.exports = (grunt) => {
                     replacement: (match, filename) => {
                         return `<link href="web-audio-conference-2017/styles/${ filename }" rel="stylesheet">`;
                     }
-                } ]
-            }
-        },
-        'worker': {
-            files: {
-                './': [
-                    'build/scripts/worker-basic.min.js'
-                ]
-            },
-            options: {
-                patterns: [ {
-                    match: /"ngsw-manifest\.json"/,
-                    replacement: '"../ngsw-manifest.json"'
                 } ]
             }
         }

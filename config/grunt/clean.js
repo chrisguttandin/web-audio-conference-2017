@@ -1,14 +1,13 @@
 module.exports = {
     inline: [
-        'build/inline.*.bundle.js'
+        'build/inline.*.bundle.js',
+        'build/sw-register.*.bundle.js'
     ],
     scripts: [
         'build/*.bundle.js',
         'build/*.bundle.js.gz',
         'build/*.chunk.js',
-        'build/*.chunk.js.gz',
-        'build/*.min.js',
-        'build/*.min.js.gz'
+        'build/*.chunk.js.gz'
     ],
     styles: [
         'build/*.bundle.css',
