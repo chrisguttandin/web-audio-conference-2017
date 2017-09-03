@@ -24,6 +24,8 @@ THE SOFTWARE.
 
 @angular/router@4.3.6 MIT
 
+@angular/service-worker@1.0.0-beta.16 MIT
+
 @angular/animations@4.3.6 MIT
 
 prismjs@1.6.0 MIT

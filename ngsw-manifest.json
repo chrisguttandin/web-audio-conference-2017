@@ -1,0 +1,15 @@
+{
+  "static": {
+    "urls": {
+      "/web-audio-conference-2017/scripts/0.ce9318c82f7a8ce349ac.chunk.js": "458563417719d3fca725081a6d3c458f0cc896b5",
+      "/web-audio-conference-2017/scripts/polyfills.21d3b570af0ce33d43c6.bundle.js": "44e330f433af11cae4d8fe4472d29478ffd37b6a",
+      "/web-audio-conference-2017/scripts/main.69a941fbd5105a5cdbfd.bundle.js": "38963279971c4a3619ca123e71234553b3bb1894",
+      "/web-audio-conference-2017/scripts/scripts.0ee5de5f7d2804ee8363.bundle.js": "2ebf3baead830dc966221991cc46efc5b9377885",
+      "/web-audio-conference-2017/scripts/sw-register.b6fa77a6846ea93a5a57.bundle.js": "e818c1075ddc65a63acb3518667822af4c36cd47",
+      "/web-audio-conference-2017/scripts/vendor.f9535c9fafd9a753a95e.bundle.js": "c1f917534bb01a510346b7f1395b359d3c89a3e3",
+      "/web-audio-conference-2017/styles/styles.3f59b7bad9dd94a886b2.bundle.css": "0843771c65c7b04b72caa508daaa3a62996c4cad",
+      "/web-audio-conference-2017/index.html": "24ff69f24ad67a6758b92695343808038f2732c2"
+    },
+    "_generatedFromWebpack": true
+  }
+}
