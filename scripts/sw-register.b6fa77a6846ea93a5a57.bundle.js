@@ -1,1 +1,0 @@
-webpackJsonp([5],{4:function(r,e,o){r.exports=o("EUKP")},EUKP:function(r,e){"serviceWorker"in navigator&&navigator.serviceWorker.register("web-audio-conference-2017/scripts/worker-basic.min.js").catch(function(r){console.error("Error registering service worker:",r)})}},[4]);
