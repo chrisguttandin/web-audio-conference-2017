@@ -6,6 +6,7 @@ module.exports = {
                 'build'
             ],
             ignoreMatches: [
+                '@angular/service-worker',
                 'hammerjs',
                 'prismjs',
                 'tslib',
