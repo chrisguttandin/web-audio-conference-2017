@@ -6,7 +6,9 @@ module.exports = {
         'build/*.bundle.js',
         'build/*.bundle.js.gz',
         'build/*.chunk.js',
-        'build/*.chunk.js.gz'
+        'build/*.chunk.js.gz',
+        'build/*.min.js',
+        'build/*.min.js.gz'
     ],
     styles: [
         'build/*.bundle.css',
