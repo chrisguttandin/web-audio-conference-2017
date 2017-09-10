@@ -44,7 +44,7 @@
     "grunt-gh-pages": "^2.0.0",
     "grunt-htmlhint": "^0.9.13",
     "grunt-if": "^0.1.5",
-    "grunt-postcss": "^0.8.0",
+    "grunt-postcss": "^0.9.0",
     "grunt-replace": "^1.0.1",
     "grunt-sh": "^0.2.0",
     "gruntify-eslint": "^4.0.0",
