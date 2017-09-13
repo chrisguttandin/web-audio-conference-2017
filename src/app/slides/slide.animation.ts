@@ -1,4 +1,4 @@
-import { animate, animation, group, query, style } from '@angular/animations';
+import { animate, animation, group, query, style } from '@angular/animations';
 
 // @todo For some reason the objects which define the styles can't be composed when using AoT.
 
