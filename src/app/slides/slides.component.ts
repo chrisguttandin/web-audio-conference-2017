@@ -1,4 +1,4 @@
-import { transition, trigger, useAnimation } from '@angular/animations';
+import { transition, trigger, useAnimation } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import 'rxjs/add/operator/filter';

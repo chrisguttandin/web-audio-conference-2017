@@ -8,7 +8,7 @@ import { SlideFiveComponent } from './slide-five/slide-five.component';
 import { SlideFourComponent } from './slide-four/slide-four.component';
 import { SlideFourteenComponent } from './slide-fourteen/slide-fourteen.component';
 import { SlideNineComponent } from './slide-nine/slide-nine.component';
-import { SlideOneComponent } from './slide-one/slide-one.component';
+import { SlideOneComponent } from './slide-one/slide-one.component';
 import { SlideSevenComponent } from './slide-seven/slide-seven.component';
 import { SlideSeventeenComponent } from './slide-seventeen/slide-seventeen.component';
 import { SlideSixComponent } from './slide-six/slide-six.component';
@@ -19,7 +19,7 @@ import { SlideThreeComponent } from './slide-three/slide-three.component';
 import { SlideTwelveComponent } from './slide-twelve/slide-twelve.component';
 import { SlideTwoComponent } from './slide-two/slide-two.component';
 import { SlidesRoutingModule } from './slides-routing.module';
-import { SlidesComponent } from './slides.component';
+import { SlidesComponent } from './slides.component';
 
 @NgModule({
     declarations: [
