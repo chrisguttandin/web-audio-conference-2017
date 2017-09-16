@@ -67,7 +67,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-prismjs@1.7.0
+prismjs@1.8.1
 MIT
 MIT LICENSE
 
@@ -95,22 +95,22 @@ THE SOFTWARE.
 MIT
 MIT
 
-@angular/core@4.3.6
+@angular/core@4.4.1
 MIT
 MIT
 
-@angular/router@4.3.6
+@angular/router@4.4.1
 MIT
 MIT
 
-@angular/animations@4.3.6
+@angular/animations@4.4.1
 MIT
 MIT
 
-@angular/platform-browser@4.3.6
+@angular/platform-browser@4.4.1
 MIT
 MIT
 
-@angular/common@4.3.6
+@angular/common@4.4.1
 MIT
 MIT
