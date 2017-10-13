@@ -95,22 +95,22 @@ THE SOFTWARE.
 MIT
 MIT
 
-@angular/core@4.4.4
+@angular/core@4.4.5
 MIT
 MIT
 
-@angular/router@4.4.4
+@angular/router@4.4.5
 MIT
 MIT
 
-@angular/animations@4.4.4
+@angular/animations@4.4.5
 MIT
 MIT
 
-@angular/platform-browser@4.4.4
+@angular/platform-browser@4.4.5
 MIT
 MIT
 
-@angular/common@4.4.4
+@angular/common@4.4.5
 MIT
 MIT
