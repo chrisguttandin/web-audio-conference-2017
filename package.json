@@ -32,7 +32,7 @@
     "bundle-buddy": "^0.1.2",
     "content-security-policy-builder": "^1.1.0",
     "eslint": "^4.9.0",
-    "eslint-config-holy-grail": "^24.0.0",
+    "eslint-config-holy-grail": "^24.0.1",
     "greenkeeper-lockfile": "^1.9.0",
     "grunt": "^1.0.1",
     "grunt-axe-webdriver": "^0.0.5",
