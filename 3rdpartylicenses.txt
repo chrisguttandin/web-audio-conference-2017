@@ -20,7 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-webpack@3.6.0
+webpack@3.7.1
 MIT
 Copyright JS Foundation and other contributors
 
@@ -95,22 +95,22 @@ THE SOFTWARE.
 MIT
 MIT
 
-@angular/core@4.4.5
+@angular/core@4.4.6
 MIT
 MIT
 
-@angular/router@4.4.5
+@angular/router@4.4.6
 MIT
 MIT
 
-@angular/animations@4.4.5
+@angular/animations@4.4.6
 MIT
 MIT
 
-@angular/platform-browser@4.4.5
+@angular/platform-browser@4.4.6
 MIT
 MIT
 
-@angular/common@4.4.5
+@angular/common@4.4.6
 MIT
 MIT
