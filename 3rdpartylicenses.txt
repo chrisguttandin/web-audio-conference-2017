@@ -20,7 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-webpack@3.7.1
+webpack@3.8.1
 MIT
 Copyright JS Foundation and other contributors
 
@@ -67,6 +67,22 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+@angular/animations@5.0.0
+MIT
+MIT
+
+@angular/common@5.0.0
+MIT
+MIT
+
+@angular/core@5.0.0
+MIT
+MIT
+
+@angular/platform-browser@5.0.0
+MIT
+MIT
+
 prismjs@1.8.3
 MIT
 MIT LICENSE
@@ -91,26 +107,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+@angular/router@5.0.0
+MIT
+MIT
+
 @angular/service-worker@1.0.0-beta.16
-MIT
-MIT
-
-@angular/core@4.4.6
-MIT
-MIT
-
-@angular/router@4.4.6
-MIT
-MIT
-
-@angular/animations@4.4.6
-MIT
-MIT
-
-@angular/platform-browser@4.4.6
-MIT
-MIT
-
-@angular/common@4.4.6
 MIT
 MIT
