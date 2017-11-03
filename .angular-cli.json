@@ -18,7 +18,6 @@
             "scripts": [
                 "../node_modules/hammerjs/hammer.js"
             ],
-            "serviceWorker": true,
             "styles": [
                 "../node_modules/prismjs/themes/prism-okaidia.css",
                 "styles/styles.css"
