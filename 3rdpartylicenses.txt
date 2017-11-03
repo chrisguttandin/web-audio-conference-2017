@@ -110,7 +110,3 @@ THE SOFTWARE.
 @angular/router@5.0.0
 MIT
 MIT
-
-@angular/service-worker@1.0.0-beta.16
-MIT
-MIT
