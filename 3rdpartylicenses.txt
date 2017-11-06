@@ -83,7 +83,7 @@ MIT
 MIT
 MIT
 
-prismjs@1.8.3
+prismjs@1.8.4
 MIT
 MIT LICENSE
 
