@@ -67,7 +67,7 @@
     "tslint": "^5.8.0",
     "tslint-config-holy-grail": "^16.0.4",
     "typescript": "~2.4.2",
-    "webpack-bundle-analyzer": "^2.9.0"
+    "webpack-bundle-analyzer": "^2.9.1"
   },
   "homepage": "https://chrisguttandin.github.io/web-audio-conference-2017",
   "license": "MIT",
