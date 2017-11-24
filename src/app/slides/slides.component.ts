@@ -1,7 +1,7 @@
 import { transition, trigger, useAnimation } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import 'rxjs/add/operator/filter';
+import { filter } from 'rxjs/operators';
 import { slideAnimation } from './slide.animation';
 
 @Component({
@@ -55,7 +55,9 @@ export class SlidesComponent implements OnDestroy, OnInit {
 
     public ngOnInit () {
         this._routerEventsSubscription = this._router.events
-            .filter((routerEvent) => (routerEvent instanceof NavigationEnd))
+            .pipe(
+                filter((routerEvent) => (routerEvent instanceof NavigationEnd))
+            )
             .subscribe(() => this._setIndexAndTransition());
 
         this._setIndexAndTransition();
