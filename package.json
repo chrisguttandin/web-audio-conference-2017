@@ -21,7 +21,7 @@
   },
   "description": "My talk at the Web Audio Conference 2017.",
   "devDependencies": {
-    "@angular/cli": "^1.5.4",
+    "@angular/cli": "^1.5.5",
     "@angular/compiler-cli": "^5.0.3",
     "@angular/language-service": "^5.0.3",
     "@sonarwhal/sonar": "^0.14.2",
