@@ -86,5 +86,5 @@
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "test": "grunt lint && grunt test"
   },
-  "version": "1.4.5"
+  "version": "1.4.6"
 }
