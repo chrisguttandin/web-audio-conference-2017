@@ -47,6 +47,9 @@
         "no-disallowed-headers": "off",
         "no-friendly-error-pages": "error",
         "no-html-only-headers": "error",
+        "no-http-redirects": [ "error", {
+            "max-target-redirects": 1
+        } ],
         "no-protocol-relative-urls": "error",
         "no-vulnerable-javascript-libraries": "error",
         "ssllabs": "error",
