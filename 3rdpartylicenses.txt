@@ -110,3 +110,7 @@ MIT
 @angular/common@5.1.0
 MIT
 MIT
+
+@angular/service-worker@5.1.0
+MIT
+MIT
