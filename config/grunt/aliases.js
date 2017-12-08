@@ -10,6 +10,7 @@ module.exports = {
     ],
     'deploy': [
         'sh:build',
+        'replace:bundle',
         'copy:404',
         'htmlmin',
         'replace:inline',

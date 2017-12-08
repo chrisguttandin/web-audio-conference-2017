@@ -1,0 +1,28 @@
+{
+    "assetGroups": [
+        {
+            "installMode": "prefetch",
+            "name": "app",
+            "resources": {
+                "files": [
+                    "/index.html"
+                ],
+                "versionedFiles": [
+                    "/*.bundle.css",
+                    "/*.bundle.js",
+                    "/*.chunk.js"
+                ]
+            }
+        }, {
+            "installMode": "lazy",
+            "name": "assets",
+            "resources": {
+                "files": [
+                    "/assets/**"
+                ]
+            },
+            "updateMode": "prefetch"
+        }
+    ],
+    "index": "/index.html"
+}

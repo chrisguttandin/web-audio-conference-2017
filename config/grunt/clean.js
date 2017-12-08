@@ -1,7 +1,6 @@
 module.exports = {
     inline: [
-        'build/inline.*.bundle.js',
-        'build/sw-register.*.bundle.js'
+        'build/inline.*.bundle.js'
     ],
     scripts: [
         'build/*.bundle.js',
