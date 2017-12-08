@@ -5,6 +5,19 @@ const fs = require('fs');
 
 module.exports = (grunt) => {
     return {
+        'bundle': {
+            files: {
+                './': [
+                    'build/main.*.bundle.js'
+                ]
+            },
+            options: {
+                patterns: [ {
+                    match: /"\/ngsw-worker\.js"/g,
+                    replacement: '"/web-audio-conference-2017/ngsw-worker.js"'
+                } ]
+            }
+        },
         'chunks': {
             files: {
                 './': [
@@ -71,28 +84,19 @@ module.exports = (grunt) => {
                     replacement: (match, filename) => {
                         return `<script type="text/javascript">${ fs.readFileSync(`build/${ filename }`) }</script>`;
                     }
-                }, {
-                    match: /<script\stype="text\/javascript"\ssrc="(sw-register\.[a-z0-9]*\.bundle\.js)"><\/script>/g,
-                    replacement: (match, filename) => {
-                        const content = fs
-                            .readFileSync(`build/${ filename }`, { encoding: 'utf8' })
-                            .replace(/register\("worker-basic\.min\.js"\)/, 'register("web-audio-conference-2017/worker-basic.min.js")');
-
-                        return `<script type="text/javascript">${ content }</script>`;
-                    }
                 } ]
             }
         },
         'manifest': {
             files: {
                 './': [
-                    'build/ngsw-manifest.json'
+                    'build/ngsw.json'
                 ]
             },
             options: {
                 patterns: [ {
-                    match: /assets\/(apple-touch-icon-[1-9][0-9]{1,2}\.png)/g,
-                    replacement: (_, filename) => grunt.file.expand({ cwd: 'build' }, `assets/*.${ filename }`)[0]
+                    match: /assets\/apple-touch-icon\.png/g,
+                    replacement: () => grunt.file.expand({ cwd: 'build' }, 'assets/*.apple-touch-icon.png')[0]
                 }, {
                     match: /assets\/favicon\.ico/g,
                     replacement: () => grunt.file.expand({ cwd: 'build' }, 'assets/*.favicon.ico')[0]
@@ -103,10 +107,10 @@ module.exports = (grunt) => {
                     match: /\/([a-z0-9-]+\.[a-z0-9]*\.(bundle|chunk)\.js)"/g,
                     replacement: (_, filename) => `/scripts/${ filename }"`
                 }, {
-                    match: /[\s]*"\/web-audio-conference-2017(\/scripts)?\/inline\.[a-z0-9]+.bundle.js":\s"[a-z0-9]+",/g,
+                    match: /[\s]*"\/web-audio-conference-2017(\/scripts)?\/inline\.[a-z0-9]+.bundle.js",/g,
                     replacement: ''
                 }, {
-                    match: /[\s]*"\/web-audio-conference-2017(\/scripts)?\/sw-register\.[a-z0-9]+.bundle.js":\s"[a-z0-9]+",/g,
+                    match: /[\s]*"\/web-audio-conference-2017(\/scripts)?\/inline\.[a-z0-9]+.bundle.js":\s"[a-z0-9]+",/g,
                     replacement: ''
                 } ]
             }

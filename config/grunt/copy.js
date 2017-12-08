@@ -15,7 +15,7 @@ module.exports = {
                 cwd: 'build/',
                 dest: 'build/scripts/',
                 expand: true,
-                src: [ '**/!(worker-basic.min).js' ]
+                src: [ '**/!(ngsw-worker).js' ]
             }
         ]
     },
