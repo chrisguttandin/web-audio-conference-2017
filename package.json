@@ -31,7 +31,7 @@
     "axe-core": "^2.5.0",
     "bundle-buddy": "^0.2.1",
     "content-security-policy-builder": "^1.1.0",
-    "eslint": "^4.12.1",
+    "eslint": "^4.13.0",
     "eslint-config-holy-grail": "^24.0.1",
     "greenkeeper-lockfile": "^1.12.0",
     "grunt": "^1.0.1",
