@@ -112,6 +112,30 @@ module.exports = (grunt) => {
                 }, {
                     match: /[\s]*"\/web-audio-conference-2017(\/scripts)?\/inline\.[a-z0-9]+.bundle.js":\s"[a-z0-9]+",/g,
                     replacement: ''
+                }, {
+                    // Replace the hash value inside of the hashTable for "/scripts/main.*.bundle.js" because it was modified before.
+                    match: /"(\/scripts\/main\.[a-z0-9]+.bundle.js)":\s"[a-z0-9]+"/g,
+                    replacement: (_, filename) => {
+                        const content = fs.readFileSync(`build${ filename }`, 'utf-8');
+                        const hash = crypto
+                            .createHash('sha1')
+                            .update(content)
+                            .digest('hex');
+
+                        return `"${ filename }": "${ hash }"`;
+                    }
+                }, {
+                    // Replace the hash value inside of the hashTable for "/index.html" because it was modified before.
+                    match: /"\/index\.html":\s"[a-z0-9]+"/g,
+                    replacement: () => {
+                        const content = fs.readFileSync('build/index.html', 'utf-8');
+                        const hash = crypto
+                            .createHash('sha1')
+                            .update(content)
+                            .digest('hex');
+
+                        return `"/index.html": "${ hash }"`;
+                    }
                 } ]
             }
         },
