@@ -162,7 +162,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<link\shref="(styles\.[a-z0-9]*\.bundle\.css)"\srel="stylesheet">/g,
+                    match: /<link\shref="(styles\.[a-z0-9]*\.bundle\.css)"\srel="stylesheet"\/>/g,
                     replacement: (match, filename) => {
                         return `<link href="web-audio-conference-2017/styles/${ filename }" rel="stylesheet">`;
                     }
