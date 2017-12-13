@@ -114,7 +114,7 @@ module.exports = (grunt) => {
                     replacement: ''
                 }, {
                     // Replace the hash value inside of the hashTable for "/scripts/main.*.bundle.js" because it was modified before.
-                    match: /"(\/scripts\/main\.[a-z0-9]+.bundle.js)":\s"[a-z0-9]+"/g,
+                    match: /"(\/web-audio-conference-2017\/scripts\/main\.[a-z0-9]+.bundle.js)":\s"[a-z0-9]+"/g,
                     replacement: (_, filename) => {
                         const content = fs.readFileSync(`build${ filename }`, 'utf-8');
                         const hash = crypto
@@ -126,7 +126,7 @@ module.exports = (grunt) => {
                     }
                 }, {
                     // Replace the hash value inside of the hashTable for "/index.html" because it was modified before.
-                    match: /"\/index\.html":\s"[a-z0-9]+"/g,
+                    match: /"\/web-audio-conference-2017\/index\.html":\s"[a-z0-9]+"/g,
                     replacement: () => {
                         const content = fs.readFileSync('build/index.html', 'utf-8');
                         const hash = crypto
@@ -134,7 +134,7 @@ module.exports = (grunt) => {
                             .update(content)
                             .digest('hex');
 
-                        return `"/index.html": "${ hash }"`;
+                        return `"/web-audio-conference-2017/index.html": "${ hash }"`;
                     }
                 } ]
             }
