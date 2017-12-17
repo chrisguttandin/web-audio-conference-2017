@@ -18,25 +18,37 @@
     "ignoredUrls": [
         {
             "domain": ".*fonts\\.googleapis\\.com/.*",
-            "rules": [ "*" ]
-        }, {
+            "rules": [
+                "*"
+            ]
+        },
+        {
             "domain": ".*fonts\\.gstatic\\.com/.*",
-            "rules": [ "*" ]
-        }, {
+            "rules": [
+                "*"
+            ]
+        },
+        {
             "domain": ".*github\\.io.*.ico$",
-            "rules": [ "content-type" ]
+            "rules": [
+                "content-type"
+            ]
         }
     ],
     "rules": {
         "amp-validator": "off",
         "apple-touch-icons": "off",
         "axe": "error",
-        "content-type": [ "error", {
-            ".*\\.js": "application/javascript; charset=utf-8"
-        } ],
+        "content-type": [
+            "error",
+            {
+                ".*\\.js": "application/javascript; charset=utf-8"
+            }
+        ],
         "disown-opener": "error",
         "highest-available-document-mode": "error",
         "html-checker": "off",
+        "http-cache": "off",
         "image-optimization-cloudinary": "off",
         "manifest-app-name": "error",
         "manifest-exists": "off",
@@ -47,9 +59,12 @@
         "no-disallowed-headers": "off",
         "no-friendly-error-pages": "error",
         "no-html-only-headers": "error",
-        "no-http-redirects": [ "error", {
-            "max-target-redirects": 1
-        } ],
+        "no-http-redirects": [
+            "error",
+            {
+                "max-target-redirects": 1
+            }
+        ],
         "no-protocol-relative-urls": "error",
         "no-vulnerable-javascript-libraries": "error",
         "ssllabs": "error",
