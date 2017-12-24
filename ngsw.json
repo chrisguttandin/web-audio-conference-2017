@@ -13,7 +13,7 @@
         "/web-audio-conference-2017/scripts/polyfills.b10cbeec9b33b79402a8.bundle.js",
         "/web-audio-conference-2017/scripts/scripts.400c5d3d7995a38066bc.bundle.js",
         "/web-audio-conference-2017/styles/styles.3f59b7bad9dd94a886b2.bundle.css",
-        "/web-audio-conference-2017/scripts/vendor.9a7c05117635e21d183a.bundle.js"
+        "/web-audio-conference-2017/scripts/vendor.427094ab5539dc5cd128.bundle.js"
       ],
       "patterns": []
     },
@@ -32,7 +32,7 @@
     "/web-audio-conference-2017/scripts/polyfills.b10cbeec9b33b79402a8.bundle.js": "ba872226d0cfdbe2b73a4eec76f4944da0825021",
     "/web-audio-conference-2017/scripts/scripts.400c5d3d7995a38066bc.bundle.js": "87ab6f7f9217514d100f19f6471f40732bdffb26",
     "/web-audio-conference-2017/styles/styles.3f59b7bad9dd94a886b2.bundle.css": "0843771c65c7b04b72caa508daaa3a62996c4cad",
-    "/web-audio-conference-2017/scripts/vendor.9a7c05117635e21d183a.bundle.js": "4cb9ac0a23304ee2ceab3b7d5829e8003d9076af",
-    "/web-audio-conference-2017/index.html": "daccbb42cb12e42f018db362c48fede9ba8394f4"
+    "/web-audio-conference-2017/scripts/vendor.427094ab5539dc5cd128.bundle.js": "b58c8282dabc25ea8899ace4982df8f214cc2595",
+    "/web-audio-conference-2017/index.html": "9bac2ff885b7dfe8dd67dc42cafbe0063afbbf6d"
   }
 }
