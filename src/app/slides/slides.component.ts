@@ -1,5 +1,5 @@
 import { transition, trigger, useAnimation } from '@angular/animations';
-import { ChangeDetectionStrategy, Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { slideAnimation } from './slide.animation';
@@ -33,7 +33,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
         this._router = router;
     }
 
-    public handleKeyUp (event: KeyboardEvent) {
+    @HostListener('document:keyup', [ '$event' ]) public handleKeyUp (event: KeyboardEvent) {
         if ((event.code && event.code === 'ArrowLeft') || event.keyCode === 37) {
             this._goToPreviousSlide();
         } else if ((event.code && event.code === 'ArrowRight') || event.keyCode === 39) {
