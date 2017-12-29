@@ -1,4 +1,5 @@
-import { APP_BASE_HREF } from '@angular/common';
+import 'core-js/es7/reflect'; // tslint:disable-line:ordered-imports
+import { APP_BASE_HREF } from '@angular/common'; // tslint:disable-line:ordered-imports
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent, AppModule } from '../../src/app';
 

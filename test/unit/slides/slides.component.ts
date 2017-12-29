@@ -1,3 +1,4 @@
+import 'core-js/es7/reflect';
 import { BehaviorSubject } from 'rxjs';
 import { SlidesComponent } from '../../../src/app/slides';
 
