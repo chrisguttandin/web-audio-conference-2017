@@ -1,16 +1,16 @@
-@angular/core@5.2.0
+@angular/core@5.2.1
 MIT
 MIT
 
-@angular/platform-browser@5.2.0
+@angular/platform-browser@5.2.1
 MIT
 MIT
 
-@angular/router@5.2.0
+@angular/router@5.2.1
 MIT
 MIT
 
-@angular/common@5.2.0
+@angular/common@5.2.1
 MIT
 MIT
 
@@ -37,7 +37,7 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-prismjs@1.9.0
+prismjs@1.10.0
 MIT
 MIT LICENSE
 
