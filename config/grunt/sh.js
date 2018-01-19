@@ -9,7 +9,7 @@ module.exports = {
         cmd: 'ng test'
     },
     e2e: {
-        cmd: 'ng e2e'
+        cmd: 'ng e2e --aot'
     },
     lint: {
         cmd: 'ng lint --type-check'
