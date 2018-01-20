@@ -32,7 +32,7 @@
     "content-security-policy-builder": "^1.1.0",
     "core-js": "^2.5.3",
     "eslint": "^4.16.0",
-    "eslint-config-holy-grail": "^24.0.1",
+    "eslint-config-holy-grail": "^25.0.0",
     "greenkeeper-lockfile": "^1.13.0",
     "grunt": "^1.0.1",
     "grunt-axe-webdriver": "^1.0.1",
