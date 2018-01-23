@@ -29,7 +29,7 @@
     "@types/prismjs": "^1.9.0",
     "axe-core": "^2.6.1",
     "bundle-buddy": "^0.2.1",
-    "content-security-policy-builder": "^1.1.0",
+    "content-security-policy-builder": "^2.0.0",
     "core-js": "^2.5.3",
     "eslint": "^4.16.0",
     "eslint-config-holy-grail": "^25.0.0",
