@@ -71,6 +71,22 @@
     "webpack-bundle-analyzer": "^2.9.2",
     "webpack-stats-duplicates": "^2.1.0"
   },
+  "greenkeeper": {
+    "ignore": [
+      "@types/jasmine",
+      "@types/jasminewd2",
+      "@types/node",
+      "jasmine-core",
+      "jasmine-spec-reporter",
+      "karma",
+      "karma-chrome-launcher",
+      "karma-jasmine",
+      "protractor",
+      "ts-node",
+      "tslint",
+      "typescript"
+    ]
+  },
   "homepage": "https://chrisguttandin.github.io/web-audio-conference-2017",
   "license": "MIT",
   "main": "src/index.html",
