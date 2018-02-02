@@ -20,7 +20,7 @@
   },
   "description": "My talk at the Web Audio Conference 2017.",
   "devDependencies": {
-    "@angular/cli": "^1.6.6",
+    "@angular/cli": "^1.6.7",
     "@angular/compiler-cli": "^5.2.3",
     "@angular/language-service": "^5.2.3",
     "@types/jasmine": "~2.8.6",
