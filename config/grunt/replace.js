@@ -27,7 +27,7 @@ module.exports = (grunt) => {
             options: {
                 patterns: [ {
                     match: /""\+e\+"\."\+{([0-9]+:"[a-f0-9]{20}",?)+}/g,
-                    replacement: (match) => match.replace(/""\+e\+"/g, '"web-audio-conference-2017/scripts/"+e+"')
+                    replacement: (match) => match.replace(/""\+e\+"/g, '"scripts/"+e+"')
                 } ]
             }
         },
@@ -149,7 +149,7 @@ module.exports = (grunt) => {
                 patterns: [ {
                     match: /<script\stype="text\/javascript"\ssrc="([a-z-]*\.[a-z0-9]*\.bundle\.js)"><\/script>/g,
                     replacement: (match, filename) => {
-                        return `<script type="text/javascript" src="web-audio-conference-2017/scripts/${ filename }"></script>`;
+                        return `<script type="text/javascript" src="scripts/${ filename }"></script>`;
                     }
                 } ]
             }
@@ -164,7 +164,7 @@ module.exports = (grunt) => {
                 patterns: [ {
                     match: /<link\shref="(styles\.[a-z0-9]*\.bundle\.css)"\srel="stylesheet"\/>/g,
                     replacement: (match, filename) => {
-                        return `<link href="web-audio-conference-2017/styles/${ filename }" rel="stylesheet">`;
+                        return `<link href="styles/${ filename }" rel="stylesheet">`;
                     }
                 } ]
             }
