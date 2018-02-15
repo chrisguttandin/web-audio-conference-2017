@@ -1,16 +1,16 @@
-@angular/core@5.2.4
+@angular/core@5.2.5
 MIT
 MIT
 
-@angular/platform-browser@5.2.4
+@angular/platform-browser@5.2.5
 MIT
 MIT
 
-@angular/router@5.2.4
+@angular/router@5.2.5
 MIT
 MIT
 
-@angular/common@5.2.4
+@angular/common@5.2.5
 MIT
 MIT
 
