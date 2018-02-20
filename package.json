@@ -66,7 +66,7 @@
     "tsconfig-holy-grail": "^3.0.23",
     "tslint": "^5.9.1",
     "tslint-config-holy-grail": "^22.0.5",
-    "typescript": "~2.5.3",
+    "typescript": "~2.6.2",
     "webpack-bundle-analyzer": "^2.10.0",
     "webpack-stats-duplicates": "^2.1.0"
   },
