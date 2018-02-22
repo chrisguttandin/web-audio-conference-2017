@@ -6,7 +6,6 @@ module.exports = {
                 'build'
             ],
             ignoreMatches: [
-                '@angular/service-worker',
                 'hammerjs',
                 'tslib',
                 '@angular/cli',
@@ -15,7 +14,6 @@ module.exports = {
                 '@types/*',
                 'axe-core',
                 'bundle-buddy',
-                'chromedriver',
                 'eslint',
                 'eslint-config-holy-grail',
                 'greenkeeper-lockfile',
