@@ -4,6 +4,9 @@
             "assets": [
                 "assets"
             ],
+            "budgets": [
+                { "baseline": "500kb", "maximumError": "500kb", "type": "all" }
+            ],
             "environmentSource": "environments/environment.ts",
             "environments": {
                 "dev": "environments/environment.ts",
