@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "declaration": false,
+    "module": "commonjs",
+    "outDir": "../../out-tsc/e2e",
+    "target": "es5",
+    "types": [
+      "jasmine",
+      "jasminewd2",
+      "node"
+    ]
+  },
+  "extends": "../../node_modules/tsconfig-holy-grail/src/tsconfig-universal"
+}

@@ -27,8 +27,9 @@ exports.config = {
         jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } })); // eslint-disable-line no-undef
     },
 
-    specs: [
-        '../../test/e2e/**/*.ts'
-    ]
+    suites: {
+        e2e: '../../test/e2e/**/*.ts',
+        regression: '../../test/regression/**/*.ts'
+    }
 
 };
