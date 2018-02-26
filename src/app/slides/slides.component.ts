@@ -60,7 +60,14 @@ export class SlidesComponent implements OnDestroy, OnInit {
             )
             .subscribe(() => this._setIndexAndTransition());
 
-        this._setIndexAndTransition();
+        const activatedChildRoute = this._activatedRoute.firstChild;
+
+        if (activatedChildRoute !== null) {
+            const index = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
+
+            this._index = index;
+            this.transition = { params: { enterTransform: 'none', leaveTransform: 'none' }, value: index };
+        }
     }
 
     private _goToNextSlide () {
