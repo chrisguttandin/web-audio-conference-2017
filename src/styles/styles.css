@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+}
+
 body {
     background-color: #333;
     color: #FFD;
@@ -5,6 +9,15 @@ body {
     font-size: 100%;
     line-height: 8vmin;
     margin: 4vmin;
+    min-height: calc(100% - 8vmin);
+}
+
+body h1:first-child {
+    margin-top: 4vmin;
+}
+
+body h2:first-child {
+    margin-top: 4vmin;
 }
 
 a {
