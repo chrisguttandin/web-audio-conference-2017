@@ -8,7 +8,7 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         chromeOptions: {
-            args: [ '--device-scale-factor=2', '--disable-gpu', '--force-device-scale-factor=2', '--headless', '--window-size=1024,768' ]
+            args: [ '--device-scale-factor=1', '--disable-gpu', '--force-device-scale-factor=1', '--headless', '--window-size=2048,1536' ]
         }
     },
 
