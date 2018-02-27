@@ -11,11 +11,6 @@ describe('slides', () => {
 
     beforeEach(() => {
         jasmine.addMatchers(elementShotMatchers);
-
-        browser.driver
-            .manage()
-            .window()
-            .setSize(1024, 768);
     });
 
     describe('first slide', () => {
