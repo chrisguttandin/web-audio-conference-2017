@@ -9,7 +9,7 @@ export class HomePage {
     }
 
     public getSubHeadline () {
-        return element(by.css('wac-app h2')).getText();
+        return element(by.css('wac-app h2:first-child')).getText();
     }
 
     public navigateTo () {
