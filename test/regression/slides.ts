@@ -33,7 +33,7 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-1');
 
-            expectElementShot(result).toBeRegressionFree();// 0.2);
+            expectElementShot(result).toBeRegressionFree();
         });
 
     });
@@ -81,7 +81,7 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-5');
 
-            expectElementShot(result).toBeRegressionFree();// 0.6);
+            expectElementShot(result).toBeRegressionFree();
         });
 
     });
@@ -93,7 +93,7 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-6');
 
-            expectElementShot(result).toBeRegressionFree();// 1.1);
+            expectElementShot(result).toBeRegressionFree();
         });
 
     });
@@ -117,7 +117,7 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-8');
 
-            expectElementShot(result).toBeRegressionFree();// 0.7);
+            expectElementShot(result).toBeRegressionFree();
         });
 
     });
@@ -129,7 +129,7 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-9');
 
-            expectElementShot(result).toBeRegressionFree();// 0.7);
+            expectElementShot(result).toBeRegressionFree();
         });
 
     });
@@ -141,7 +141,7 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-10');
 
-            expectElementShot(result).toBeRegressionFree();// 0.6);
+            expectElementShot(result).toBeRegressionFree();
         });
 
     });
@@ -153,7 +153,7 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-11');
 
-            expectElementShot(result).toBeRegressionFree();// 0.4);
+            expectElementShot(result).toBeRegressionFree();
         });
 
     });
@@ -165,7 +165,7 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-12');
 
-            expectElementShot(result).toBeRegressionFree();// 0.8);
+            expectElementShot(result).toBeRegressionFree();
         });
 
     });
