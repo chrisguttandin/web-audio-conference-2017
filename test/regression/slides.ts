@@ -20,7 +20,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-1');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(3.2, 3.4);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
         it('should look the same', async () => {
@@ -28,7 +32,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-1');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(3.2, 3.4);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -40,7 +48,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-2');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(2.1, 2.3);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -52,7 +64,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-3');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(1.3, 1.5);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -64,7 +80,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-4');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(2.1, 2.3);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -76,7 +96,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-5');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(3, 3.2);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -88,7 +112,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-6');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(7.1, 7.3);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -100,7 +128,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-7');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(4.2, 4.4);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -112,7 +144,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-8');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(7.1, 7.3);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -124,7 +160,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-9');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(3.8, 4);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -136,7 +176,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-10');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(3.1, 3.3);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -148,7 +192,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-11');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(5.2, 5.4);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -160,7 +208,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-12');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(3.9, 4.1);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -172,7 +224,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-13');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(3.1, 3.3);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -184,7 +240,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-14');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(1.7, 1.9);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -196,7 +256,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-15');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(1.8, 2);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -208,7 +272,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-16');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(2.9, 3.1);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
@@ -220,7 +288,11 @@ describe('slides', () => {
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-17');
 
-            expectElementShot(result).toBeRegressionFree();
+            if (process.env.TRAVIS) {
+                expectElementShot(result).toHaveMisMatchWithinRange(2.6, 2.8);
+            } else {
+                expectElementShot(result).toBeRegressionFree();
+            }
         });
 
     });
