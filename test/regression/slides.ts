@@ -9,13 +9,20 @@ const navigateTo = (path: string) => {
 
 describe('slides', () => {
 
-    beforeEach(() => {
+    beforeEach((done: any) => {
         jasmine.addMatchers(elementShotMatchers);
 
         browser.driver
             .manage()
             .window()
             .setSize(1024, 768);
+
+        if (IS_SMOKE_TEST) {
+            // Wait some time for the font to get loaded from Google.
+            setTimeout(done, 500);
+        } else {
+            done();
+        }
     });
 
     describe('first slide', () => {
