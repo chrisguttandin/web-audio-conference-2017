@@ -6,7 +6,10 @@ exports.config = {
     allScriptsTimeout: 11000,
 
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
+        chromeOptions: {
+            args: [ '--disable-gpu', '--headless', '--window-size=1280,720' ]
+        }
     },
 
     directConnect: true,
