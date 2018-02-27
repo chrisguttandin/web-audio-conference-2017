@@ -15,7 +15,7 @@ describe('slides', () => {
         browser.driver
             .manage()
             .window()
-            .setSize(1280, 720);
+            .setSize(1024, 768);
     });
 
     describe('first slide', () => {
