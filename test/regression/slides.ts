@@ -4,7 +4,7 @@ import { elementShotMatchers, expectElementShot, resembleElementShot } from 'ele
 const IS_SMOKE_TEST = !!process.env.IS_SMOKE_TEST;
 
 const navigateTo = (path: string) => {
-    return browser.get((IS_SMOKE_TEST) ? `https://chrisguttandin.github.io/web-audio-conference-2017/${ path }` : path);
+    return browser.get((IS_SMOKE_TEST) ? `https://chrisguttandin.github.io/web-audio-conference-2017${ path }` : path);
 }
 
 describe('slides', () => {
