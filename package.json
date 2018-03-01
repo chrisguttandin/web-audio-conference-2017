@@ -33,7 +33,7 @@
     "core-js": "^2.5.3",
     "element-shot": "^2.0.1",
     "eslint": "^4.18.1",
-    "eslint-config-holy-grail": "^25.0.0",
+    "eslint-config-holy-grail": "^25.1.0",
     "greenkeeper-lockfile": "^1.13.2",
     "grunt": "^1.0.2",
     "grunt-axe-webdriver": "^1.1.0",
