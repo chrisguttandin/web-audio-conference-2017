@@ -11,6 +11,7 @@ describe('/', () => {
 
     it('should display the correct headline', () => {
         page.navigateTo();
+
         expect(page.getHeadline()).toEqual('Noiseless Web Audio tests');
     });
 
