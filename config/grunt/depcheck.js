@@ -12,6 +12,7 @@ module.exports = {
                 '@angular/compiler-cli',
                 '@angular/language-service',
                 '@commitlint/cli',
+                '@commitlint/config-angular',
                 '@types/*',
                 'axe-core',
                 'bundle-buddy',
