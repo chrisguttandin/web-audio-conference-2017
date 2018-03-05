@@ -36,6 +36,7 @@
     "@types/prismjs": "^1.9.0",
     "axe-core": "^2.6.1",
     "bundle-buddy": "^0.2.1",
+    "commitizen": "^2.9.6",
     "content-security-policy-builder": "^2.0.0",
     "core-js": "^2.5.3",
     "cz-conventional-changelog": "^2.1.0",
