@@ -106,6 +106,7 @@
     "url": "https://github.com/chrisguttandin/web-audio-conference-2017.git"
   },
   "scripts": {
+    "commitmsg": "commitlint --edit --extends @commitlint/config-angular",
     "e2e": "protractor",
     "precommit": "grunt lint",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
