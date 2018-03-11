@@ -1,3 +1,9 @@
+const filter = (tasks) => tasks.filter((task) => task !== null);
+const isVersionUpdate = (process.env.TRAVIS === 'true' &&
+    process.env.TRAVIS_PULL_REQUEST === 'false' &&
+    process.env.TRAVIS_SECURE_ENV_VARS === 'true' &&
+    process.env.TRAVIS_TAG !== '');
+
 module.exports = {
     'a11y': [
         'axe-webdriver'
@@ -27,9 +33,9 @@ module.exports = {
         'gh-pages:deploy',
         'sh:smoke'
     ],
-    'deploy-on-version-updates': [
-        'if:deploy'
-    ],
+    'deploy-on-version-updates': filter([
+        (isVersionUpdate) ? 'deploy' : null
+    ]),
     'e2e': [
         'sh:e2e'
     ],
