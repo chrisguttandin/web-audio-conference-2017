@@ -13,6 +13,7 @@ module.exports = {
                 '@angular/language-service',
                 '@commitlint/cli',
                 '@commitlint/config-angular',
+                '@sonarwhal/*',
                 '@types/*',
                 'axe-core',
                 'bundle-buddy',
