@@ -74,7 +74,7 @@
     "ts-node": "~4.1.0",
     "tsconfig-holy-grail": "^4.0.1",
     "tslint": "^5.9.1",
-    "tslint-config-holy-grail": "^22.0.9",
+    "tslint-config-holy-grail": "^23.0.1",
     "typescript": "~2.6.2",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-stats-duplicates": "^2.1.0"
