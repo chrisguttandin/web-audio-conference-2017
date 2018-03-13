@@ -62,7 +62,7 @@
         "no-http-redirects": [
             "error",
             {
-                "max-target-redirects": 1
+                "max-html-redirects": 1
             }
         ],
         "no-protocol-relative-urls": "error",
