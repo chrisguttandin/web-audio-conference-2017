@@ -60,7 +60,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "@types/prismjs": "^1.9.0",
-    "axe-core": "^2.6.1",
+    "axe-core": "^3.0.0",
     "bundle-buddy": "^0.2.1",
     "commitizen": "^2.9.6",
     "content-security-policy-builder": "^2.0.0",
