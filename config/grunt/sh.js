@@ -9,7 +9,9 @@ module.exports = {
         cmd: 'ng test'
     },
     e2e: {
-        cmd: 'ng e2e --aot'
+        cmd: (process.env.TRAVIS) ?
+            'ng e2e --aot' :
+            'webdriver-manager update && ng e2e --aot --no-webdriver-update'
     },
     lint: {
         cmd: 'ng lint --type-check'
@@ -21,7 +23,9 @@ module.exports = {
         cmd: 'ng serve --aot --build-optimizer --port 7733 --prod'
     },
     smoke: {
-        cmd: 'IS_SMOKE_TEST=true ng e2e --serve false && sonarwhal https://chrisguttandin.github.io/web-audio-conference-2017 && rm cdp.pid'
+        cmd: (process.env.TRAVIS) ?
+            'IS_SMOKE_TEST=true ng e2e --serve false && sonarwhal https://chrisguttandin.github.io/web-audio-conference-2017 && rm cdp.pid' :
+            'webdriver-manager update && IS_SMOKE_TEST=true ng e2e --no-webdriver-update --serve false && sonarwhal https://chrisguttandin.github.io/web-audio-conference-2017 && rm cdp.pid'
     },
     test: {
         cmd: 'ng test --watch false'
