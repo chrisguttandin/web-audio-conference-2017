@@ -31,7 +31,7 @@ module.exports = {
         'clean:styles',
         'replace:manifest',
         'gh-pages:deploy',
-        'sh:smoke'
+        'smoke'
     ],
     'deploy-on-version-updates': filter([
         (isVersionUpdate) ? 'deploy' : null
@@ -51,6 +51,9 @@ module.exports = {
     ],
     'preview': [
         'sh:preview'
+    ],
+    'smoke': [
+        'sh:smoke'
     ],
     'test': [
         'sh:test'
