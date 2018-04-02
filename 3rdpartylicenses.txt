@@ -97,7 +97,7 @@ MIT
 MIT
 MIT
 
-zone.js@0.8.23
+zone.js@0.8.24
 MIT
 The MIT License
 
