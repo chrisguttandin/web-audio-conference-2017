@@ -96,7 +96,7 @@
     "protractor": "~5.1.2",
     "sonarwhal": "^1.4.0",
     "stylelint": "^9.2.0",
-    "stylelint-config-holy-grail": "^1.0.0",
+    "stylelint-config-holy-grail": "^1.0.1",
     "ts-node": "~4.1.0",
     "tsconfig-holy-grail": "^4.0.4",
     "tslint": "^5.9.1",
