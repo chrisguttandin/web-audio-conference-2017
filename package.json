@@ -66,7 +66,7 @@
     "content-security-policy-builder": "^2.0.0",
     "core-js": "^2.5.4",
     "cz-conventional-changelog": "^2.1.0",
-    "element-shot": "^2.1.5",
+    "element-shot": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-holy-grail": "^26.0.0",
     "greenkeeper-lockfile": "^1.14.0",
