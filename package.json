@@ -21,7 +21,7 @@
     "prismjs": "^1.13.0",
     "rxjs": "^5.5.8",
     "tslib": "^1.9.0",
-    "zone.js": "^0.8.25"
+    "zone.js": "^0.8.26"
   },
   "description": "My talk at the Web Audio Conference 2017.",
   "devDependencies": {
