@@ -30,7 +30,7 @@
     "@angular/language-service": "^5.2.9",
     "@commitlint/cli": "^6.1.3",
     "@commitlint/config-angular": "^6.1.3",
-    "@sonarwhal/formatter-stylish": "^2.0.1",
+    "@sonarwhal/formatter-stylish": "^2.0.2",
     "@sonarwhal/rule-amp-validator": "^3.0.1",
     "@sonarwhal/rule-apple-touch-icons": "^3.0.0",
     "@sonarwhal/rule-axe": "^4.0.0",
