@@ -44,7 +44,7 @@
     "@sonarwhal/rule-manifest-app-name": "^4.0.0",
     "@sonarwhal/rule-manifest-exists": "^4.0.0",
     "@sonarwhal/rule-manifest-file-extension": "^4.0.0",
-    "@sonarwhal/rule-manifest-is-valid": "^4.0.0",
+    "@sonarwhal/rule-manifest-is-valid": "^5.0.0",
     "@sonarwhal/rule-meta-charset-utf-8": "^3.0.2",
     "@sonarwhal/rule-meta-viewport": "^3.0.1",
     "@sonarwhal/rule-no-disallowed-headers": "^3.0.3",
