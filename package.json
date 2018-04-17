@@ -98,7 +98,7 @@
     "sonarwhal": "^1.6.1",
     "stylelint": "^9.2.0",
     "stylelint-config-holy-grail": "^1.0.1",
-    "ts-node": "~4.1.0",
+    "ts-node": "~6.0.0",
     "tsconfig-holy-grail": "^4.0.7",
     "tslint": "^5.9.1",
     "tslint-config-holy-grail": "^24.0.4",
