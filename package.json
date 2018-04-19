@@ -59,7 +59,7 @@
     "@sonarwhal/rule-x-content-type-options": "^3.0.1",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.2",
-    "@types/node": "~6.0.105",
+    "@types/node": "~9.6.6",
     "@types/prismjs": "^1.9.0",
     "axe-core": "^3.0.1",
     "bundle-buddy": "^0.2.1",
