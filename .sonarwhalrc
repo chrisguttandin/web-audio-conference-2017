@@ -67,6 +67,7 @@
         ],
         "no-protocol-relative-urls": "error",
         "no-vulnerable-javascript-libraries": "error",
+        "sri": "error",
         "ssllabs": "error",
         "strict-transport-security": "off",
         "validate-set-cookie-header": "error",
