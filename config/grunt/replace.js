@@ -3,6 +3,19 @@ const cspProductionConfig = require('../csp/production');
 const crypto = require('crypto');
 const fs = require('fs');
 
+// eslint-disable-next-line padding-line-between-statements
+const computeHashOfFile = (filename, algorithm, encoding) => {
+    const content = fs.readFileSync(filename, 'utf-8');
+
+    return computeHashOfString(content, algorithm, encoding);
+};
+const computeHashOfString = (string, algorithm, encoding) => {
+    return crypto
+        .createHash(algorithm)
+        .update(string)
+        .digest(encoding);
+};
+
 module.exports = (grunt) => {
     return {
         'bundle': {
@@ -48,10 +61,7 @@ module.exports = (grunt) => {
                         let result = regex.exec(html);
 
                         while (result !== null) {
-                            scriptHashes.push(`'sha256-${ crypto
-                                .createHash('sha256')
-                                .update(result[1])
-                                .digest('base64') }'`);
+                            scriptHashes.push(`'sha256-${ computeHashOfString(result[1], 'sha256', 'base64') }'`);
 
                             result = regex.exec(html);
                         }
@@ -80,7 +90,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\stype="text\/javascript"\ssrc="(inline\.[a-z0-9]*\.bundle\.js)"><\/script>/g,
+                    match: /<script\stype="text\/javascript"\ssrc="(inline\.[a-z0-9]*\.bundle\.js)"\sintegrity="sha384-[a-zA-Z0-9+/]*=*"\scrossorigin="anonymous"><\/script>/g,
                     replacement: (match, filename) => {
                         return `<script type="text/javascript">${ fs.readFileSync(`build/${ filename }`) }</script>`;
                     }
@@ -116,25 +126,13 @@ module.exports = (grunt) => {
                     // Replace the hash value inside of the hashTable for "/scripts/main.*.bundle.js" because it was modified before.
                     match: /"\/web-audio-conference-2017(\/scripts\/main\.[a-z0-9]+.bundle.js)":\s"[a-z0-9]+"/g,
                     replacement: (_, filename) => {
-                        const content = fs.readFileSync(`build${ filename }`, 'utf-8');
-                        const hash = crypto
-                            .createHash('sha1')
-                            .update(content)
-                            .digest('hex');
-
-                        return `"/web-audio-conference-2017${ filename }": "${ hash }"`;
+                        return `"/web-audio-conference-2017${ filename }": "${ computeHashOfFile(`build${ filename }`, 'sha1', 'hex') }"`;
                     }
                 }, {
                     // Replace the hash value inside of the hashTable for "/index.html" because it was modified before.
                     match: /"\/web-audio-conference-2017\/index\.html":\s"[a-z0-9]+"/g,
                     replacement: () => {
-                        const content = fs.readFileSync('build/index.html', 'utf-8');
-                        const hash = crypto
-                            .createHash('sha1')
-                            .update(content)
-                            .digest('hex');
-
-                        return `"/web-audio-conference-2017/index.html": "${ hash }"`;
+                        return `"/web-audio-conference-2017/index.html": "${ computeHashOfFile('build/index.html', 'sha1', 'hex') }"`;
                     }
                 } ]
             }
@@ -147,9 +145,13 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\stype="text\/javascript"\ssrc="([a-z-]*\.[a-z0-9]*\.bundle\.js)"><\/script>/g,
-                    replacement: (match, filename) => {
-                        return `<script type="text/javascript" src="scripts/${ filename }"></script>`;
+                    match: /<script\stype="text\/javascript"\ssrc="([a-z-]*\.[a-z0-9]*\.bundle\.js)"\sintegrity="(sha384-[a-zA-Z0-9+/]*=*)"\scrossorigin="anonymous"><\/script>/g,
+                    replacement: (match, filename, initialHash) => {
+                        const updatedHash = (/main\.[a-z0-9]*\.bundle\.js/.test(filename)) ?
+                            `sha384-${ computeHashOfFile(`build/scripts/${ filename }`, 'sha384', 'base64') }` :
+                            initialHash;
+
+                        return `<script type="text/javascript" src="scripts/${ filename }" integrity="${ updatedHash }" crossorigin="anonymous"></script>`;
                     }
                 } ]
             }
@@ -162,9 +164,9 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<link\shref="(styles\.[a-z0-9]*\.bundle\.css)"\srel="stylesheet"\/>/g,
-                    replacement: (match, filename) => {
-                        return `<link href="styles/${ filename }" rel="stylesheet">`;
+                    match: /<link\shref="(styles\.[a-z0-9]*\.bundle\.css)"\srel="stylesheet"\sintegrity="(sha384-[a-zA-Z0-9+/]*=*)"\scrossorigin="anonymous"\/>/g,
+                    replacement: (match, filename, hash) => {
+                        return `<link href="styles/${ filename }" rel="stylesheet" integrity="${ hash }" crossorigin="anonymous">`;
                     }
                 } ]
             }

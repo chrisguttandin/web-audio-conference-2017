@@ -3,7 +3,7 @@ module.exports = {
         cmd: 'ng build --aot --build-optimizer --prod --sourcemaps --stats-json && (bundle-buddy build/*.map & webpack-bundle-analyzer build/stats.json)'
     },
     build: {
-        cmd: "ng build --aot --base-href /web-audio-conference-2017/ --build-optimizer --no-sourcemaps --prod --stats-json && webpack-stats-duplicates build/stats.json --whitelist 'multi ./node_modules/prismjs' && rm build/stats.json"
+        cmd: "ng build --aot --base-href /web-audio-conference-2017/ --build-optimizer --no-sourcemaps --prod --stats-json --subresource-integrity && webpack-stats-duplicates build/stats.json --whitelist 'multi ./node_modules/prismjs' && rm build/stats.json"
     },
     continuous: {
         cmd: 'ng test'
