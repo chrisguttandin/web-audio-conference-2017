@@ -17,7 +17,7 @@ env:
     - secure: NUAvclltOqHZwn8Um4DdKS1F8M5J3NHVTlGaJ7uw4sLAs7lW4ledcrkwyDMnrNLcGaDsepwoS4/4rKvaTE6H32lwE6+Gq69BWOkveu8dwQY06p7ViLlZnxKiKDkeX4d3mKQZ84GySMvUNxb2w+aclUghN/G2IloGADsCNmgODGZHF70KHv3lDuQw0wur1uY/+wjq32F7pidzlkdzMZJ+ZcMDbCHhpaVMxEk9CoedGlBbQuHD3NCvAAYdqKJiosLlic4z/xcPxiyCrBNmIMxRY2kWyXjv2/3hibs7cRO5vB9P+WTOorqB3BhyOiGRm5DfHXRc959WBTvEg53/UZ5C3JVezS+rHZJ0pfBXfNZYQbYnoZCxbbXxUa5OkphCUtq3hmH4GruHFO+b3UNX91T2Xf6Pi73uH/lNaOjDK5i2PakKmDvgfRI6yFCdpaUpV38KnuxLBEcbIAAeUPZhAV4f4D7TWr8vaRDvBVs3pjI85o6XiBNG2VN1SamqsdHTZ9aBm61Z0a3sVV44mQBjMjJFpDzZopVcuVKhVL8CmGBZ1ZPN/jFsmwx7jnhqjnU/1ftZ1sZxaz5fWWfQLrEyWSl0DjohaWOPTghH7roN4FsDOI3kUA46a2L7UdFpgF3tOeW98+K7bWJ1QXYmQYmKQ6E5hD57lvJtxecTwHbiUJAgVPU=
 install: npm ci || (rm -rf node_modules && npm install)
 language: node_js
-node_js: 9
+node_js: 10
 script:
   - npm test
   - grunt deploy-on-version-updates
