@@ -5,7 +5,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SlidesModule } from './slides';
 
 @NgModule({
     bootstrap: [
@@ -18,8 +17,7 @@ import { SlidesModule } from './slides';
         AppRoutingModule,
         BrowserAnimationsModule,
         BrowserModule,
-        ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-        SlidesModule
+        ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
     ]
 })
 export class AppModule { }
