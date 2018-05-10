@@ -5,12 +5,9 @@
             "name": "app",
             "resources": {
                 "files": [
-                    "/index.html"
-                ],
-                "versionedFiles": [
-                    "/*.bundle.css",
-                    "/*.bundle.js",
-                    "/*.chunk.js"
+                    "/index.html",
+                    "/*.css",
+                    "/*.js"
                 ]
             }
         }, {

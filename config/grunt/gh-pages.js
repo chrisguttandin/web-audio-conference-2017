@@ -3,7 +3,7 @@ const pkg = require('../../package.json');
 module.exports = {
     deploy: {
         options: {
-            base: 'build/',
+            base: 'build/web-audio-conference-2017',
             message: `build page for version ${ process.env.TRAVIS_TAG }`,
             repo: pkg.repository.url.replace(/:\/\//, `://${ process.env.GIT_HUB_ACCESS_TOKEN }@`),
             silent: true,

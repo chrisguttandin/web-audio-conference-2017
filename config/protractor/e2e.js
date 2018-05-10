@@ -29,7 +29,7 @@ exports.config = {
 
     onPrepare () {
         tsNode.register({
-            project: 'test/e2e'
+            project: 'test/e2e/tsconfig.json'
         });
 
         jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } })); // eslint-disable-line no-undef

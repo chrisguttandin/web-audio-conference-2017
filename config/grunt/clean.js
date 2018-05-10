@@ -1,15 +1,11 @@
 module.exports = {
-    inline: [
-        'build/inline.*.bundle.js'
+    runtime: [
+        'build/web-audio-conference-2017/runtime.*.js'
     ],
     scripts: [
-        'build/*.bundle.js',
-        'build/*.bundle.js.gz',
-        'build/*.chunk.js',
-        'build/*.chunk.js.gz'
+        'build/web-audio-conference-2017/!(ngsw-worker).js'
     ],
     styles: [
-        'build/*.bundle.css',
-        'build/*.bundle.css.gz'
+        'build/web-audio-conference-2017/**.css'
     ]
 };

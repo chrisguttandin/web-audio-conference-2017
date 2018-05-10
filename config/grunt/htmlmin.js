@@ -1,10 +1,10 @@
 module.exports = {
     default: {
         files: [ {
-            cwd: 'build/',
-            dest: 'build/',
+            cwd: 'build/web-audio-conference-2017',
+            dest: 'build/web-audio-conference-2017',
             expand: true,
-            src: [ '**/!(index).html' ]
+            src: [ '**/*.html' ]
         } ],
         options: {
             caseSensitive: true,

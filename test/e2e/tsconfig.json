@@ -3,7 +3,7 @@
     "baseUrl": "./",
     "declaration": false,
     "module": "commonjs",
-    "outDir": "../../out-tsc/e2e",
+    "outDir": "../../out-tsc/app",
     "target": "es5",
     "types": [
       "jasmine",

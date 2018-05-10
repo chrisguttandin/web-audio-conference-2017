@@ -3,7 +3,7 @@ module.exports = {
         files: [
             {
                 cwd: 'src/',
-                dest: 'build/',
+                dest: 'build/web-audio-conference-2017/',
                 expand: true,
                 src: [ '404.html' ]
             }
@@ -12,8 +12,8 @@ module.exports = {
     scripts: {
         files: [
             {
-                cwd: 'build/',
-                dest: 'build/scripts/',
+                cwd: 'build/web-audio-conference-2017/',
+                dest: 'build/web-audio-conference-2017/scripts/',
                 expand: true,
                 src: [ '**/!(ngsw-worker).js' ]
             }
@@ -22,8 +22,8 @@ module.exports = {
     styles: {
         files: [
             {
-                cwd: 'build/',
-                dest: 'build/styles/',
+                cwd: 'build/web-audio-conference-2017/',
+                dest: 'build/web-audio-conference-2017/styles/',
                 expand: true,
                 src: [ '**/*.css' ]
             }

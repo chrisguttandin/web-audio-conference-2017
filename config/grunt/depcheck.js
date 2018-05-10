@@ -11,6 +11,7 @@ module.exports = {
                 '@angular/cli',
                 '@angular/compiler-cli',
                 '@angular/language-service',
+                '@angular-devkit/build-angular',
                 '@commitlint/cli',
                 '@commitlint/config-angular',
                 '@sonarwhal/*',
@@ -31,8 +32,7 @@ module.exports = {
                 'tslint',
                 'tslint-config-holy-grail',
                 'typescript',
-                'webpack-bundle-analyzer',
-                'webpack-stats-duplicates'
+                'webpack-bundle-analyzer'
             ]
         },
         src: './'
