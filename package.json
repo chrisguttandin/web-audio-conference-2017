@@ -97,7 +97,7 @@
     "karma-sauce-launcher": "^1.2.0",
     "load-grunt-config": "^0.19.2",
     "protractor": "~5.3.2",
-    "sonarwhal": "^1.9.0",
+    "sonarwhal": "^1.9.1",
     "stylelint": "^9.2.1",
     "stylelint-config-holy-grail": "^1.0.1",
     "ts-node": "~5.0.1",
