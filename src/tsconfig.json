@@ -5,7 +5,6 @@
   "compilerOptions": {
     "baseUrl": "./",
     "declaration": false,
-    "noUnusedParameters": false,
     "outDir": "../out-tsc/app",
     "target": "es5"
   },
