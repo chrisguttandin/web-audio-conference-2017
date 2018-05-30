@@ -41,7 +41,7 @@
     "@sonarwhal/rule-disown-opener": "^3.0.3",
     "@sonarwhal/rule-highest-available-document-mode": "^3.0.4",
     "@sonarwhal/rule-html-checker": "^4.0.0",
-    "@sonarwhal/rule-http-cache": "^3.1.0",
+    "@sonarwhal/rule-http-cache": "^3.1.1",
     "@sonarwhal/rule-image-optimization-cloudinary": "^3.0.2",
     "@sonarwhal/rule-manifest-app-name": "^4.0.2",
     "@sonarwhal/rule-manifest-exists": "^4.0.1",
