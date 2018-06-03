@@ -31,7 +31,7 @@
     "@angular/compiler-cli": "^6.0.3",
     "@angular/language-service": "^6.0.3",
     "@commitlint/cli": "^7.0.0",
-    "@commitlint/config-angular": "^7.0.0",
+    "@commitlint/config-angular": "^7.0.1",
     "@sonarwhal/formatter-stylish": "^2.0.3",
     "@sonarwhal/parser-manifest": "^1.0.2",
     "@sonarwhal/rule-amp-validator": "^3.0.2",
