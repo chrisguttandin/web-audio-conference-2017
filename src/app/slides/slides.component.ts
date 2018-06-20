@@ -18,7 +18,7 @@ import { slideAnimation } from './slide.animation';
 })
 export class SlidesComponent implements OnDestroy, OnInit {
 
-    @HostBinding('@transition') public transition: { params: { enterTransform: string, leaveTransform: string }, value: number };
+    @HostBinding('@transition') public transition!: { params: { enterTransform: string, leaveTransform: string }, value: number };
 
     private _activatedRoute: ActivatedRoute;
 
@@ -30,6 +30,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
 
     constructor (activatedRoute: ActivatedRoute, router: Router) {
         this._activatedRoute = activatedRoute;
+        this._index = 0;
         this._router = router;
     }
 

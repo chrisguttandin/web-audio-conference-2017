@@ -9,9 +9,9 @@ import * as Prism from 'prismjs';
 })
 export class PrismComponent implements AfterViewInit, OnChanges {
 
-    @Input() public language: string;
+    @Input() public language!: string;
 
-    @ViewChild('element') private element: ElementRef;
+    @ViewChild('element') private element!: ElementRef;
 
     public ngAfterViewInit () {
         Prism.highlightElement(this.element.nativeElement, false);
