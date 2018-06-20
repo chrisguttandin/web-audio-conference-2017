@@ -56,6 +56,7 @@
         "manifest-is-valid": "error",
         "meta-charset-utf-8": "error",
         "meta-viewport": "error",
+        "minified-js": "error",
         "no-disallowed-headers": "off",
         "no-friendly-error-pages": "error",
         "no-html-only-headers": "error",
@@ -70,6 +71,7 @@
         "sri": "error",
         "ssllabs": "error",
         "strict-transport-security": "off",
+        "stylesheet-limits": "error",
         "validate-set-cookie-header": "error",
         "x-content-type-options": "off"
     },
