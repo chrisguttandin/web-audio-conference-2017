@@ -73,7 +73,7 @@
     "content-security-policy-builder": "^2.0.0",
     "cz-conventional-changelog": "^2.1.0",
     "element-shot": "^3.0.7",
-    "eslint": "^4.19.1",
+    "eslint": "^5.0.0",
     "eslint-config-holy-grail": "^27.0.2",
     "greenkeeper-lockfile": "^1.15.1",
     "grunt": "^1.0.3",
