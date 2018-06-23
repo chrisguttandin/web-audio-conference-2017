@@ -66,15 +66,17 @@ module.exports = (grunt) => {
                             result = regex.exec(html);
                         }
 
-                        const cspConfig = Object.assign({}, cspProductionConfig, {
-                            directives: Object.assign({}, cspProductionConfig.directives, {
+                        const cspConfig = {
+                            ...cspProductionConfig,
+                            directives: {
+                                ...cspProductionConfig.directives,
                                 'script-src': ('script-src' in cspProductionConfig.directives)
                                     ? (Array.isArray(cspProductionConfig.directives['script-src']))
                                         ? [ ...cspProductionConfig.directives['script-src'], ...scriptHashes ]
                                         : [ cspProductionConfig.directives['script-src'], ...scriptHashes ]
                                     : [ ...scriptHashes ]
-                            })
-                        });
+                            }
+                        };
                         const cspString = cspBuilder(cspConfig);
 
                         return `<meta content="${ cspString }" http-equiv="content-security-policy">`;
