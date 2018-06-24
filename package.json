@@ -88,7 +88,7 @@
     "grunt-postcss": "^0.9.0",
     "grunt-replace": "^1.0.1",
     "grunt-sh": "^0.2.0",
-    "gruntify-eslint": "^4.0.0",
+    "gruntify-eslint": "github:chrisguttandin/gruntify-eslint",
     "husky": "^0.14.3",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
