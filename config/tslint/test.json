@@ -1,17 +1,30 @@
 {
     "extends": "tslint-config-holy-grail",
     "rules": {
-        "component-selector": [ true, "element", "wac", "kebab-case" ],
-        "directive-selector": [ true, "attribute", "wac", "camelCase" ],
+        "component-selector": [
+            true,
+            "element",
+            "wac",
+            "kebab-case"
+        ],
+        "directive-selector": [
+            true,
+            "attribute",
+            "wac",
+            "camelCase"
+        ],
         "import-blacklist": false,
         "newline-per-chained-call": false,
-        "no-implicit-dependencies": [ true, "dev" ],
+        "no-implicit-dependencies": [
+            true,
+            "dev"
+        ],
         "no-submodule-imports": [
             true,
             "@angular/common/http",
             "@angular/core/testing",
-            "@angular/platform-browser/animations",
             "@angular/platform-browser-dynamic/testing",
+            "@angular/platform-browser/animations",
             "@angular/router/testing",
             "@ngrx/effects/testing",
             "angulartics2/ga",
@@ -37,7 +50,6 @@
             "rxjs/scheduler",
             "rxjs/symbol",
             "zone.js/dist"
-        ],
-        "pipe-naming": [ true, "camelCase", "wac" ]
+        ]
     }
 }
