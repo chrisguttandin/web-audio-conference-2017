@@ -1,8 +1,11 @@
+const { env } = require('process');
+
+// eslint-disable-next-line padding-line-between-statements
 const filter = (tasks) => tasks.filter((task) => task !== null);
-const isVersionUpdate = (process.env.TRAVIS === 'true' &&
-    process.env.TRAVIS_PULL_REQUEST === 'false' &&
-    process.env.TRAVIS_SECURE_ENV_VARS === 'true' &&
-    process.env.TRAVIS_TAG !== '');
+const isVersionUpdate = (env.TRAVIS === 'true' &&
+    env.TRAVIS_PULL_REQUEST === 'false' &&
+    env.TRAVIS_SECURE_ENV_VARS === 'true' &&
+    env.TRAVIS_TAG !== '');
 
 module.exports = {
     'a11y': [

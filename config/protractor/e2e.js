@@ -1,4 +1,5 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
+const { env } = require('process');
 const tsNode = require('ts-node');
 
 // eslint-disable-next-line padding-line-between-statements
@@ -13,7 +14,7 @@ exports.config = {
 
     allScriptsTimeout: 11000,
 
-    directConnect: !!process.env.TRAVIS,
+    directConnect: !!env.TRAVIS,
 
     framework: 'jasmine',
 
@@ -23,7 +24,7 @@ exports.config = {
         showColors: true
     },
 
-    multiCapabilities: (process.env.TRAVIS) ?
+    multiCapabilities: (env.TRAVIS) ?
         [ chromeCapabilities ] :
         [ chromeCapabilities, { browserName: 'safari' } ],
 
