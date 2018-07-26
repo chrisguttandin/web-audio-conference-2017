@@ -7,9 +7,9 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/web-audio-conference-2017/scripts/0.e35bba7ae61c7aed12d9.js",
+        "/web-audio-conference-2017/scripts/0.5e70d59fadb41c349197.js",
         "/web-audio-conference-2017/index.html",
-        "/web-audio-conference-2017/scripts/main.69ff5060a182f14870e7.js",
+        "/web-audio-conference-2017/scripts/main.abf2bd06fe34465e698e.js",
         "/web-audio-conference-2017/scripts/polyfills.4acdbe2d2780cd72c166.js",
         "/web-audio-conference-2017/scripts/scripts.2e1ce7e02614f3c7a0cf.js",
         "/web-audio-conference-2017/styles/styles.45065efc8ac3902782ce.css"
@@ -26,9 +26,9 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/web-audio-conference-2017/scripts/0.e35bba7ae61c7aed12d9.js": "9a2d05de6c06fd711e8e850158d986b47877672f",
-    "/web-audio-conference-2017/index.html": "093785673c0429c1b7f66c9b862a9287e4ff9a30",
-    "/web-audio-conference-2017/scripts/main.69ff5060a182f14870e7.js": "d4b6d0b972cc7cd410e44881d675ceaa26b7c351",
+    "/web-audio-conference-2017/scripts/0.5e70d59fadb41c349197.js": "4ac372331aded4652c684bc15540b7f0c3467fd5",
+    "/web-audio-conference-2017/index.html": "32fbeb5e56860b11c83657ced491c51f1af4f2b4",
+    "/web-audio-conference-2017/scripts/main.abf2bd06fe34465e698e.js": "2f3302dc47200a31d55febc2ff35f5533158a5f6",
     "/web-audio-conference-2017/scripts/polyfills.4acdbe2d2780cd72c166.js": "32ff103404372406dccb69a68c193ef7bea153c0",
     "/web-audio-conference-2017/scripts/scripts.2e1ce7e02614f3c7a0cf.js": "5953fb53b4617918a379ad521eea7b157b244d46",
     "/web-audio-conference-2017/styles/styles.45065efc8ac3902782ce.css": "ceaff00958d01a5fc074661b4d05a2036e35b733"
@@ -40,15 +40,15 @@
     },
     {
       "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^\\/]*\\.[^\\/]*$"
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
     },
     {
       "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*$"
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
     },
     {
       "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*\\/.*$"
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
   ]
 }
