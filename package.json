@@ -112,6 +112,7 @@
   },
   "greenkeeper": {
     "ignore": [
+      "@angular-devkit/build-angular",
       "@types/jasmine",
       "@types/jasminewd2",
       "@types/node",
@@ -124,7 +125,8 @@
       "protractor",
       "ts-node",
       "tslint",
-      "typescript"
+      "typescript",
+      "zone.js"
     ]
   },
   "homepage": "https://chrisguttandin.github.io/web-audio-conference-2017",
