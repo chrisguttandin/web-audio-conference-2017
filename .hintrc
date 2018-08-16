@@ -18,24 +18,24 @@
     "ignoredUrls": [
         {
             "domain": ".*fonts\\.googleapis\\.com/.*",
-            "rules": [
+            "hints": [
                 "*"
             ]
         },
         {
             "domain": ".*fonts\\.gstatic\\.com/.*",
-            "rules": [
+            "hints": [
                 "*"
             ]
         },
         {
             "domain": ".*github\\.io.*.ico$",
-            "rules": [
+            "hints": [
                 "content-type"
             ]
         }
     ],
-    "rules": {
+    "hints": {
         "amp-validator": "off",
         "apple-touch-icons": "off",
         "axe": "error",
@@ -75,5 +75,5 @@
         "validate-set-cookie-header": "error",
         "x-content-type-options": "off"
     },
-    "rulesTimeout": 120000
+    "hintsTimeout": 120000
 }
