@@ -67,6 +67,7 @@
                 "max-html-redirects": 1
             }
         ],
+        "no-p3p": "error",
         "no-protocol-relative-urls": "error",
         "no-vulnerable-javascript-libraries": "error",
         "sri": "error",
