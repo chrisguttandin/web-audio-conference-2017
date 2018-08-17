@@ -8,6 +8,12 @@
       "path": "cz-conventional-changelog"
     }
   },
+  "contributors": [
+    {
+      "email": "alrraa@gmail.com",
+      "name": "Cătălin Mariș"
+    }
+  ],
   "dependencies": {
     "@angular/animations": "^6.1.2",
     "@angular/common": "^6.1.2",
