@@ -26,8 +26,8 @@ module.exports = {
     },
     smoke: {
         cmd: (env.TRAVIS) ?
-            "IS_SMOKE_TEST=true ng e2e --dev-server-target '' && sonarwhal https://chrisguttandin.github.io/web-audio-conference-2017 && rm cdp.pid" :
-            "webdriver-manager update && IS_SMOKE_TEST=true ng e2e --dev-server-target '' --no-webdriver-update && sonarwhal https://chrisguttandin.github.io/web-audio-conference-2017 && rm cdp.pid"
+            "IS_SMOKE_TEST=true ng e2e --dev-server-target '' && hint https://chrisguttandin.github.io/web-audio-conference-2017 && rm cdp.pid" :
+            "webdriver-manager update && IS_SMOKE_TEST=true ng e2e --dev-server-target '' --no-webdriver-update && hint https://chrisguttandin.github.io/web-audio-conference-2017 && rm cdp.pid"
     },
     test: {
         cmd: 'ng test --watch false'
