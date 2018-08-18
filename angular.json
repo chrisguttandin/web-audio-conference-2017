@@ -77,7 +77,8 @@
                         }
                     },
                     "options": {
-                        "browserTarget": "web-audio-conference-2017:build"
+                        "browserTarget": "web-audio-conference-2017:build",
+                        "port": 7733
                     }
                 },
                 "test": {
