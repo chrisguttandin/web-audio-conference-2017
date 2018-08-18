@@ -8,4 +8,5 @@ if (environment.production) {
 }
 
 platformBrowserDynamic()
-    .bootstrapModule(AppModule);
+    .bootstrapModule(AppModule)
+    .catch((err) => console.log(err)); // tslint:disable-line:no-console
