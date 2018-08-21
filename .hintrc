@@ -58,6 +58,7 @@
         "meta-viewport": "error",
         "minified-js": "error",
         "no-bom": "error",
+        "no-broken-links": "error",
         "no-disallowed-headers": "off",
         "no-friendly-error-pages": "error",
         "no-html-only-headers": "error",
