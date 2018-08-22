@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "declaration": false,
+    "declarationMap": false,
     "module": "commonjs",
     "outDir": "../../out-tsc/app",
     "target": "es5",
