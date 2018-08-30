@@ -37,7 +37,7 @@
     "@angular/compiler-cli": "^6.1.6",
     "@angular/language-service": "^6.1.6",
     "@commitlint/cli": "^7.1.1",
-    "@commitlint/config-angular": "^7.0.1",
+    "@commitlint/config-angular": "^7.1.1",
     "@hint/formatter-stylish": "^1.0.0",
     "@hint/hint-amp-validator": "^1.0.1",
     "@hint/hint-apple-touch-icons": "^1.0.1",
