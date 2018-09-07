@@ -132,6 +132,7 @@
       "karma-coverage-istanbul-reporter",
       "karma-jasmine",
       "protractor",
+      "rxjs",
       "ts-node",
       "tslint",
       "typescript",
