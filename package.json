@@ -73,7 +73,7 @@
     "@hint/parser-javascript": "^1.0.1",
     "@hint/parser-manifest": "^1.1.0",
     "@types/jasmine": "~2.8.8",
-    "@types/jasminewd2": "~2.0.3",
+    "@types/jasminewd2": "~2.0.4",
     "@types/node": "~8.9.5",
     "@types/prismjs": "^1.9.0",
     "axe-core": "^3.1.2",
