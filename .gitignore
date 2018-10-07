@@ -1,4 +1,3 @@
 *.DS_Store
-.tscache
-build/**
+build/
 node_modules/
