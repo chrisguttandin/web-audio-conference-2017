@@ -70,7 +70,7 @@
     "@hint/hint-stylesheet-limits": "^1.0.2",
     "@hint/hint-validate-set-cookie-header": "^1.0.3",
     "@hint/hint-x-content-type-options": "^1.0.4",
-    "@hint/parser-javascript": "^1.0.1",
+    "@hint/parser-javascript": "^1.0.2",
     "@hint/parser-manifest": "^1.1.0",
     "@types/jasmine": "~2.8.9",
     "@types/jasminewd2": "~2.0.5",
