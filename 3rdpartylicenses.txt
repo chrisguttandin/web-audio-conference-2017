@@ -306,9 +306,6 @@ MIT
 @angular/core
 MIT
 
-@angular/compiler
-MIT
-
 zone.js
 MIT
 The MIT License
