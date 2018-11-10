@@ -65,7 +65,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
             .pipe(
                 filter((routerEvent) => (routerEvent instanceof NavigationEnd))
             )
-            .subscribe(() => this._setIndexAndTransition());
+            .subscribe(() => this._setIndexAndTransition()); // tslint:disable-line:rxjs-prefer-async-pipe
 
         const activatedChildRoute = this._activatedRoute.firstChild;
 
