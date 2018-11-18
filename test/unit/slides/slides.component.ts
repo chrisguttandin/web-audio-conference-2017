@@ -22,7 +22,7 @@ describe('SlidesComponent', () => {
 
         router = {
             events: new BehaviorSubject('a fake router event'),
-            navigate () {} // tslint:disable-line:no-empty
+            navigate (): void {} // tslint:disable-line:no-empty
         };
 
         spyOn(router, 'navigate').and.callThrough();

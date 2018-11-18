@@ -13,11 +13,11 @@ export class PrismComponent implements AfterViewInit, OnChanges {
 
     @ViewChild('element') private element!: ElementRef;
 
-    public ngAfterViewInit () {
+    public ngAfterViewInit (): void {
         Prism.highlightElement(this.element.nativeElement, false);
     }
 
-    public ngOnChanges () {
+    public ngOnChanges (): void {
         this.language = `language-${this.language}`;
 
         if (this.element !== undefined) {

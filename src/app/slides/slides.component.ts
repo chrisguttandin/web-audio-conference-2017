@@ -34,7 +34,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
         this._router = router;
     }
 
-    @HostListener('document:keyup', [ '$event' ]) public handleKeyUp (event: KeyboardEvent) {
+    @HostListener('document:keyup', [ '$event' ]) public handleKeyUp (event: KeyboardEvent): void {
         if ((event.code && event.code === 'ArrowLeft') ||
             // The keyCode property is deprecated but it should be fine to use it here as it is only used as a fallback.
             event.keyCode === 37 // tslint:disable-line:deprecation
@@ -48,19 +48,19 @@ export class SlidesComponent implements OnDestroy, OnInit {
         }
     }
 
-    public handleSwipeLeft () {
+    public handleSwipeLeft (): void {
         this._goToNextSlide();
     }
 
-    public handleSwipeRight () {
+    public handleSwipeRight (): void {
         this._goToPreviousSlide();
     }
 
-    public ngOnDestroy () {
+    public ngOnDestroy (): void {
         this._routerEventsSubscription.unsubscribe();
     }
 
-    public ngOnInit () {
+    public ngOnInit (): void {
         this._routerEventsSubscription = this._router.events
             .pipe(
                 filter((routerEvent) => (routerEvent instanceof NavigationEnd))
@@ -77,19 +77,19 @@ export class SlidesComponent implements OnDestroy, OnInit {
         }
     }
 
-    private _goToNextSlide () {
+    private _goToNextSlide (): void {
         if (this._index < 17) {
             this._router.navigate([ `${ this._index + 1 }` ], { relativeTo: this._activatedRoute });
         }
     }
 
-    private _goToPreviousSlide () {
+    private _goToPreviousSlide (): void {
         if (this._index > 1) {
             this._router.navigate([ `${ this._index - 1 }` ], { relativeTo: this._activatedRoute });
         }
     }
 
-    private _setIndexAndTransition () {
+    private _setIndexAndTransition (): void {
         const activatedChildRoute = this._activatedRoute.firstChild;
 
         if (activatedChildRoute !== null) {
