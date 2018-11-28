@@ -40,7 +40,7 @@
     "@hint/connector-chrome": "^2.0.0",
     "@hint/formatter-stylish": "^2.0.0",
     "@hint/hint-amp-validator": "^2.1.0",
-    "@hint/hint-apple-touch-icons": "^2.0.0",
+    "@hint/hint-apple-touch-icons": "^2.1.0",
     "@hint/hint-axe": "^2.0.0",
     "@hint/hint-content-type": "^2.0.0",
     "@hint/hint-disown-opener": "^2.0.0",
