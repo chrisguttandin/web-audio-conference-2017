@@ -58,7 +58,7 @@
     "@hint/hint-no-bom": "^2.1.0",
     "@hint/hint-no-broken-links": "^2.1.0",
     "@hint/hint-no-disallowed-headers": "^2.1.0",
-    "@hint/hint-no-friendly-error-pages": "^2.0.0",
+    "@hint/hint-no-friendly-error-pages": "^2.1.0",
     "@hint/hint-no-html-only-headers": "^2.0.0",
     "@hint/hint-no-http-redirects": "^2.0.0",
     "@hint/hint-no-p3p": "^2.0.0",
