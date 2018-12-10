@@ -1,8 +1,5 @@
-import { env } from 'process';
 import { browser, by, element } from 'protractor';
 import { promise } from 'selenium-webdriver'; // tslint:disable-line:no-implicit-dependencies
-
-const IS_SMOKE_TEST = !!env.IS_SMOKE_TEST;
 
 export class HomePage {
 
@@ -15,7 +12,7 @@ export class HomePage {
     }
 
     public navigateTo (): promise.Promise<any> {
-        return browser.get((IS_SMOKE_TEST) ? 'https://chrisguttandin.github.io/web-audio-conference-2017' : '/');
+        return browser.get('/');
     }
 
 }
