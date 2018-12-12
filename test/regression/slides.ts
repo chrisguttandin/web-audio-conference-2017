@@ -2,10 +2,8 @@ import { env } from 'process';
 import { browser, by } from 'protractor';
 import { elementShotMatchers, expectElementShot, resembleElementShot } from 'element-shot';
 
-const IS_SMOKE_TEST = !!env.IS_SMOKE_TEST;
-
 const navigateTo = (path: string) => {
-    return browser.get((IS_SMOKE_TEST) ? `https://chrisguttandin.github.io/web-audio-conference-2017${ path }` : path);
+    return browser.get((env.IS_SMOKE_TEST) ? `/web-audio-conference-2017${ path }` : path);
 }
 
 describe('slides', () => {
