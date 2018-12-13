@@ -106,7 +106,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.4",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-sauce-launcher": "^2.0.0",
+    "karma-sauce-launcher": "^2.0.2",
     "load-grunt-config": "^1.0.1",
     "protractor": "~5.4.1",
     "stylelint": "^9.9.0",
