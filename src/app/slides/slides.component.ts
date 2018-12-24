@@ -18,7 +18,7 @@ import { slideAnimation } from './slide.animation';
 })
 export class SlidesComponent implements OnDestroy, OnInit {
 
-    @HostBinding('@transition') public transition!: { params: { enterTransform: string, leaveTransform: string }, value: number };
+    @HostBinding('@transition') public transition!: { params: { enterTransform: string; leaveTransform: string }; value: number };
 
     private _activatedRoute: ActivatedRoute;
 
@@ -35,12 +35,12 @@ export class SlidesComponent implements OnDestroy, OnInit {
     }
 
     @HostListener('document:keyup', [ '$event' ]) public handleKeyUp (event: KeyboardEvent): void {
-        if ((event.code && event.code === 'ArrowLeft') ||
+        if ((event.code !== undefined && event.code === 'ArrowLeft') ||
             // The keyCode property is deprecated but it should be fine to use it here as it is only used as a fallback.
             event.keyCode === 37 // tslint:disable-line:deprecation
         ) {
             this._goToPreviousSlide();
-        } else if ((event.code && event.code === 'ArrowRight') ||
+        } else if ((event.code !== undefined && event.code === 'ArrowRight') ||
             // The keyCode property is deprecated but it should be fine to use it here as it is only used as a fallback.
             event.keyCode === 39 // tslint:disable-line:deprecation
         ) {
