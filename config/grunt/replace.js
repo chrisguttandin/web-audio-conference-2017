@@ -39,7 +39,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /""\+\({}\[e\]\|\|e\)\+"\."\+{([0-9]+:"[a-f0-9]{20}",?)+}/g,
+                    match: /""\+\({[^}]*}\[e\]\|\|e\)\+"\."\+{([0-9]+:"[a-f0-9]{20}",?)+}/g,
                     replacement: (match) => match.replace(/^""/g, '"scripts/"')
                 } ]
             }
