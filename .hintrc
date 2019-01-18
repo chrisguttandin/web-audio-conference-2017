@@ -15,30 +15,11 @@
     "formatters": [
         "stylish"
     ],
-    "ignoredUrls": [
-        {
-            "domain": ".*fonts\\.googleapis\\.com/.*",
-            "hints": [
-                "*"
-            ]
-        },
-        {
-            "domain": ".*fonts\\.gstatic\\.com/.*",
-            "hints": [
-                "*"
-            ]
-        },
-        {
-            "domain": ".*github\\.io.*.ico$",
-            "hints": [
-                "content-type"
-            ]
-        }
-    ],
     "hints": {
         "amp-validator": "off",
         "apple-touch-icons": "off",
         "axe": "error",
+        "button-type": "error",
         "content-type": [
             "error",
             {
@@ -71,12 +52,37 @@
         "no-p3p": "error",
         "no-protocol-relative-urls": "error",
         "no-vulnerable-javascript-libraries": "error",
-        "sri": "error",
+        "sri": [
+            "error",
+            {
+                "originCriteria": "all"
+            }
+        ],
         "ssllabs": "error",
         "strict-transport-security": "off",
         "stylesheet-limits": "error",
         "validate-set-cookie-header": "error",
         "x-content-type-options": "off"
     },
-    "hintsTimeout": 120000
+    "hintsTimeout": 120000,
+    "ignoredUrls": [
+        {
+            "domain": ".*fonts\\.googleapis\\.com/.*",
+            "hints": [
+                "*"
+            ]
+        },
+        {
+            "domain": ".*fonts\\.gstatic\\.com/.*",
+            "hints": [
+                "*"
+            ]
+        },
+        {
+            "domain": ".*github\\.io.*.ico$",
+            "hints": [
+                "content-type"
+            ]
+        }
+    ]
 }
