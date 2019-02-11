@@ -1,3 +1,21 @@
+@angular/animations
+MIT
+
+@angular/common
+MIT
+
+@angular/core
+MIT
+
+@angular/platform-browser
+MIT
+
+@angular/router
+MIT
+
+@angular/service-worker
+MIT
+
 prismjs
 MIT
 MIT LICENSE
@@ -229,18 +247,6 @@ Apache-2.0
  
 
 
-@angular/core
-MIT
-
-@angular/common
-MIT
-
-@angular/router
-MIT
-
-@angular/platform-browser
-MIT
-
 tslib
 Apache-2.0
 Apache License
@@ -299,12 +305,6 @@ If the Work includes a "NOTICE" text file as part of its distribution, then any 
 
 END OF TERMS AND CONDITIONS
 
-
-@angular/animations
-MIT
-
-@angular/service-worker
-MIT
 
 zone.js
 MIT
