@@ -20,7 +20,7 @@ describe('slides', () => {
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-1');
 
             if (env.TRAVIS) {
-                expectElementShot(result).toHaveMismatchWithinRange(3.3, 3.5);
+                expectElementShot(result).toHaveMismatchWithinRange(3.1, 3.3);
             } else {
                 expectElementShot(result).toBeRegressionFree();
             }
@@ -32,7 +32,7 @@ describe('slides', () => {
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-1');
 
             if (env.TRAVIS) {
-                expectElementShot(result).toHaveMismatchWithinRange(3.3, 3.5);
+                expectElementShot(result).toHaveMismatchWithinRange(3.1, 3.3);
             } else {
                 expectElementShot(result).toBeRegressionFree();
             }
@@ -144,7 +144,7 @@ describe('slides', () => {
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-8');
 
             if (env.TRAVIS) {
-                expectElementShot(result).toHaveMismatchWithinRange(8, 8.2);
+                expectElementShot(result).toHaveMismatchWithinRange(8.1, 8.3);
             } else {
                 expectElementShot(result).toBeRegressionFree();
             }
