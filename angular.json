@@ -36,7 +36,11 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "serviceWorker": true,
-                            "sourceMap": false,
+                            "sourceMap": {
+                                "hidden": true,
+                                "scripts": true,
+                                "styles": false
+                            },
                             "vendorChunk": false
                         }
                     },
