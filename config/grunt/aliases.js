@@ -19,6 +19,7 @@ module.exports = {
     ],
     'deploy': [
         'sh:build',
+        'sh:verify',
         'clean:source-maps',
         'replace:bundle',
         'copy:404',

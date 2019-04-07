@@ -2,7 +2,7 @@ const { env } = require('process');
 
 module.exports = {
     analyze: {
-        cmd: 'ng build --prod --source-map --stats-json && (bundle-buddy build/web-audio-conference-2017/*.js.map & webpack-bundle-analyzer build/web-audio-conference-2017/stats.json)'
+        cmd: 'ng build --prod --source-map --stats-json && webpack-bundle-analyzer build/web-audio-conference-2017/stats.json'
     },
     build: {
         cmd: 'ng build --base-href /web-audio-conference-2017/ --prod --subresource-integrity'
@@ -31,5 +31,8 @@ module.exports = {
     },
     test: {
         cmd: 'ng test --watch false'
+    },
+    verify: {
+        cmd: "bundle-buddy build/web-audio-conference-2017/*.js.map && grep -r build/**/*.map -e '/environments/environment.ts'; test $? -eq 1"
     }
 };
