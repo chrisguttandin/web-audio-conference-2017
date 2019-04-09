@@ -7,29 +7,29 @@ export const slideAnimation = animation([
         query(':enter', [
             style({
                 position: 'fixed',
-                top: 0,
+                top: '{{ top }}',
                 transform: '{{ enterTransform }}',
-                width: 'calc(100% - 8vmin)'
+                width: '{{ width }}'
             }),
-            animate('0.5s ease-in-out', style({
+            animate('{{ duration }} ease-in-out', style({
                 position: 'fixed',
-                top: 0,
+                top: '{{ top }}',
                 transform: 'translateX(0%)',
-                width: 'calc(100% - 8vmin)'
+                width: '{{ width }}'
             }))
         ], { optional: true }),
         query(':leave', [
             style({
                 position: 'fixed',
-                top: 0,
+                top: '{{ top }}',
                 transform: 'translateX(0%)',
-                width: 'calc(100% - 8vmin)'
+                width: '{{ width }}'
             }),
-            animate('0.5s ease-in-out', style({
+            animate('{{ duration }} ease-in-out', style({
                 position: 'fixed',
-                top: 0,
+                top: '{{ top }}',
                 transform: '{{ leaveTransform }}',
-                width: 'calc(100% - 8vmin)'
+                width: '{{ width }}'
             }))
         ], { optional: true })
     ])

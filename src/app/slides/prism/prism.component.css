@@ -1,8 +1,10 @@
 code {
-    font-size: 3.5vmin;
+    font-size: 27.5%;
 }
 
 pre[class*='language-'] {
-    line-height: 1;
-    padding: 0 0.5em;
+    border-radius: 0.1em;
+    line-height: 10%;
+    margin: 0.5em 0 0;
+    padding: 0 1% 2%;
 }

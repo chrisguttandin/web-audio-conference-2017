@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, HostBinding, HostListener, OnDestro
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { WindowService } from '../window.service';
 import { slideAnimation } from './slide.animation';
 
 @Component({
@@ -19,7 +20,13 @@ import { slideAnimation } from './slide.animation';
 })
 export class SlidesComponent implements OnDestroy, OnInit {
 
-    @HostBinding('@transition') public transition!: { params: { enterTransform: string; leaveTransform: string }; value: number };
+    @HostBinding('@transition') public transition!: {
+
+        params: { duration: string; enterTransform: string; leaveTransform: string; top: string; width: string };
+
+        value: number;
+
+    };
 
     private _index: number;
 
@@ -27,7 +34,8 @@ export class SlidesComponent implements OnDestroy, OnInit {
 
     constructor (
         private _activatedRoute: ActivatedRoute,
-        private _router: Router
+        private _router: Router,
+        private _windowService: WindowService
     ) {
         this._index = 0;
         this._routerEventsSubscription = null;
@@ -74,7 +82,10 @@ export class SlidesComponent implements OnDestroy, OnInit {
             const index = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
 
             this._index = index;
-            this.transition = { params: { enterTransform: 'none', leaveTransform: 'none' }, value: index };
+            this.transition = {
+                params: { duration: '0s', enterTransform: 'none', leaveTransform: 'none', top: 'auto', width: 'auto' },
+                value: index
+            };
         }
     }
 
@@ -96,12 +107,18 @@ export class SlidesComponent implements OnDestroy, OnInit {
         if (activatedChildRoute !== null) {
             const newIndex = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
             const direction = (newIndex > this._index) ? 'forwards' : 'backwards';
+            const nativeWindow = this._windowService.nativeWindow;
+            const isPortrait = (nativeWindow !== null && (nativeWindow.innerWidth / nativeWindow.innerHeight < 4 / 3));
+            const distance = (isPortrait) ? '108%' : '108vw';
 
             this._index = newIndex;
             this.transition = {
                 params: {
-                    enterTransform: (direction === 'forwards') ? 'translateX(100%)' : 'translateX(-100%)',
-                    leaveTransform: (direction === 'forwards') ? 'translateX(-100%)' : 'translateX(100%)'
+                    duration: '0.5s',
+                    enterTransform: (direction === 'forwards') ? `translateX(${ distance })` : `translateX(-${ distance })`,
+                    leaveTransform: (direction === 'forwards') ? `translateX(-${ distance })` : `translateX(${ distance })`,
+                    top: (isPortrait) ? '4vw' : '5.333vh',
+                    width: (isPortrait) ? 'calc(92%)' : 'calc(122.666vh)'
                 },
                 value: newIndex
             };

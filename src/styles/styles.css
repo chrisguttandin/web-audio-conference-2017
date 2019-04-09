@@ -1,23 +1,34 @@
 html {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: #333;
     color: #FFD;
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-    font-size: 100%;
-    line-height: 8vmin;
-    margin: 4vmin;
-    min-height: calc(100% - 8vmin);
+    font-size: 8vw;
+    height: 75vw;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-body h1:first-child {
-    margin-top: 4vmin;
-}
-
+body h1:first-child,
 body h2:first-child {
-    margin-top: 4vmin;
+    margin-top: 0;
+}
+
+@media (min-aspect-ratio: 4/3) {
+
+    body {
+        font-size: 10.666vh;
+        height: 100%;
+        margin: 0 auto;
+        width: 133vh;
+    }
+
 }
 
 a {
@@ -28,14 +39,24 @@ div,
 h3,
 li,
 p {
-    font-size: 5vmin;
+    font-size: 50%;
 }
 
 h1 {
-    font-size: 10vmin;
-    line-height: 16vmin;
+    font-size: 100%;
+    letter-spacing: -0.005em;
 }
 
 h2 {
-    font-size: 8vmin;
+    font-size: 80%;
+    letter-spacing: -0.005em;
+}
+
+ul {
+    margin: 0.5em 0;
+    padding: 0 0 0 0.5em;
+}
+
+li {
+    margin: 0.5em 0;
 }
