@@ -27,7 +27,7 @@ describe('SlidesComponent', () => {
 
         spyOn(router, 'navigate').and.callThrough();
 
-        slidesComponent = new SlidesComponent(activatedRoute, router);
+        slidesComponent = new SlidesComponent(activatedRoute, router, { nativeWindow: null });
     });
 
     describe('handleKeyUp()', () => {
