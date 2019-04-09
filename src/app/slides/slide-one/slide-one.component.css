@@ -9,3 +9,7 @@ a,
 span {
     display: block;
 }
+
+span {
+    font-size: 40%;
+}
