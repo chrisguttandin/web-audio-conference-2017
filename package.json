@@ -60,7 +60,7 @@
     "@hint/hint-no-broken-links": "^4.0.1",
     "@hint/hint-no-disallowed-headers": "^2.2.1",
     "@hint/hint-no-friendly-error-pages": "^3.1.1",
-    "@hint/hint-no-html-only-headers": "^2.1.1",
+    "@hint/hint-no-html-only-headers": "^2.2.1",
     "@hint/hint-no-http-redirects": "^2.1.1",
     "@hint/hint-no-p3p": "^3.0.0",
     "@hint/hint-no-protocol-relative-urls": "^2.1.1",
