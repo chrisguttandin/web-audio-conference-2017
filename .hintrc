@@ -52,12 +52,7 @@
         "no-p3p": "error",
         "no-protocol-relative-urls": "error",
         "no-vulnerable-javascript-libraries": "error",
-        "sri": [
-            "error",
-            {
-                "originCriteria": "all"
-            }
-        ],
+        "sri": "off",
         "ssllabs": "error",
         "strict-transport-security": "off",
         "stylesheet-limits": "error",
