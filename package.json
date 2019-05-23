@@ -65,7 +65,7 @@
     "@hint/hint-no-p3p": "^3.1.2",
     "@hint/hint-no-protocol-relative-urls": "^2.2.2",
     "@hint/hint-no-vulnerable-javascript-libraries": "^2.8.2",
-    "@hint/hint-sri": "^3.1.1",
+    "@hint/hint-sri": "^3.1.2",
     "@hint/hint-ssllabs": "^2.2.1",
     "@hint/hint-strict-transport-security": "^2.2.1",
     "@hint/hint-stylesheet-limits": "^3.1.1",
