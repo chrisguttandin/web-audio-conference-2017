@@ -82,7 +82,7 @@
     "commitizen": "^3.1.1",
     "content-security-policy-builder": "^2.0.0",
     "cz-conventional-changelog": "^2.1.0",
-    "element-shot": "^3.2.8",
+    "element-shot": "^4.0.0",
     "eslint": "^5.16.0",
     "eslint-config-holy-grail": "^36.0.1",
     "grunt": "^1.0.4",
