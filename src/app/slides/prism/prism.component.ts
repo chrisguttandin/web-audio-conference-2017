@@ -21,7 +21,7 @@ export class PrismComponent implements AfterViewInit, OnChanges {
 
     @Input() public readonly language!: string;
 
-    @ViewChild('element') private _element!: ElementRef;
+    @ViewChild('element', { static: true }) private _element!: ElementRef;
 
     constructor (private _renderer2: Renderer2) { }
 
