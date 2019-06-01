@@ -6,6 +6,7 @@
     "baseUrl": "./",
     "declaration": false,
     "declarationMap": false,
+    "module": "esnext",
     "outDir": "../out-tsc/app",
     "target": "es5"
   },

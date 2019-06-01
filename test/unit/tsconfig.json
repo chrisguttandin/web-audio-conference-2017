@@ -2,6 +2,7 @@
   "compilerOptions": {
     "declaration": false,
     "declarationMap": false,
+    "module": "esnext",
     "outDir": "../../out-tsc/spec",
     "types": [
       "jasmine",

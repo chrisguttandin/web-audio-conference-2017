@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
     {
-        loadChildren: './slides/slides.module#SlidesModule',
+        loadChildren: () => import('./slides/slides.module')
+            .then((mdl) => mdl.SlidesModule),
         path: 'slides'
     }, {
         path: '',
