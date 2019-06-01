@@ -15,6 +15,7 @@
         ],
         "import-blacklist": false,
         "newline-per-chained-call": false,
+        "no-lifecycle-call": false,
         "no-implicit-dependencies": [
             true,
             "dev"
