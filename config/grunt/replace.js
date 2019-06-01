@@ -132,9 +132,9 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\stype="text\/javascript"\ssrc="(runtime\.[a-z0-9]*\.js)"\sintegrity="sha384-[a-zA-Z0-9+/]*=*"\scrossorigin="anonymous"><\/script>/g,
+                    match: /<script\ssrc="(runtime\.[a-z0-9]*\.js)"\sintegrity="sha384-[a-zA-Z0-9+/]*=*"\scrossorigin="anonymous"><\/script>/g,
                     replacement: (match, filename) => {
-                        return `<script type="text/javascript">${ fs.readFileSync(`build/web-audio-conference-2017/${ filename }`) }</script>`;
+                        return `<script>${ fs.readFileSync(`build/web-audio-conference-2017/${ filename }`) }</script>`;
                     }
                 } ]
             }
@@ -147,13 +147,17 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\stype="text\/javascript"\ssrc="([a-z-]*\.[a-z0-9]*\.js)"\sintegrity="(sha384-[a-zA-Z0-9+/]*=*)"\scrossorigin="anonymous"><\/script>/g,
-                    replacement: (match, filename, initialHash) => {
+                    match: /<script\ssrc="([a-z0-9-]*\.[a-z0-9]*\.js)"\s(nomodule\s)?integrity="(sha384-[a-zA-Z0-9+/]*=*)"\scrossorigin="anonymous"><\/script>/g,
+                    replacement: (match, filename, nomoduleAttribute, initialHash) => {
                         const updatedHash = (/main\.[a-z0-9]*\.js/.test(filename)) ?
                             `sha384-${ computeHashOfFile(`build/web-audio-conference-2017/scripts/${ filename }`, 'sha384', 'base64') }` :
                             initialHash;
 
-                        return `<script type="text/javascript" src="scripts/${ filename }" integrity="${ updatedHash }" crossorigin="anonymous"></script>`;
+                        if (nomoduleAttribute === undefined) {
+                            return `<script src="scripts/${ filename }" integrity="${ updatedHash }" crossorigin="anonymous"></script>`;
+                        }
+
+                        return `<script src="scripts/${ filename }" nomodule integrity="${ updatedHash }" crossorigin="anonymous"></script>`;
                     }
                 } ]
             }
