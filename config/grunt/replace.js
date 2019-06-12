@@ -110,7 +110,7 @@ module.exports = (grunt) => {
                     match: /[\s]*"\/web-audio-conference-2017(\/scripts)?\/runtime-es(?:2015|5)\.[a-z0-9]*\.js":\s"[a-z0-9]+",/g,
                     replacement: ''
                 }, {
-                    // Replace the hash value inside of the hashTable for "/scripts/main.*.js" because it was modified before.
+                    // Replace the hash value inside of the hashTable for "/scripts/main-es*.js" because it was modified before.
                     match: /"\/web-audio-conference-2017(\/scripts\/main-es(?:2015|5)\.[a-z0-9]+.js)":\s"[a-z0-9]+"/g,
                     replacement: (_, filename) => {
                         return `"/web-audio-conference-2017${ filename }": "${ computeHashOfFile(`build/web-audio-conference-2017${ filename }`, 'sha1', 'hex') }"`;
