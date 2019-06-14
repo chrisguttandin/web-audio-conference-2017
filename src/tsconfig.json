@@ -10,5 +10,5 @@
     "outDir": "../out-tsc/app",
     "target": "es2015"
   },
-  "extends": "../node_modules/tsconfig-holy-grail/src/tsconfig-browser"
+  "extends": "tsconfig-holy-grail/src/tsconfig-browser"
 }
