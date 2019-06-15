@@ -27,7 +27,9 @@ module.exports = (config) => {
             'karma-*'
         ],
 
-        reporters: [ 'progress', 'kjhtml' ]
+        reporters: [ 'progress', 'kjhtml' ],
+
+        restartOnFileChange: true
 
     });
 
