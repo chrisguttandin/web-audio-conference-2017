@@ -16,7 +16,7 @@ module.exports = {
             'webdriver-manager update && ng e2e --no-webdriver-update'
     },
     lint: {
-        cmd: 'ng lint web-audio-conference-2017 --type-check && ng lint web-audio-conference-2017-e2e --type-check && ng lint web-audio-conference-2017-unit --type-check'
+        cmd: 'ng lint web-audio-conference-2017 --type-check && ng lint web-audio-conference-2017 --configuration test'
     },
     monitor: {
         cmd: 'ng serve --aot'
