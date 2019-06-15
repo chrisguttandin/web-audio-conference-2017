@@ -7,7 +7,7 @@
             "prefix": "wac",
             "projectType": "application",
             "root": "",
-            "schematics": { },
+            "schematics": {},
             "sourceRoot": "src",
             "targets": {
                 "build": {
@@ -45,6 +45,7 @@
                         }
                     },
                     "options": {
+                        "aot": false,
                         "assets": [
                             "src/assets"
                         ],
@@ -62,6 +63,18 @@
                         "tsConfig": "src/tsconfig.json"
                     }
                 },
+                "e2e": {
+                    "builder": "@angular-devkit/build-angular:protractor",
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "web-audio-conference-2017:serve:production"
+                        }
+                    },
+                    "options": {
+                        "devServerTarget": "web-audio-conference-2017:serve",
+                        "protractorConfig": "config/protractor/e2e.js"
+                    }
+                },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
@@ -70,6 +83,15 @@
                 },
                 "lint": {
                     "builder": "@angular-devkit/build-angular:tslint",
+                    "configurations": {
+                        "test": {
+                            "tsConfig": [
+                                "test/e2e/tsconfig.json",
+                                "test/unit/tsconfig.json"
+                            ],
+                            "tslintConfig": "config/tslint/test.json"
+                        }
+                    },
                     "options": {
                         "exclude": [
                             "**/node_modules/**"
@@ -107,50 +129,6 @@
                             "src/styles/styles.css"
                         ],
                         "tsConfig": "test/unit/tsconfig.json"
-                    }
-                }
-            }
-        },
-        "web-audio-conference-2017-e2e": {
-            "projectType": "application",
-            "root": "test/e2e/",
-            "targets": {
-                "e2e": {
-                    "builder": "@angular-devkit/build-angular:protractor",
-                    "configurations": {
-                        "production": {
-                            "devServerTarget": "web-audio-conference-2017:serve:production"
-                        }
-                    },
-                    "options": {
-                        "devServerTarget": "web-audio-conference-2017:serve",
-                        "protractorConfig": "config/protractor/e2e.js"
-                    }
-                },
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "exclude": [
-                            "**/node_modules/**"
-                        ],
-                        "tsConfig": "test/e2e/tsconfig.json",
-                        "tslintConfig": "config/tslint/test.json"
-                    }
-                }
-            }
-        },
-        "web-audio-conference-2017-unit": {
-            "projectType": "application",
-            "root": "test/unit/",
-            "targets": {
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "exclude": [
-                            "**/node_modules/**"
-                        ],
-                        "tsConfig": "test/unit/tsconfig.json",
-                        "tslintConfig": "config/tslint/test.json"
                     }
                 }
             }
