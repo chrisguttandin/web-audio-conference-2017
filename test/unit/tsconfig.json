@@ -4,6 +4,7 @@
     "declarationMap": false,
     "module": "esnext",
     "outDir": "../../out-tsc/spec",
+    "target": "es2015",
     "types": [
       "jasmine",
       "node"
