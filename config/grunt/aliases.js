@@ -46,7 +46,6 @@ module.exports = {
     ],
     'lint': [
         'eslint',
-        'htmlhint',
         'postcss:lint',
         'sh:lint',
         'depcheck'
