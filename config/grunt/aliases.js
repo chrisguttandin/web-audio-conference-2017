@@ -19,6 +19,7 @@ module.exports = {
     ],
     'deploy': [
         'sh:build',
+        'replace:fix',
         'sh:verify',
         'clean:source-maps',
         'replace:bundle',
