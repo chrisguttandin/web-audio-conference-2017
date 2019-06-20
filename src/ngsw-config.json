@@ -19,6 +19,16 @@
                 ]
             },
             "updateMode": "prefetch"
+        }, {
+            "installMode": "lazy",
+            "name": "fonts",
+            "resources": {
+                "urls": [
+                    "https://fonts.googleapis.com/css",
+                    "https://fonts.gstatic.com"
+                ]
+            },
+            "updateMode": "lazy"
         }
     ],
     "index": "/index.html"
