@@ -15,6 +15,13 @@ const computeHashOfString = (string, algorithm, encoding) => {
         .update(string)
         .digest(encoding);
 };
+const replaceHashInMatch = (grunt, match, prefix, index) => {
+    const filename = grunt.file.expand({ cwd: 'build/web-audio-conference-2017/scripts' }, `${ prefix }.*.js`)[0];
+    const hash = `sha384-${ computeHashOfFile(`build/web-audio-conference-2017/scripts/${ filename }`, 'sha384', 'base64') }`;
+    const chunkExpression = new RegExp(`${ index }:"sha384-[a-zA-Z0-9+/]{64}"`);
+
+    return match.replace(chunkExpression, `${ index }:"${ hash }"`);
+};
 
 module.exports = (grunt) => {
     return {
@@ -41,6 +48,21 @@ module.exports = (grunt) => {
                 patterns: [ {
                     match: /""\+\({[^}]*}\[e\]\|\|e\)\+"(?:-es(?:2015|5))?\."\+{([0-9]+:"[a-f0-9]{20}",?)+}/g,
                     replacement: (match) => match.replace(/^""/g, '"scripts/"')
+                }, {
+                    match: /{([1-9][0-9]*:"sha384-[a-zA-Z0-9+/]{64}",?)+}/g,
+                    replacement: (match) => {
+                        let updatedMatch = replaceHashInMatch(grunt, match, 'common', 1);
+
+                        const numberOfHashes = match
+                            .split(/sha384-/)
+                            .length;
+
+                        for (let i = 5; i < numberOfHashes; i += 1) {
+                            updatedMatch = replaceHashInMatch(grunt, updatedMatch, `${ i }`, i);
+                        }
+
+                        return updatedMatch;
+                    }
                 } ]
             }
         },
