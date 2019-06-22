@@ -4,7 +4,7 @@
     "declaration": false,
     "declarationMap": false,
     "module": "commonjs",
-    "outDir": "../../out-tsc/app",
+    "outDir": "../../out-tsc/e2e",
     "target": "es5",
     "types": [
       "jasmine",
