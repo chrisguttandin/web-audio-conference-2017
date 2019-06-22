@@ -47,7 +47,7 @@
          * Extract the pathname of a URL.
          */
         parseUrl(url, relativeTo) {
-            const parsed = new URL(url, relativeTo);
+            const parsed = !relativeTo ? new URL(url) : new URL(url, relativeTo);
             return { origin: parsed.origin, path: parsed.pathname, search: parsed.search };
         }
         /**
