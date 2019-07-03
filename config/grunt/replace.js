@@ -180,7 +180,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\ssrc="(runtime(?:-es(?:2015|5))?.[a-z0-9]*\.js)"(\s(?:nomodule|type="module"))?\sintegrity="sha384-[a-zA-Z0-9+/]*=*"\scrossorigin="anonymous"><\/script>/g,
+                    match: /<script\ssrc="(runtime(?:-es(?:2015|5))?.[a-z0-9]*\.js)"\scrossorigin="anonymous"(\s(?:nomodule|type="module"))?\sintegrity="sha384-[a-zA-Z0-9+/]*=*"><\/script>/g,
                     replacement: (match, filename, moduleAttribute) => {
                         if (moduleAttribute === undefined) {
                             return `<script>${ fs.readFileSync(`build/web-audio-conference-2017/${ filename }`) }</script>`;
@@ -199,17 +199,17 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\ssrc="([a-z0-9-]*\.[a-z0-9]*\.js)"(\s(?:nomodule|type="module"))?\sintegrity="(sha384-[a-zA-Z0-9+/]*=*)"\scrossorigin="anonymous"><\/script>/g,
+                    match: /<script\ssrc="([a-z0-9-]*\.[a-z0-9]*\.js)"\scrossorigin="anonymous"(\s(?:nomodule|type="module"))?\sintegrity="(sha384-[a-zA-Z0-9+/]*=*)"><\/script>/g,
                     replacement: (match, filename, moduleAttribute, initialHash) => {
                         const updatedHash = (/main(?:-es(?:2015|5))?.[a-z0-9]*\.js/.test(filename)) ?
                             `sha384-${ computeHashOfFile(`build/web-audio-conference-2017/scripts/${ filename }`, 'sha384', 'base64') }` :
                             initialHash;
 
                         if (moduleAttribute === undefined) {
-                            return `<script src="scripts/${ filename }" integrity="${ updatedHash }" crossorigin="anonymous"></script>`;
+                            return `<script src="scripts/${ filename }" crossorigin="anonymous" integrity="${ updatedHash }"></script>`;
                         }
 
-                        return `<script src="scripts/${ filename }"${ moduleAttribute } integrity="${ updatedHash }" crossorigin="anonymous"></script>`;
+                        return `<script src="scripts/${ filename }" crossorigin="anonymous"${ moduleAttribute } integrity="${ updatedHash }"></script>`;
                     }
                 } ]
             }
@@ -222,11 +222,11 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<link\srel="stylesheet"\shref="(styles\.[a-z0-9]*\.css)"\sintegrity="sha384-[a-zA-Z0-9+/]*=*"\scrossorigin="anonymous">/g,
+                    match: /<link\srel="stylesheet"\shref="(styles\.[a-z0-9]*\.css)"\scrossorigin="anonymous"\sintegrity="sha384-[a-zA-Z0-9+/]*=*">/g,
                     replacement: (match, filename) => {
                         const hash = `sha384-${ computeHashOfFile(`build/web-audio-conference-2017/styles/${ filename }`, 'sha384', 'base64') }`;
 
-                        return `<link href="styles/${ filename }" rel="stylesheet" integrity="${ hash }" crossorigin="anonymous">`;
+                        return `<link href="styles/${ filename }" rel="stylesheet" crossorigin="anonymous" integrity="${ hash }">`;
                     }
                 } ]
             }
