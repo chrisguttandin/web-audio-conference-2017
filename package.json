@@ -41,7 +41,7 @@
     "@hint/formatter-stylish": "^3.0.2",
     "@hint/hint-amp-validator": "^2.8.2",
     "@hint/hint-apple-touch-icons": "^3.0.2",
-    "@hint/hint-axe": "^3.0.2",
+    "@hint/hint-axe": "^4.0.0",
     "@hint/hint-button-type": "^2.1.2",
     "@hint/hint-content-type": "^4.0.2",
     "@hint/hint-disown-opener": "^3.1.0",
