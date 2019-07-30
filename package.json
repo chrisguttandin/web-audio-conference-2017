@@ -117,7 +117,7 @@
     "tslint": "~5.15.0",
     "tslint-config-holy-grail": "^44.0.7",
     "typescript": "~3.4.5",
-    "webpack-bundle-analyzer": "^3.3.2"
+    "webpack-bundle-analyzer": "^3.4.1"
   },
   "greenkeeper": {
     "ignore": [
