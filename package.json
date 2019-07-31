@@ -57,7 +57,7 @@
     "@hint/hint-meta-viewport": "^4.1.2",
     "@hint/hint-minified-js": "^2.3.2",
     "@hint/hint-no-bom": "^4.1.2",
-    "@hint/hint-no-broken-links": "^4.1.1",
+    "@hint/hint-no-broken-links": "^4.1.2",
     "@hint/hint-no-disallowed-headers": "^2.3.1",
     "@hint/hint-no-friendly-error-pages": "^3.2.1",
     "@hint/hint-no-html-only-headers": "^2.3.1",
