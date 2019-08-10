@@ -13,7 +13,7 @@ const chromeCapabilities = {
 
 exports.config = {
 
-    allScriptsTimeout: 11000,
+    allScriptsTimeout: 60000,
 
     baseUrl: (env.IS_SMOKE_TEST) ? 'https://chrisguttandin.github.io' : `http://localhost:${ projects[defaultProject].targets.serve.options.port }`,
 
@@ -22,7 +22,7 @@ exports.config = {
     framework: 'jasmine',
 
     jasmineNodeOpts: {
-        defaultTimeoutInterval: 30000,
+        defaultTimeoutInterval: 60000,
         print () {},
         showColors: true
     },
