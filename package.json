@@ -96,7 +96,6 @@
     "grunt-postcss": "^0.9.0",
     "grunt-replace": "^1.0.1",
     "grunt-sh": "^0.2.0",
-    "gruntify-eslint": "^5.0.0",
     "hint": "^5.2.1",
     "htmlhint": "^0.11.0",
     "husky": "^3.0.4",
