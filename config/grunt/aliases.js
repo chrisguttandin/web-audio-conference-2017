@@ -45,9 +45,10 @@ module.exports = {
         'sh:e2e'
     ],
     'lint': [
-        'eslint',
         'postcss:lint',
-        'sh:lint',
+        'sh:lint-config',
+        'sh:lint-src',
+        'sh:lint-test',
         'depcheck'
     ],
     'monitor': [
