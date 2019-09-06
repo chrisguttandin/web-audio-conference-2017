@@ -37,7 +37,7 @@
     "@angular/language-service": "~8.2.5",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-angular": "^8.1.0",
-    "@hint/connector-chrome": "^4.0.7",
+    "@hint/connector-chrome": "^4.0.8",
     "@hint/formatter-stylish": "^3.1.4",
     "@hint/hint-amp-validator": "^2.9.4",
     "@hint/hint-apple-touch-icons": "^3.1.4",
