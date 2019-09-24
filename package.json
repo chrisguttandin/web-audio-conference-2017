@@ -54,7 +54,7 @@
     "@hint/hint-manifest-file-extension": "^2.3.7",
     "@hint/hint-manifest-is-valid": "^3.2.7",
     "@hint/hint-meta-charset-utf-8": "^3.2.7",
-    "@hint/hint-meta-viewport": "^4.1.6",
+    "@hint/hint-meta-viewport": "^4.1.7",
     "@hint/hint-minified-js": "^2.3.6",
     "@hint/hint-no-bom": "^4.1.6",
     "@hint/hint-no-broken-links": "^4.1.6",
