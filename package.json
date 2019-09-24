@@ -72,7 +72,7 @@
     "@hint/hint-validate-set-cookie-header": "^2.3.7",
     "@hint/hint-x-content-type-options": "^3.2.7",
     "@hint/parser-javascript": "^3.0.10",
-    "@hint/parser-manifest": "^2.2.7",
+    "@hint/parser-manifest": "^2.2.8",
     "@types/jasmine": "~3.3.16",
     "@types/jasminewd2": "~2.0.6",
     "@types/node": "~8.9.5",
