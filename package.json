@@ -62,7 +62,7 @@
     "@hint/hint-no-friendly-error-pages": "^3.2.8",
     "@hint/hint-no-html-only-headers": "^2.3.8",
     "@hint/hint-no-http-redirects": "^2.3.8",
-    "@hint/hint-no-p3p": "^3.2.7",
+    "@hint/hint-no-p3p": "^3.2.8",
     "@hint/hint-no-protocol-relative-urls": "^2.3.7",
     "@hint/hint-no-vulnerable-javascript-libraries": "^2.9.7",
     "@hint/hint-sri": "^3.2.7",
