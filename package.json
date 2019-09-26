@@ -39,7 +39,7 @@
     "@commitlint/config-angular": "^8.2.0",
     "@hint/connector-chrome": "^4.0.9",
     "@hint/formatter-stylish": "^3.1.8",
-    "@hint/hint-amp-validator": "^2.9.7",
+    "@hint/hint-amp-validator": "^2.9.8",
     "@hint/hint-apple-touch-icons": "^3.1.7",
     "@hint/hint-axe": "^4.1.3",
     "@hint/hint-button-type": "^2.2.7",
