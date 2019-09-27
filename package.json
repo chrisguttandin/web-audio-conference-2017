@@ -59,7 +59,7 @@
     "@hint/hint-no-bom": "^4.1.9",
     "@hint/hint-no-broken-links": "^4.1.9",
     "@hint/hint-no-disallowed-headers": "^2.3.9",
-    "@hint/hint-no-friendly-error-pages": "^3.2.8",
+    "@hint/hint-no-friendly-error-pages": "^3.2.9",
     "@hint/hint-no-html-only-headers": "^2.3.8",
     "@hint/hint-no-http-redirects": "^2.3.8",
     "@hint/hint-no-p3p": "^3.2.8",
