@@ -1,9 +1,6 @@
 {
     "connector": {
-        "name": "chrome",
-        "options": {
-            "waitFor": 1000
-        }
+        "name": "puppeteer"
     },
     "formatters": [
         "stylish"
