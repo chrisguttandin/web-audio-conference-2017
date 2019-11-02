@@ -68,7 +68,7 @@
     "@hint/hint-sri": "^3.2.11",
     "@hint/hint-ssllabs": "^2.3.11",
     "@hint/hint-strict-transport-security": "^2.3.11",
-    "@hint/hint-stylesheet-limits": "^3.2.10",
+    "@hint/hint-stylesheet-limits": "^3.2.11",
     "@hint/hint-validate-set-cookie-header": "^2.3.10",
     "@hint/hint-x-content-type-options": "^3.2.10",
     "@hint/parser-javascript": "^3.0.13",
