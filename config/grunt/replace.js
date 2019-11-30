@@ -83,7 +83,7 @@ module.exports = (grunt) => {
                     match: /<meta\shttp-equiv="content-security-policy">/,
                     replacement: () => {
                         const html = fs.readFileSync('build/web-audio-conference-2017/index.html', 'utf-8');
-                        const regex = /<script[^>]*?>(?<script>[^<][\n\r.]*?)<\/script>/gm;
+                        const regex = /<script[^>]*?>(?<script>.*?)<\/script>/gm;
                         const scriptHashes = [];
 
                         let result = regex.exec(html);
@@ -120,13 +120,13 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /assets\/(?<filename>[\d-a-z]+)\.(?<extension>ico|jpg|png)/g,
+                    match: /assets\/(?<filename>[\d\-a-z]+)\.(?<extension>ico|jpg|png)/g,
                     replacement: (_, filename, extension) => grunt.file.expand({ cwd: 'build/web-audio-conference-2017' }, `assets/*.${ filename }.${ extension }`)[0]
                 }, {
-                    match: /\/(?<filename>[\d-a-z]+\.[\da-z]*\.css)"/g,
+                    match: /\/(?<filename>[\d\-a-z]+\.[\da-z]*\.css)"/g,
                     replacement: (_, filename) => `/styles/${ filename }"`
                 }, {
-                    match: /\/(?<filename>[\d-a-z]*\.[\da-z]*\.js)"/g,
+                    match: /\/(?<filename>[\d\-a-z]*\.[\da-z]*\.js)"/g,
                     replacement: (_, filename) => `/scripts/${ filename }"`
                 }, {
                     match: /\s*"\/web-audio-conference-2017(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[\da-z]*\.js",/g,
@@ -163,7 +163,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\ssrc="(?<filename>runtime(?:-es(?:2015|5))?.[\da-z]*\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="sha384-[\d+/A-Za-z]*=*"><\/script>/g,
+                    match: /<script\ssrc="(?<filename>runtime(?:-es(?:2015|5))?.[\da-z]*\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="sha384-[\d+/A-Za-z]+=*"><\/script>/g,
                     replacement: (match, filename, moduleAttribute) => {
                         if (moduleAttribute === undefined) {
                             return `<script>${ fs.readFileSync(`build/web-audio-conference-2017/${ filename }`) }</script>`;
@@ -182,9 +182,9 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\ssrc="(?<filename>[\d-a-z]*\.[\da-z]*\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="(?<initialHash>sha384-[\d+/A-Za-z]*=*)"><\/script>/g,
+                    match: /<script\ssrc="(?<filename>[\d\-a-z]+\.[\da-z]+\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="(?<initialHash>sha384-[\d+/A-Za-z]+=*)"><\/script>/g,
                     replacement: (match, filename, moduleAttribute, initialHash) => {
-                        const updatedHash = (/main(?:-es(?:2015|5))?.[\da-z]*\.js/.test(filename)) ?
+                        const updatedHash = (/main(?:-es(?:2015|5))?\.[\da-z]+\.js/.test(filename)) ?
                             `sha384-${ computeHashOfFile(`build/web-audio-conference-2017/scripts/${ filename }`, 'sha384', 'base64') }` :
                             initialHash;
 
@@ -205,7 +205,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<link\srel="stylesheet"\shref="(?<filename>styles\.[\da-z]*\.css)"\scrossorigin="anonymous"\sintegrity="sha384-[\d+/A-Za-z]*=*">/g,
+                    match: /<link\srel="stylesheet"\shref="(?<filename>styles\.[\da-z]+\.css)"\scrossorigin="anonymous"\sintegrity="sha384-[\d+/A-Za-z]+=*">/g,
                     replacement: (match, filename) => {
                         const hash = `sha384-${ computeHashOfFile(`build/web-audio-conference-2017/styles/${ filename }`, 'sha384', 'base64') }`;
 
