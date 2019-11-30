@@ -51,10 +51,10 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /""\+\({[^}]*}\[e\]\|\|e\)\+"(?:-es(?:2015|5))?\."\+{(?:[0-9]+:"[a-f0-9]{20}",?)+}/g,
+                    match: /""\+\({[^}]*}\[e]\|\|e\)\+"(?:-es(?:2015|5))?\."\+{(?:\d+:"[\da-f]{20}",?)+}/g,
                     replacement: (match) => match.replace(/^""/g, '"scripts/"')
                 }, {
-                    match: /{(?:[1-9][0-9]*:"sha384-[a-zA-Z0-9+/]{64}",?)+}/g,
+                    match: /{(?:[1-9]\d*:"sha384-[\d+/A-Za-z]{64}",?)+}/g,
                     replacement: (match) => {
                         let updatedMatch = replaceHashInMatch(grunt, match, 'common', 1);
 
@@ -83,7 +83,7 @@ module.exports = (grunt) => {
                     match: /<meta\shttp-equiv="content-security-policy">/,
                     replacement: () => {
                         const html = fs.readFileSync('build/web-audio-conference-2017/index.html', 'utf-8');
-                        const regex = /<script[^>]*?>(?<script>[^<](?:.|[\n\r])*?)<\/script>/gm;
+                        const regex = /<script[^>]*?>(?<script>[^<][\n\r.]*?)<\/script>/gm;
                         const scriptHashes = [];
 
                         let result = regex.exec(html);
@@ -120,35 +120,35 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /assets\/(?<filename>[a-z0-9-]+)\.(?<extension>ico|jpg|png)/g,
+                    match: /assets\/(?<filename>[\d-a-z]+)\.(?<extension>ico|jpg|png)/g,
                     replacement: (_, filename, extension) => grunt.file.expand({ cwd: 'build/web-audio-conference-2017' }, `assets/*.${ filename }.${ extension }`)[0]
                 }, {
-                    match: /\/(?<filename>[a-z0-9-]+\.[a-z0-9]*\.css)"/g,
+                    match: /\/(?<filename>[\d-a-z]+\.[\da-z]*\.css)"/g,
                     replacement: (_, filename) => `/styles/${ filename }"`
                 }, {
-                    match: /\/(?<filename>[a-z0-9-]*\.[a-z0-9]*\.js)"/g,
+                    match: /\/(?<filename>[\d-a-z]*\.[\da-z]*\.js)"/g,
                     replacement: (_, filename) => `/scripts/${ filename }"`
                 }, {
-                    match: /[\s]*"\/web-audio-conference-2017(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[a-z0-9]*\.js",/g,
+                    match: /\s*"\/web-audio-conference-2017(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[\da-z]*\.js",/g,
                     replacement: ''
                 }, {
-                    match: /[\s]*"\/web-audio-conference-2017(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[a-z0-9]*\.js":\s"[a-z0-9]+",/g,
+                    match: /\s*"\/web-audio-conference-2017(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[\da-z]*\.js":\s"[\da-z]+",/g,
                     replacement: ''
                 }, {
                     // Replace the hash value inside of the hashTable for "/scripts/main-es*.js" because it was modified before.
-                    match: /"\/web-audio-conference-2017(?<filename>\/scripts\/main(?:-es(?:2015|5))?.[a-z0-9]+.js)":\s"[a-z0-9]+"/g,
+                    match: /"\/web-audio-conference-2017(?<filename>\/scripts\/main(?:-es(?:2015|5))?.[\da-z]+.js)":\s"[\da-z]+"/g,
                     replacement: (_, filename) => {
                         return `"/web-audio-conference-2017${ filename }": "${ computeHashOfFile(`build/web-audio-conference-2017${ filename }`, 'sha1', 'hex') }"`;
                     }
                 }, {
                     // Replace the hash value inside of the hashTable for "/styles/styles*.css" because it was modified before.
-                    match: /"\/web-audio-conference-2017(?<filename>\/styles\/styles\.[a-z0-9]*\.css)":\s"[a-z0-9]+"/g,
+                    match: /"\/web-audio-conference-2017(?<filename>\/styles\/styles\.[\da-z]*\.css)":\s"[\da-z]+"/g,
                     replacement: (_, filename) => {
                         return `"/web-audio-conference-2017${ filename }": "${ computeHashOfFile(`build/web-audio-conference-2017${ filename }`, 'sha1', 'hex') }"`;
                     }
                 }, {
                     // Replace the hash value inside of the hashTable for "/(index|start).html" because it was modified before.
-                    match: /"\/web-audio-conference-2017\/(?<filename>index|start)\.html":\s"[a-z0-9]+"/g,
+                    match: /"\/web-audio-conference-2017\/(?<filename>index|start)\.html":\s"[\da-z]+"/g,
                     replacement: (_, filename) => {
                         return `"/web-audio-conference-2017/${ filename }.html": "${ computeHashOfFile(`build/web-audio-conference-2017/${ filename }.html`, 'sha1', 'hex') }"`;
                     }
@@ -163,7 +163,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\ssrc="(?<filename>runtime(?:-es(?:2015|5))?.[a-z0-9]*\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="sha384-[a-zA-Z0-9+/]*=*"><\/script>/g,
+                    match: /<script\ssrc="(?<filename>runtime(?:-es(?:2015|5))?.[\da-z]*\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="sha384-[\d+/A-Za-z]*=*"><\/script>/g,
                     replacement: (match, filename, moduleAttribute) => {
                         if (moduleAttribute === undefined) {
                             return `<script>${ fs.readFileSync(`build/web-audio-conference-2017/${ filename }`) }</script>`;
@@ -182,9 +182,9 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\ssrc="(?<filename>[a-z0-9-]*\.[a-z0-9]*\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="(?<initialHash>sha384-[a-zA-Z0-9+/]*=*)"><\/script>/g,
+                    match: /<script\ssrc="(?<filename>[\d-a-z]*\.[\da-z]*\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="(?<initialHash>sha384-[\d+/A-Za-z]*=*)"><\/script>/g,
                     replacement: (match, filename, moduleAttribute, initialHash) => {
-                        const updatedHash = (/main(?:-es(?:2015|5))?.[a-z0-9]*\.js/.test(filename)) ?
+                        const updatedHash = (/main(?:-es(?:2015|5))?.[\da-z]*\.js/.test(filename)) ?
                             `sha384-${ computeHashOfFile(`build/web-audio-conference-2017/scripts/${ filename }`, 'sha384', 'base64') }` :
                             initialHash;
 
@@ -205,7 +205,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<link\srel="stylesheet"\shref="(?<filename>styles\.[a-z0-9]*\.css)"\scrossorigin="anonymous"\sintegrity="sha384-[a-zA-Z0-9+/]*=*">/g,
+                    match: /<link\srel="stylesheet"\shref="(?<filename>styles\.[\da-z]*\.css)"\scrossorigin="anonymous"\sintegrity="sha384-[\d+/A-Za-z]*=*">/g,
                     replacement: (match, filename) => {
                         const hash = `sha384-${ computeHashOfFile(`build/web-audio-conference-2017/styles/${ filename }`, 'sha384', 'base64') }`;
 
