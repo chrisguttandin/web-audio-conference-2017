@@ -37,7 +37,7 @@
     "@angular/language-service": "~8.2.14",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-angular": "^8.2.0",
-    "@hint/connector-puppeteer": "^2.4.0",
+    "@hint/connector-puppeteer": "^2.4.3",
     "@hint/formatter-stylish": "^3.1.11",
     "@hint/hint-amp-validator": "^2.9.13",
     "@hint/hint-apple-touch-icons": "^3.1.11",
