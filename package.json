@@ -112,7 +112,7 @@
     "stylelint": "^12.0.0",
     "stylelint-config-holy-grail": "^6.0.0",
     "ts-node": "~7.0.1",
-    "tsconfig-holy-grail": "^10.0.34",
+    "tsconfig-holy-grail": "^10.0.35",
     "tslint": "~5.15.0",
     "tslint-config-holy-grail": "^47.0.3",
     "typescript": "~3.5.3",
