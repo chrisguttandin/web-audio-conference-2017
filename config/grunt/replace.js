@@ -121,7 +121,7 @@ module.exports = (grunt) => {
             options: {
                 patterns: [ {
                     match: /assets\/(?<filename>[\d\-a-z]+)\.(?<extension>ico|jpg|png)/g,
-                    replacement: (_, filename, extension) => grunt.file.expand({ cwd: 'build/web-audio-conference-2017' }, `assets/*.${ filename }.${ extension }`)[0]
+                    replacement: (_, filename, extension) => grunt.file.expand({ cwd: 'build/web-audio-conference-2017', ext: extension }, `assets/${ filename }.*`)[0]
                 }, {
                     match: /\/(?<filename>[\d\-a-z]+\.[\da-z]*\.css)"/g,
                     replacement: (_, filename) => `/styles/${ filename }"`
