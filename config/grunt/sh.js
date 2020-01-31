@@ -27,7 +27,7 @@ module.exports = (grunt) => {
                 'webdriver-manager update && ng e2e --no-webdriver-update'
         },
         'lint-config': {
-            cmd: `eslint --config config/eslint/config.json ${ (fix) ? '--fix ' : '' }--report-unused-disable-directives *.js config/**/*.js`
+            cmd: `eslint --config config/eslint/config.json --ext .js ${ (fix) ? '--fix ' : '' }--report-unused-disable-directives *.js config/`
         },
         'lint-src': {
             cmd: `htmlhint --rules ${ convertConfig(documentConfig) } 'src/**/index.html' && htmlhint --rules ${ convertConfig(templateConfig) } 'src/app/**/*.component.html' && ng lint web-audio-conference-2017 --type-check`
