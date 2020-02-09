@@ -115,7 +115,7 @@
     "tsconfig-holy-grail": "^11.0.0",
     "tslint": "~5.15.0",
     "tslint-config-holy-grail": "^47.0.7",
-    "typescript": "~3.5.3",
+    "typescript": "~3.7.5",
     "webpack-bundle-analyzer": "^3.6.0"
   },
   "greenkeeper": {
