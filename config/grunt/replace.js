@@ -15,6 +15,9 @@ const computeHashOfString = (string, algorithm, encoding) => {
         .update(string)
         .digest(encoding);
 };
+const createChunkExpression = (index) => {
+    return new RegExp(`${ index }:"sha384-[\\d+/A-Za-z]{64}"`);
+};
 const replaceHashInMatch = (grunt, match, prefix, index) => {
     const filename = grunt.file.expand({ cwd: 'build/web-audio-conference-2017/scripts' }, `${ prefix }.*.js`)[0];
 
@@ -23,9 +26,8 @@ const replaceHashInMatch = (grunt, match, prefix, index) => {
     }
 
     const hash = `sha384-${ computeHashOfFile(`build/web-audio-conference-2017/scripts/${ filename }`, 'sha384', 'base64') }`;
-    const chunkExpression = new RegExp(`${ index }:"sha384-[a-zA-Z0-9+/]{64}"`);
 
-    return match.replace(chunkExpression, `${ index }:"${ hash }"`);
+    return match.replace(createChunkExpression(index), `${ index }:"${ hash }"`);
 };
 
 module.exports = (grunt) => {
@@ -59,11 +61,8 @@ module.exports = (grunt) => {
                         let updatedMatch = replaceHashInMatch(grunt, match, 'common', 1);
 
                         const offset = (match === updatedMatch) ? 4 : 5;
-                        const numberOfHashes = match
-                            .split(/sha384-/)
-                            .length;
 
-                        for (let i = offset; i < numberOfHashes; i += 1) {
+                        for (let i = offset; createChunkExpression(i).test(match); i += 1) {
                             updatedMatch = replaceHashInMatch(grunt, updatedMatch, `${ i }`, i);
                         }
 
@@ -135,8 +134,8 @@ module.exports = (grunt) => {
                     match: /\s*"\/web-audio-conference-2017(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[\da-z]*\.js":\s"[\da-z]+",/g,
                     replacement: ''
                 }, {
-                    // Replace the hash value inside of the hashTable for "/scripts/main-es*.js" because it was modified before.
-                    match: /"\/web-audio-conference-2017(?<filename>\/scripts\/main(?:-es(?:2015|5))?.[\da-z]+.js)":\s"[\da-z]+"/g,
+                    // Replace the hash value inside of the hashTable for "/scripts/*.js" because it may have been modified before.
+                    match: /"\/web-audio-conference-2017(?<filename>\/scripts\/(?:\d+|main|scripts)(?:-es(?:2015|5))?.[\da-z]+.js)":\s"[\da-z]+"/g,
                     replacement: (_, filename) => {
                         return `"/web-audio-conference-2017${ filename }": "${ computeHashOfFile(`build/web-audio-conference-2017${ filename }`, 'sha1', 'hex') }"`;
                     }
