@@ -7,7 +7,6 @@
     "baseUrl": "./",
     "declaration": false,
     "declarationMap": false,
-    "downlevelIteration": true,
     "module": "esnext",
     "outDir": "../out-tsc/app",
     "target": "es2015"
