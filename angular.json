@@ -14,12 +14,16 @@
                     "builder": "@angular-devkit/build-angular:browser",
                     "configurations": {
                         "production": {
-                            "aot": true,
                             "budgets": [
                                 {
                                     "baseline": "500kb",
                                     "maximumError": "500kb",
                                     "type": "all"
+                                },
+                                {
+                                    "maximumError": "10kb",
+                                    "maximumWarning": "6kb",
+                                    "type": "anyComponentStyle"
                                 }
                             ],
                             "buildOptimizer": true,
@@ -45,7 +49,7 @@
                         }
                     },
                     "options": {
-                        "aot": false,
+                        "aot": true,
                         "assets": [
                             "src/assets"
                         ],
