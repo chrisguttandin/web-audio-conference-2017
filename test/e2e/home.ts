@@ -18,7 +18,7 @@ describe('/', () => {
             if (err.name === 'UnsupportedOperationError') {
                 console.warn('The driver for Safari does not support to retrieve the logs.'); // tslint:disable-line:no-console
             } else {
-                throw err; // tslint:disable-line:rxjs-throw-error
+                throw err;
             }
         }
     });
