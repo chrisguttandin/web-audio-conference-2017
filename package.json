@@ -67,7 +67,7 @@
     "@hint/hint-no-vulnerable-javascript-libraries": "^2.11.2",
     "@hint/hint-sri": "^3.3.2",
     "@hint/hint-ssllabs": "^2.4.2",
-    "@hint/hint-strict-transport-security": "^2.4.1",
+    "@hint/hint-strict-transport-security": "^2.4.2",
     "@hint/hint-stylesheet-limits": "^3.3.1",
     "@hint/hint-validate-set-cookie-header": "^2.4.1",
     "@hint/hint-x-content-type-options": "^3.3.1",
