@@ -1,5 +1,5 @@
 import { BehaviorSubject } from 'rxjs';
-import { SlidesComponent } from '../../../src/app/slides';
+import { SlidesComponent } from '../../../src/app/slides/slides.component';
 
 describe('SlidesComponent', () => {
 
