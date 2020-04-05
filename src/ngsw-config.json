@@ -1,4 +1,5 @@
 {
+    "$schema": "../node_modules/@angular/service-worker/config/schema.json",
     "assetGroups": [
         {
             "installMode": "prefetch",
@@ -10,7 +11,8 @@
                     "/*.js"
                 ]
             }
-        }, {
+        },
+        {
             "installMode": "lazy",
             "name": "assets",
             "resources": {
@@ -19,7 +21,8 @@
                 ]
             },
             "updateMode": "prefetch"
-        }, {
+        },
+        {
             "installMode": "lazy",
             "name": "fonts",
             "resources": {
