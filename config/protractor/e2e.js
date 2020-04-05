@@ -7,7 +7,7 @@ const { defaultProject, projects } = require('../../angular.json');
 const chromeCapabilities = {
     browserName: 'chrome',
     chromeOptions: {
-        args: [ '--device-scale-factor=2', '--disable-gpu', '--enable-features=NetworkService', '--force-device-scale-factor=2', '--headless', '--window-size=1024,768' ]
+        args: [ '--device-scale-factor=2', '--disable-gpu', '--enable-features=NetworkService', '--force-device-scale-factor=2', '--force-prefers-reduced-motion', '--headless', '--window-size=1024,768' ]
     }
 };
 
