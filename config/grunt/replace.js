@@ -5,7 +5,7 @@ const fs = require('fs');
 
 // eslint-disable-next-line padding-line-between-statements
 const computeHashOfFile = (filename, algorithm, encoding) => {
-    const content = fs.readFileSync(filename, 'utf-8');
+    const content = fs.readFileSync(filename, 'utf-8'); // eslint-disable-line node/no-sync
 
     return computeHashOfString(content, algorithm, encoding);
 };
@@ -81,7 +81,7 @@ module.exports = (grunt) => {
                 patterns: [ {
                     match: /<meta\shttp-equiv="content-security-policy">/,
                     replacement: () => {
-                        const html = fs.readFileSync('build/web-audio-conference-2017/index.html', 'utf-8');
+                        const html = fs.readFileSync('build/web-audio-conference-2017/index.html', 'utf-8'); // eslint-disable-line node/no-sync
                         const regex = /<script[^>]*?>(?<script>.*?)<\/script>/gm;
                         const scriptHashes = [];
 
@@ -165,10 +165,10 @@ module.exports = (grunt) => {
                     match: /<script\ssrc="(?<filename>runtime(?:-es(?:2015|5))?.[\da-z]*\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="sha384-[\d+/A-Za-z]+=*"><\/script>/g,
                     replacement: (match, filename, moduleAttribute) => {
                         if (moduleAttribute === undefined) {
-                            return `<script>${ fs.readFileSync(`build/web-audio-conference-2017/${ filename }`) }</script>`;
+                            return `<script>${ fs.readFileSync(`build/web-audio-conference-2017/${ filename }`) }</script>`; // eslint-disable-line node/no-sync
                         }
 
-                        return `<script${ moduleAttribute }>${ fs.readFileSync(`build/web-audio-conference-2017/${ filename }`) }</script>`;
+                        return `<script${ moduleAttribute }>${ fs.readFileSync(`build/web-audio-conference-2017/${ filename }`) }</script>`; // eslint-disable-line node/no-sync
                     }
                 } ]
             }
