@@ -1,3 +1,4 @@
+// @ts-check
 const { SpecReporter } = require('jasmine-spec-reporter');
 const { env } = require('process');
 const tsNode = require('ts-node');
@@ -11,11 +12,14 @@ const chromeCapabilities = {
     }
 };
 
+/**
+ * @type { import("protractor").Config }
+ */
 exports.config = {
 
     allScriptsTimeout: 60000,
 
-    baseUrl: (env.IS_SMOKE_TEST) ? 'https://chrisguttandin.github.io' : `http://localhost:${ projects[defaultProject].targets.serve.options.port }`,
+    baseUrl: (env.IS_SMOKE_TEST) ? 'https://chrisguttandin.github.io' : `http://localhost:${ projects[defaultProject].architect.serve.options.port }`,
 
     directConnect: !!env.TRAVIS,
 
@@ -32,6 +36,7 @@ exports.config = {
         [ chromeCapabilities, { browserName: 'safari' } ],
 
     onPrepare () {
+        // @ts-ignore
         browser.resetUrl = 'about:blank'; // eslint-disable-line no-undef
 
         tsNode.register({
