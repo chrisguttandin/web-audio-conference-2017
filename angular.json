@@ -4,12 +4,7 @@
     "newProjectRoot": "projects",
     "projects": {
         "web-audio-conference-2017": {
-            "prefix": "wac",
-            "projectType": "application",
-            "root": "",
-            "schematics": {},
-            "sourceRoot": "src",
-            "targets": {
+            "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "configurations": {
@@ -135,7 +130,12 @@
                         "tsConfig": "test/unit/tsconfig.json"
                     }
                 }
-            }
+            },
+            "prefix": "wac",
+            "projectType": "application",
+            "root": "",
+            "schematics": {},
+            "sourceRoot": "src"
         }
     },
     "schematics": {
