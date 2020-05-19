@@ -70,7 +70,7 @@
     "@hint/hint-ssllabs": "^2.4.3",
     "@hint/hint-strict-transport-security": "^2.4.3",
     "@hint/hint-stylesheet-limits": "^3.3.3",
-    "@hint/hint-validate-set-cookie-header": "^2.4.3",
+    "@hint/hint-validate-set-cookie-header": "^3.0.0",
     "@hint/hint-x-content-type-options": "^3.3.3",
     "@hint/parser-javascript": "^3.1.4",
     "@hint/parser-manifest": "^2.2.17",
