@@ -115,7 +115,7 @@
     "ts-node": "~8.3.0",
     "tsconfig-holy-grail": "^11.0.14",
     "tslint": "~6.1.2",
-    "tslint-config-holy-grail": "^50.0.0",
+    "tslint-config-holy-grail": "^50.0.1",
     "typescript": "~3.8.3",
     "webpack-bundle-analyzer": "^3.8.0"
   },
