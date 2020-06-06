@@ -131,23 +131,23 @@ module.exports = (grunt) => {
                     match: /\s*"\/web-audio-conference-2017(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[\da-z]*\.js",/g,
                     replacement: ''
                 }, {
-                    match: /\s*"\/web-audio-conference-2017(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[\da-z]*\.js":\s"[\da-z]+",/g,
+                    match: /\s*"\/web-audio-conference-2017(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[\da-z]*\.js":\s*"[\da-z]+",/g,
                     replacement: ''
                 }, {
                     // Replace the hash value inside of the hashTable for "/scripts/*.js" because it may have been modified before.
-                    match: /"\/web-audio-conference-2017(?<filename>\/scripts\/(?:\d+|main|scripts)(?:-es(?:2015|5))?.[\da-z]+.js)":\s"[\da-z]+"/g,
+                    match: /"\/web-audio-conference-2017(?<filename>\/scripts\/(?:\d+|main|scripts)(?:-es(?:2015|5))?.[\da-z]+.js)":\s*"[\da-z]+"/g,
                     replacement: (_, filename) => {
                         return `"/web-audio-conference-2017${ filename }": "${ computeHashOfFile(`build/web-audio-conference-2017${ filename }`, 'sha1', 'hex') }"`;
                     }
                 }, {
                     // Replace the hash value inside of the hashTable for "/styles/styles*.css" because it was modified before.
-                    match: /"\/web-audio-conference-2017(?<filename>\/styles\/styles\.[\da-z]*\.css)":\s"[\da-z]+"/g,
+                    match: /"\/web-audio-conference-2017(?<filename>\/styles\/styles\.[\da-z]*\.css)":\s*"[\da-z]+"/g,
                     replacement: (_, filename) => {
                         return `"/web-audio-conference-2017${ filename }": "${ computeHashOfFile(`build/web-audio-conference-2017${ filename }`, 'sha1', 'hex') }"`;
                     }
                 }, {
                     // Replace the hash value inside of the hashTable for "/(index|start).html" because it was modified before.
-                    match: /"\/web-audio-conference-2017\/(?<filename>index|start)\.html":\s"[\da-z]+"/g,
+                    match: /"\/web-audio-conference-2017\/(?<filename>index|start)\.html":\s*"[\da-z]+"/g,
                     replacement: (_, filename) => {
                         return `"/web-audio-conference-2017/${ filename }.html": "${ computeHashOfFile(`build/web-audio-conference-2017/${ filename }.html`, 'sha1', 'hex') }"`;
                     }
