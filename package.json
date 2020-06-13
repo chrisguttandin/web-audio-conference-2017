@@ -76,7 +76,7 @@
     "@hint/parser-manifest": "^2.2.18",
     "@types/jasmine": "~3.5.10",
     "@types/jasminewd2": "~2.0.8",
-    "@types/node": "^12.12.44",
+    "@types/node": "^12.12.47",
     "@types/prismjs": "^1.16.1",
     "axe-core": "^3.5.4",
     "bundle-buddy": "^0.2.2",
