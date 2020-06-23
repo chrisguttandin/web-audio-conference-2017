@@ -113,7 +113,7 @@
         "pretty-quick": "^2.0.1",
         "protractor": "~7.0.0",
         "stylelint": "^13.6.1",
-        "stylelint-config-holy-grail": "^6.0.2",
+        "stylelint-config-holy-grail": "^6.0.3",
         "ts-node": "~8.3.0",
         "tsconfig-holy-grail": "^11.0.15",
         "tslint": "~6.1.2",
