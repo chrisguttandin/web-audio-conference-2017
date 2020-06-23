@@ -6,7 +6,7 @@ module.exports = {
             browser: 'chrome'
         },
         urls: [
-            `http://localhost:${ projects[defaultProject].architect.serve.options.port }/slides/1`
+            `http://localhost:${projects[defaultProject].architect.serve.options.port}/slides/1`
             // @todo Add all other slides.
         ]
     }

@@ -4,9 +4,7 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class WindowService {
-
-    get nativeWindow (): null | Window {
-        return (typeof window === 'undefined') ? null : window;
+    get nativeWindow(): null | Window {
+        return typeof window === 'undefined' ? null : window;
     }
-
 }

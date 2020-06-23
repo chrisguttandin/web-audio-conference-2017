@@ -7,12 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-    bootstrap: [
-        AppComponent
-    ],
-    declarations: [
-        AppComponent
-    ],
+    bootstrap: [AppComponent],
+    declarations: [AppComponent],
     imports: [
         AppRoutingModule,
         BrowserAnimationsModule,
@@ -21,4 +17,4 @@ import { AppComponent } from './app.component';
         ServiceWorkerModule.register('/ngsw-worker.js', { enabled: !!environment.production })
     ]
 })
-export class AppModule { }
+export class AppModule {}

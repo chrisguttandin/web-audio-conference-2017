@@ -25,55 +25,72 @@ const routes: Routes = [
             {
                 component: SlideOneComponent,
                 path: '1'
-            }, {
+            },
+            {
                 component: SlideTwoComponent,
                 path: '2'
-            }, {
+            },
+            {
                 component: SlideThreeComponent,
                 path: '3'
-            }, {
+            },
+            {
                 component: SlideFourComponent,
                 path: '4'
-            }, {
+            },
+            {
                 component: SlideFiveComponent,
                 path: '5'
-            }, {
+            },
+            {
                 component: SlideSixComponent,
                 path: '6'
-            }, {
+            },
+            {
                 component: SlideSevenComponent,
                 path: '7'
-            }, {
+            },
+            {
                 component: SlideEightComponent,
                 path: '8'
-            }, {
+            },
+            {
                 component: SlideNineComponent,
                 path: '9'
-            }, {
+            },
+            {
                 component: SlideTenComponent,
                 path: '10'
-            }, {
+            },
+            {
                 component: SlideElevenComponent,
                 path: '11'
-            }, {
+            },
+            {
                 component: SlideTwelveComponent,
                 path: '12'
-            }, {
+            },
+            {
                 component: SlideThirteenComponent,
                 path: '13'
-            }, {
+            },
+            {
                 component: SlideFourteenComponent,
                 path: '14'
-            }, {
+            },
+            {
                 component: SlideFifteenComponent,
                 path: '15'
-            }, {
+            },
+            {
                 component: SlideSixteenComponent,
                 path: '16'
-            }, {
+            },
+            {
                 component: SlideSeventeenComponent,
                 path: '17'
-            }, {
+            },
+            {
                 path: '**',
                 redirectTo: '1'
             }
@@ -84,11 +101,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    exports: [
-        RouterModule
-    ],
-    imports: [
-        RouterModule.forChild(routes)
-    ]
+    exports: [RouterModule],
+    imports: [RouterModule.forChild(routes)]
 })
-export class SlidesRoutingModule { }
+export class SlidesRoutingModule {}

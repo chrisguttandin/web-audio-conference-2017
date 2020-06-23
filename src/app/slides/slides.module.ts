@@ -43,9 +43,6 @@ import { SlidesComponent } from './slides.component';
         SlideTwoComponent,
         SlidesComponent
     ],
-    imports: [
-        CommonModule,
-        SlidesRoutingModule
-    ]
+    imports: [CommonModule, SlidesRoutingModule]
 })
-export class SlidesModule { }
+export class SlidesModule {}

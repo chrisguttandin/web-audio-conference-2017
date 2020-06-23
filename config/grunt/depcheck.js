@@ -2,9 +2,7 @@ module.exports = {
     default: {
         options: {
             failOnUnusedDeps: true,
-            ignoreDirs: [
-                'build'
-            ],
+            ignoreDirs: ['build'],
             ignoreMatches: [
                 'hammerjs',
                 'tslib',

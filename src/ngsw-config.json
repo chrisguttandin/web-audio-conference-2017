@@ -5,20 +5,14 @@
             "installMode": "prefetch",
             "name": "app",
             "resources": {
-                "files": [
-                    "/index.html",
-                    "/*.css",
-                    "/*.js"
-                ]
+                "files": ["/index.html", "/*.css", "/*.js"]
             }
         },
         {
             "installMode": "lazy",
             "name": "assets",
             "resources": {
-                "files": [
-                    "/assets/**"
-                ]
+                "files": ["/assets/**"]
             },
             "updateMode": "prefetch"
         },
@@ -26,10 +20,7 @@
             "installMode": "lazy",
             "name": "fonts",
             "resources": {
-                "urls": [
-                    "https://fonts.googleapis.com/css",
-                    "https://fonts.gstatic.com"
-                ]
+                "urls": ["https://fonts.googleapis.com/css", "https://fonts.gstatic.com"]
             },
             "updateMode": "lazy"
         }

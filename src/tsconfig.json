@@ -1,23 +1,18 @@
 {
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true,
-    "strictTemplates": true
-  },
-  "compilerOptions": {
-    "baseUrl": "./",
-    "declaration": false,
-    "declarationMap": false,
-    "module": "esnext",
-    "outDir": "../out-tsc/app",
-    "target": "es2015"
-  },
-  "extends": "tsconfig-holy-grail/src/tsconfig-browser",
-  "files": [
-    "main.ts",
-    "polyfills.ts"
-  ],
-  "include": [
-    "**/*.d.ts"
-  ]
+    "angularCompilerOptions": {
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true,
+        "strictTemplates": true
+    },
+    "compilerOptions": {
+        "baseUrl": "./",
+        "declaration": false,
+        "declarationMap": false,
+        "module": "esnext",
+        "outDir": "../out-tsc/app",
+        "target": "es2015"
+    },
+    "extends": "tsconfig-holy-grail/src/tsconfig-browser",
+    "files": ["main.ts", "polyfills.ts"],
+    "include": ["**/*.d.ts"]
 }

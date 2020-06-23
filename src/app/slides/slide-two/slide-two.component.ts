@@ -4,4 +4,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: './slide-two.component.html'
 })
-export class SlideTwoComponent { }
+export class SlideTwoComponent {}

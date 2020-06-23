@@ -1,16 +1,12 @@
 {
-  "compilerOptions": {
-    "baseUrl": "./",
-    "declaration": false,
-    "declarationMap": false,
-    "module": "commonjs",
-    "outDir": "../../out-tsc/e2e",
-    "target": "es5",
-    "types": [
-      "jasmine",
-      "jasminewd2",
-      "node"
-    ]
-  },
-  "extends": "tsconfig-holy-grail/src/tsconfig-universal"
+    "compilerOptions": {
+        "baseUrl": "./",
+        "declaration": false,
+        "declarationMap": false,
+        "module": "commonjs",
+        "outDir": "../../out-tsc/e2e",
+        "target": "es5",
+        "types": ["jasmine", "jasminewd2", "node"]
+    },
+    "extends": "tsconfig-holy-grail/src/tsconfig-universal"
 }

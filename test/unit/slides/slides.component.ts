@@ -2,7 +2,6 @@ import { BehaviorSubject } from 'rxjs';
 import { SlidesComponent } from '../../../src/app/slides/slides.component';
 
 describe('SlidesComponent', () => {
-
     let activatedRoute: any;
 
     let router: any;
@@ -13,16 +12,18 @@ describe('SlidesComponent', () => {
         activatedRoute = {
             firstChild: {
                 snapshot: {
-                    url: [ {
-                        path: '8'
-                    } ]
+                    url: [
+                        {
+                            path: '8'
+                        }
+                    ]
                 }
             }
         };
 
         router = {
             events: new BehaviorSubject('a fake router event'),
-            navigate (): void { } // tslint:disable-line:no-empty
+            navigate(): void {} // tslint:disable-line:no-empty
         };
 
         spyOn(router, 'navigate').and.callThrough();
@@ -31,7 +32,6 @@ describe('SlidesComponent', () => {
     });
 
     describe('handleKeyUp()', () => {
-
         beforeEach(() => {
             slidesComponent.ngOnInit();
         });
@@ -41,14 +41,14 @@ describe('SlidesComponent', () => {
 
             slidesComponent.handleKeyUp(keyboardEvent);
 
-            expect(router.navigate).toHaveBeenCalledWith([ '7' ], { relativeTo: activatedRoute });
+            expect(router.navigate).toHaveBeenCalledWith(['7'], { relativeTo: activatedRoute });
         });
 
         it('should navigate to the previous slide', () => {
             // @todo Constructing a real KeyboardEvent with a given keyCode seems to be impossible.
-            slidesComponent.handleKeyUp(<KeyboardEvent> { keyCode: 37 });
+            slidesComponent.handleKeyUp(<KeyboardEvent>{ keyCode: 37 });
 
-            expect(router.navigate).toHaveBeenCalledWith([ '7' ], { relativeTo: activatedRoute });
+            expect(router.navigate).toHaveBeenCalledWith(['7'], { relativeTo: activatedRoute });
         });
 
         it('should navigate to the next slide', () => {
@@ -56,20 +56,18 @@ describe('SlidesComponent', () => {
 
             slidesComponent.handleKeyUp(keyboardEvent);
 
-            expect(router.navigate).toHaveBeenCalledWith([ '9' ], { relativeTo: activatedRoute });
+            expect(router.navigate).toHaveBeenCalledWith(['9'], { relativeTo: activatedRoute });
         });
 
         it('should navigate to the next slide', () => {
             // @todo Constructing a real KeyboardEvent with a given keyCode seems to be impossible.
-            slidesComponent.handleKeyUp(<KeyboardEvent> { keyCode: 39 });
+            slidesComponent.handleKeyUp(<KeyboardEvent>{ keyCode: 39 });
 
-            expect(router.navigate).toHaveBeenCalledWith([ '9' ], { relativeTo: activatedRoute });
+            expect(router.navigate).toHaveBeenCalledWith(['9'], { relativeTo: activatedRoute });
         });
-
     });
 
     describe('handleSwipeLeft()', () => {
-
         beforeEach(() => {
             slidesComponent.ngOnInit();
         });
@@ -77,13 +75,11 @@ describe('SlidesComponent', () => {
         it('should navigate to the next slide', () => {
             slidesComponent.handleSwipeLeft();
 
-            expect(router.navigate).toHaveBeenCalledWith([ '9' ], { relativeTo: activatedRoute });
+            expect(router.navigate).toHaveBeenCalledWith(['9'], { relativeTo: activatedRoute });
         });
-
     });
 
     describe('handleSwipeRight()', () => {
-
         beforeEach(() => {
             slidesComponent.ngOnInit();
         });
@@ -91,9 +87,7 @@ describe('SlidesComponent', () => {
         it('should navigate to the previous slide', () => {
             slidesComponent.handleSwipeRight();
 
-            expect(router.navigate).toHaveBeenCalledWith([ '7' ], { relativeTo: activatedRoute });
+            expect(router.navigate).toHaveBeenCalledWith(['7'], { relativeTo: activatedRoute });
         });
-
     });
-
 });

@@ -4,13 +4,9 @@ import { AppComponent } from '../../src/app/app.component';
 import { AppModule } from '../../src/app/app.module';
 
 describe('AppComponent', () => {
-
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [
-                AppModule,
-                RouterTestingModule
-            ]
+            imports: [AppModule, RouterTestingModule]
         });
     });
 
@@ -30,5 +26,4 @@ describe('AppComponent', () => {
 
         expect(compiled.querySelector('router-outlet')).toBeTruthy();
     }));
-
 });

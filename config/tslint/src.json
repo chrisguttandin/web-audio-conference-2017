@@ -1,17 +1,7 @@
 {
     "extends": "tslint-config-holy-grail",
     "rules": {
-        "component-selector": [
-            true,
-            "element",
-            "wac",
-            "kebab-case"
-        ],
-        "directive-selector": [
-            true,
-            "attribute",
-            "wac",
-            "camelCase"
-        ]
+        "component-selector": [true, "element", "wac", "kebab-case"],
+        "directive-selector": [true, "attribute", "wac", "camelCase"]
     }
 }

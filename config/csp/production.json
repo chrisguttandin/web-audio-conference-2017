@@ -5,6 +5,6 @@
         "font-src": "https://fonts.gstatic.com",
         "img-src": "'self'",
         "script-src": "'self'",
-        "style-src": [ "https://fonts.googleapis.com", "'self'", "'unsafe-inline'" ]
+        "style-src": ["https://fonts.googleapis.com", "'self'", "'unsafe-inline'"]
     }
 }

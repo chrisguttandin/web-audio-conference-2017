@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
     {
-        loadChildren: () => import('./slides')
-            .then((mdl) => mdl.SlidesModule),
+        loadChildren: () => import('./slides').then((mdl) => mdl.SlidesModule),
         path: 'slides'
-    }, {
+    },
+    {
         path: '',
         pathMatch: 'prefix',
         redirectTo: 'slides'
@@ -14,11 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    exports: [
-        RouterModule
-    ],
-    imports: [
-        RouterModule.forRoot(routes)
-    ]
+    exports: [RouterModule],
+    imports: [RouterModule.forRoot(routes)]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

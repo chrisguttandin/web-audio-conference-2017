@@ -5,4 +5,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     selector: 'wac-app',
     templateUrl: './app.component.html'
 })
-export class AppComponent { }
+export class AppComponent {}
