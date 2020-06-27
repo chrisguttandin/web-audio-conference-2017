@@ -5,7 +5,7 @@
         "declarationMap": false,
         "module": "commonjs",
         "outDir": "../../out-tsc/e2e",
-        "target": "es5",
+        "target": "es2018",
         "types": ["jasmine", "jasminewd2", "node"]
     },
     "extends": "tsconfig-holy-grail/src/tsconfig-universal"
