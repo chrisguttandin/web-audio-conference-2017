@@ -2,7 +2,7 @@
     "compilerOptions": {
         "declaration": false,
         "declarationMap": false,
-        "module": "esnext",
+        "module": "es2020",
         "outDir": "../../out-tsc/spec",
         "target": "es2015",
         "types": ["jasmine", "node"]
