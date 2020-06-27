@@ -121,31 +121,31 @@
     },
     "schematics": {
         "@schematics/angular:class": {
-            "spec": true
+            "skipTests": true
         },
         "@schematics/angular:component": {
             "changeDetection": "OnPush",
             "inlineStyle": false,
             "inlineTemplate": false,
             "prefix": "wac",
-            "spec": true,
-            "styleext": "css"
+            "skipTests": true,
+            "style": "css"
         },
         "@schematics/angular:directive": {
             "prefix": "wac",
-            "spec": true
+            "skipTests": true
         },
         "@schematics/angular:interface": {
             "prefix": "I"
         },
         "@schematics/angular:module": {
-            "spec": true
+            "skipTests": true
         },
         "@schematics/angular:pipe": {
-            "spec": true
+            "skipTests": true
         },
         "@schematics/angular:service": {
-            "spec": true
+            "skipTests": true
         }
     },
     "version": 1
