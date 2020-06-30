@@ -1,5 +1,5 @@
 // @ts-check
-const { SpecReporter } = require('jasmine-spec-reporter');
+const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
 const { env } = require('process');
 const tsNode = require('ts-node');
 const { defaultProject, projects } = require('../../angular.json');
@@ -50,7 +50,7 @@ exports.config = {
             project: 'test/e2e/tsconfig.json'
         });
 
-        jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } })); // eslint-disable-line no-undef
+        jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: StacktraceOption.PRETTY } })); // eslint-disable-line no-undef
     },
 
     suites: {
