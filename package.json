@@ -27,7 +27,7 @@
         "prismjs": "^1.21.0",
         "rxjs": "~6.5.5",
         "subscribable-things": "^1.9.1",
-        "tslib": "^2.0.0",
+        "tslib": "^2.0.1",
         "zone.js": "~0.10.3"
     },
     "description": "My talk at the Web Audio Conference 2017.",
