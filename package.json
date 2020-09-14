@@ -97,7 +97,7 @@
         "grunt-postcss": "^0.9.0",
         "grunt-replace": "^1.0.1",
         "grunt-sh": "^0.2.0",
-        "hint": "^6.0.7",
+        "hint": "^6.1.0",
         "htmlhint": "^0.14.1",
         "husky": "^4.2.5",
         "jasmine-core": "~3.5.0",
