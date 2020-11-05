@@ -5,7 +5,7 @@ const fs = require('fs');
 
 // eslint-disable-next-line padding-line-between-statements
 const computeHashOfFile = (filename, algorithm, encoding) => {
-    const content = fs.readFileSync(filename, 'utf-8'); // eslint-disable-line node/no-sync
+    const content = fs.readFileSync(filename, 'utf8'); // eslint-disable-line node/no-sync
 
     return computeHashOfString(content, algorithm, encoding);
 };
@@ -78,7 +78,7 @@ module.exports = (grunt) => {
                     {
                         match: /<meta\shttp-equiv="content-security-policy">/,
                         replacement: () => {
-                            const html = fs.readFileSync('build/web-audio-conference-2017/index.html', 'utf-8'); // eslint-disable-line node/no-sync
+                            const html = fs.readFileSync('build/web-audio-conference-2017/index.html', 'utf8'); // eslint-disable-line node/no-sync
                             const regex = /<script[^>]*?>(?<script>.*?)<\/script>/gm;
                             const scriptHashes = [];
 
