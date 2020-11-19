@@ -49,8 +49,8 @@
                         "main": "src/main.ts",
                         "outputPath": "build/web-audio-conference-2017",
                         "polyfills": "src/polyfills.ts",
-                        "scripts": ["node_modules/hammerjs/hammer.js"],
-                        "styles": ["node_modules/prismjs/themes/prism-okaidia.css", "src/styles/styles.css"],
+                        "scripts": ["hammerjs/hammer.js"],
+                        "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.css"],
                         "tsConfig": "src/tsconfig.json"
                     }
                 },
@@ -105,8 +105,8 @@
                         "karmaConfig": "config/karma/config.js",
                         "main": "config/karma/test.ts",
                         "polyfills": "src/polyfills.ts",
-                        "scripts": ["node_modules/hammerjs/hammer.js"],
-                        "styles": ["node_modules/prismjs/themes/prism-okaidia.css", "src/styles/styles.css"],
+                        "scripts": ["hammerjs/hammer.js"],
+                        "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.css"],
                         "tsConfig": "test/unit/tsconfig.json"
                     }
                 }
