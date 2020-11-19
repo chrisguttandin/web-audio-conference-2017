@@ -180,7 +180,7 @@ module.exports = (grunt) => {
             options: {
                 patterns: [
                     {
-                        match: /<script\ssrc="(?<filename>runtime(?:-es(?:2015|5))?.[\da-z]*\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="sha384-[\d+/A-Za-z]+=*"><\/script>/g,
+                        match: /<script\ssrc="(?<filename>runtime(?:-es(?:2015|5))?.[\da-z]*\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer(?:="")?\sintegrity="sha384-[\d+/A-Za-z]+=*"><\/script>/g,
                         replacement: (match, filename, moduleAttribute) => {
                             if (moduleAttribute === undefined) {
                                 return `<script>${fs.readFileSync(`build/web-audio-conference-2017/${filename}`)}</script>`; // eslint-disable-line node/no-sync
@@ -199,7 +199,7 @@ module.exports = (grunt) => {
             options: {
                 patterns: [
                     {
-                        match: /<script\ssrc="(?<filename>[\da-z-]+\.[\da-z]+\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="(?<initialHash>sha384-[\d+/A-Za-z]+=*)"><\/script>/g,
+                        match: /<script\ssrc="(?<filename>[\da-z-]+\.[\da-z]+\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer(?:="")?\sintegrity="(?<initialHash>sha384-[\d+/A-Za-z]+=*)"><\/script>/g,
                         replacement: (match, filename, moduleAttribute, initialHash) => {
                             const updatedHash = /main(?:-es(?:2015|5))?\.[\da-z]+\.js/.test(filename)
                                 ? `sha384-${computeHashOfFile(`build/web-audio-conference-2017/scripts/${filename}`, 'sha384', 'base64')}`
