@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1605726322124,
+  "timestamp": 1605835870695,
   "index": "/web-audio-conference-2017/index.html",
   "assetGroups": [
     {
@@ -11,12 +11,12 @@
         "ignoreVary": true
       },
       "urls": [
-        "/web-audio-conference-2017/scripts/4.f92627e81eb64ccdccb7.js",
+        "/web-audio-conference-2017/scripts/4.4f8ae4a4015f5e5da6ab.js",
         "/web-audio-conference-2017/index.html",
-        "/web-audio-conference-2017/scripts/main.6251f59ac3997deeae9b.js",
-        "/web-audio-conference-2017/scripts/polyfills.c99f51b7982345bb9558.js",
+        "/web-audio-conference-2017/scripts/main.7e95e7eb042c954082e6.js",
+        "/web-audio-conference-2017/scripts/polyfills.8e269b83f8a07f1625d0.js",
         "/web-audio-conference-2017/scripts/scripts.1dade9dd63b52cc23955.js",
-        "/web-audio-conference-2017/scripts/styles.4a29398598a1303be462.js"
+        "/web-audio-conference-2017/styles/styles.c43ca4fde0043381291b.css"
       ],
       "patterns": []
     },
@@ -46,12 +46,12 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/web-audio-conference-2017/scripts/4.f92627e81eb64ccdccb7.js": "62337e205f1107b0d10b09281319b3ad4fc77c90",
-    "/web-audio-conference-2017/index.html": "f7c8396bfacffd04a5dba5b2a9be193ef0d503e2",
-    "/web-audio-conference-2017/scripts/main.6251f59ac3997deeae9b.js": "ca93d132ab98575f6f8904447b2e9d045e62c417",
-    "/web-audio-conference-2017/scripts/polyfills.c99f51b7982345bb9558.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
-    "/web-audio-conference-2017/scripts/scripts.1dade9dd63b52cc23955.js": "b13c36026668fc2622494bd3e55c75d9d19f620a",
-    "/web-audio-conference-2017/scripts/styles.4a29398598a1303be462.js": "39d10a34f2d531e5134f1e0c653154b5aabb3c27"
+    "/web-audio-conference-2017/scripts/4.4f8ae4a4015f5e5da6ab.js": "8aff990818c7117a1369a8f8a0112061e73fbdf1",
+    "/web-audio-conference-2017/index.html": "3b80809ec32a9ffdfa904c2653e24d4aca97feb7",
+    "/web-audio-conference-2017/scripts/main.7e95e7eb042c954082e6.js": "34c24fbc53813d998f2bd8ee951220c8555a1084",
+    "/web-audio-conference-2017/scripts/polyfills.8e269b83f8a07f1625d0.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
+    "/web-audio-conference-2017/scripts/scripts.1dade9dd63b52cc23955.js": "e54fa2bc91ef05b31657e00f51a7e46771e2a900",
+    "/web-audio-conference-2017/styles/styles.c43ca4fde0043381291b.css": "61737e7ca02812a69de4769f602085b1b82403d9"
   },
   "navigationUrls": [
     {
@@ -70,5 +70,6 @@
       "positive": false,
       "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
-  ]
+  ],
+  "navigationRequestStrategy": "performance"
 }
