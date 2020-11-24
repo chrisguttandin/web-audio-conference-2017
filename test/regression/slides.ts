@@ -3,7 +3,7 @@ import { browser, by } from 'protractor';
 import { elementShotMatchers, expectElementShot, resembleElementShot } from 'element-shot';
 
 const navigateTo = (path: string) => {
-    return browser.get(env.IS_SMOKE_TEST ? `/web-audio-conference-2017${path}` : path);
+    return browser.get(`${browser.baseUrl}${path}`);
 };
 
 describe('slides', () => {
