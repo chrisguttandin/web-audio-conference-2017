@@ -32,7 +32,7 @@ module.exports = {
     ],
     'deploy-on-version-updates': filter([isVersionUpdate ? 'deploy' : null]),
     'e2e': ['sh:e2e'],
-    'lint': ['postcss:lint', 'sh:lint-config', 'sh:lint-src', 'sh:lint-test', 'depcheck'],
+    'lint': ['postcss:lint', 'sh:lint-config', 'sh:lint-src', 'sh:lint-test'],
     'monitor': ['sh:monitor'],
     'preview': ['sh:preview'],
     'smoke': ['sh:smoke'],
