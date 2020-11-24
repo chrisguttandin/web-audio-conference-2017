@@ -24,6 +24,8 @@ const chromeCapabilities = {
  * @type { import("protractor").Config }
  */
 exports.config = {
+    SELENIUM_PROMISE_MANAGER: false,
+
     allScriptsTimeout: 60000,
 
     baseUrl: env.IS_SMOKE_TEST
