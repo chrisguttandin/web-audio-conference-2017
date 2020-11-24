@@ -10,7 +10,7 @@ export class HomePage {
         return element(by.css('wac-app h2:first-child')).getText();
     }
 
-    public async navigateTo(): Promise<any> {
+    public async navigateTo(): Promise<unknown> {
         return browser.get(env.IS_SMOKE_TEST === 'true' ? '/web-audio-conference-2017' : '/');
     }
 }
