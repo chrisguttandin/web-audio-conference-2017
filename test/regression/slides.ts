@@ -13,7 +13,7 @@ describe('slides', () => {
 
     describe('first slide', () => {
         it('should look the same', async () => {
-            navigateTo('/');
+            await navigateTo('/');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-1');
 
@@ -25,7 +25,7 @@ describe('slides', () => {
         });
 
         it('should look the same', async () => {
-            navigateTo('/slides/1');
+            await navigateTo('/slides/1');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-1');
 
@@ -39,7 +39,7 @@ describe('slides', () => {
 
     describe('second slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/2');
+            await navigateTo('/slides/2');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-2');
 
@@ -53,7 +53,7 @@ describe('slides', () => {
 
     describe('third slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/3');
+            await navigateTo('/slides/3');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-3');
 
@@ -67,7 +67,7 @@ describe('slides', () => {
 
     describe('fourth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/4');
+            await navigateTo('/slides/4');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-4');
 
@@ -81,7 +81,7 @@ describe('slides', () => {
 
     describe('fifth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/5');
+            await navigateTo('/slides/5');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-5');
 
@@ -95,7 +95,7 @@ describe('slides', () => {
 
     describe('sixth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/6');
+            await navigateTo('/slides/6');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-6');
 
@@ -109,7 +109,7 @@ describe('slides', () => {
 
     describe('seventh slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/7');
+            await navigateTo('/slides/7');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-7');
 
@@ -123,7 +123,7 @@ describe('slides', () => {
 
     describe('eighth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/8');
+            await navigateTo('/slides/8');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-8');
 
@@ -137,7 +137,7 @@ describe('slides', () => {
 
     describe('nineth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/9');
+            await navigateTo('/slides/9');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-9');
 
@@ -151,7 +151,7 @@ describe('slides', () => {
 
     describe('tenth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/10');
+            await navigateTo('/slides/10');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-10');
 
@@ -165,7 +165,7 @@ describe('slides', () => {
 
     describe('eleventh slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/11');
+            await navigateTo('/slides/11');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-11');
 
@@ -179,7 +179,7 @@ describe('slides', () => {
 
     describe('twelveth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/12');
+            await navigateTo('/slides/12');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-12');
 
@@ -193,7 +193,7 @@ describe('slides', () => {
 
     describe('thirteenth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/13');
+            await navigateTo('/slides/13');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-13');
 
@@ -207,7 +207,7 @@ describe('slides', () => {
 
     describe('fourteenth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/14');
+            await navigateTo('/slides/14');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-14');
 
@@ -221,7 +221,7 @@ describe('slides', () => {
 
     describe('fifteenth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/15');
+            await navigateTo('/slides/15');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-15');
 
@@ -235,7 +235,7 @@ describe('slides', () => {
 
     describe('sixteenth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/16');
+            await navigateTo('/slides/16');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-16');
 
@@ -249,7 +249,7 @@ describe('slides', () => {
 
     describe('seventeenth slide', () => {
         it('should look the same', async () => {
-            navigateTo('/slides/17');
+            await navigateTo('/slides/17');
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-17');
 
