@@ -26,6 +26,8 @@ module.exports = {
                 'husky',
                 'jasmine-core',
                 'karma*',
+                'prettier',
+                'pretty-quick',
                 'stylelint-config-holy-grail',
                 'tsconfig-holy-grail',
                 'tslint',
