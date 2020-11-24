@@ -9,10 +9,10 @@ module.exports = (config) => {
             clearContext: false
         },
 
-        coverageIstanbulReporter: {
+        coverageReporter: {
             dir: join(__dirname, '../../coverage'),
-            fixWebpackSourcePaths: true,
-            reports: ['html', 'lcovonly', 'text-summary']
+            reporters: [{ type: 'html' }, { type: 'text-summary' }],
+            subdir: '.'
         },
 
         frameworks: ['@angular-devkit/build-angular', 'jasmine'],
