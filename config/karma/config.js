@@ -10,7 +10,7 @@ module.exports = (config) => {
         },
 
         coverageReporter: {
-            dir: join(__dirname, '../../coverage'),
+            dir: join(__dirname, '../../coverage/web-audio-conference-2017'),
             reporters: [{ type: 'html' }, { type: 'text-summary' }],
             subdir: '.'
         },
