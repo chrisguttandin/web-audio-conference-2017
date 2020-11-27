@@ -62,12 +62,8 @@ export class SlidesComponent implements OnDestroy, OnInit {
     }
 
     public ngOnDestroy(): void {
-        if (this._matchMediaQueryMatchSubscription !== null) {
-            this._matchMediaQueryMatchSubscription.unsubscribe();
-        }
-        if (this._routerEventsSubscription !== null) {
-            this._routerEventsSubscription.unsubscribe();
-        }
+        this._matchMediaQueryMatchSubscription?.unsubscribe();
+        this._routerEventsSubscription?.unsubscribe();
     }
 
     public ngOnInit(): void {
