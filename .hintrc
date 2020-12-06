@@ -1,6 +1,9 @@
 {
     "connector": {
-        "name": "puppeteer"
+        "name": "puppeteer",
+        "options": {
+            "headless": true
+        }
     },
     "formatters": [
         "stylish"
