@@ -28,18 +28,18 @@ module.exports = (grunt) => {
             cmd: `eslint --config config/eslint/config.json --ext .js ${fix ? '--fix ' : ''}--report-unused-disable-directives *.js config/`
         },
         'lint-src': {
-            cmd: `htmlhint --rules ${convertConfig(documentConfig)} 'src/**/index.html' && htmlhint --rules ${convertConfig(
-                templateConfig
-            )} 'src/app/**/*.component.html' && ng lint web-audio-conference-2017 --type-check`
+            cmd: `htmlhint --rules ${convertConfig(documentConfig)} 'src/**/index.html' && \
+                htmlhint --rules ${convertConfig(templateConfig)} 'src/app/**/*.component.html' && \
+                ng lint web-audio-conference-2017 --type-check`
         },
         'lint-test': {
             cmd: 'ng lint web-audio-conference-2017 --configuration test'
         },
         'monitor': {
-            cmd: 'ng serve --aot'
+            cmd: 'ng serve'
         },
         'preview': {
-            cmd: 'ng serve --aot --prod'
+            cmd: 'ng serve --prod'
         },
         'smoke': {
             cmd: env.TRAVIS
@@ -50,8 +50,8 @@ module.exports = (grunt) => {
             cmd: 'ng test --watch false'
         },
         'verify': {
-            cmd:
-                "bundle-buddy build/web-audio-conference-2017/*.js.map && grep -r build/**/*.map -e '/environments/environment.ts'; test $? -eq 1"
+            cmd: `bundle-buddy build/web-audio-conference-2017/*.js.map && \
+                grep -r build/**/*.map -e '/environments/environment.ts'; test $? -eq 1`
         }
     };
 };
