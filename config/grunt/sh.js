@@ -22,7 +22,7 @@ module.exports = (grunt) => {
             cmd: 'ng test'
         },
         'e2e': {
-            cmd: env.TRAVIS ? 'ng e2e' : 'webdriver-manager update && ng e2e --no-webdriver-update'
+            cmd: env.CI ? 'ng e2e' : 'webdriver-manager update && ng e2e --no-webdriver-update'
         },
         'lint-config': {
             cmd: `eslint --config config/eslint/config.json --ext .js ${fix ? '--fix ' : ''}--report-unused-disable-directives *.js config/`
@@ -42,7 +42,7 @@ module.exports = (grunt) => {
             cmd: 'ng serve --prod'
         },
         'smoke': {
-            cmd: env.TRAVIS
+            cmd: env.CI
                 ? "IS_SMOKE_TEST=true ng e2e --dev-server-target '' && hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2017"
                 : "webdriver-manager update && IS_SMOKE_TEST=true ng e2e --dev-server-target '' --no-webdriver-update && hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2017"
         },
