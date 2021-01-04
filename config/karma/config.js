@@ -5,6 +5,10 @@ module.exports = (config) => {
     config.set({
         basePath: '../../',
 
+        browserDisconnectTimeout: 100000,
+
+        browserNoActivityTimeout: 100000,
+
         client: {
             clearContext: false
         },
@@ -24,23 +28,24 @@ module.exports = (config) => {
         restartOnFileChange: true
     });
 
-    if (env.TRAVIS) {
+    if (env.CI) {
         config.set({
-            browserNoActivityTimeout: 120000,
-
             browsers: ['ChromeSauceLabs'],
 
-            captureTimeout: 120000,
+            captureTimeout: 300000,
 
             customLaunchers: {
                 ChromeSauceLabs: {
                     base: 'SauceLabs',
                     browserName: 'chrome',
-                    platform: 'OS X 10.11'
+                    captureTimeout: 300,
+                    platform: 'macOS 11.00'
                 }
             },
 
-            tunnelIdentifier: env.TRAVIS_JOB_NUMBER
+            sauceLabs: {
+                recordVideo: false
+            }
         });
     } else {
         config.set({
