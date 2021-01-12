@@ -13,7 +13,8 @@ module.exports = (grunt) => {
 
     return {
         'analyze': {
-            cmd: 'npx ng build --prod --source-map --stats-json && webpack-bundle-analyzer build/web-audio-conference-2017/stats.json'
+            cmd: `npx ng build --prod --source-map --stats-json && \
+                webpack-bundle-analyzer build/web-audio-conference-2017/stats.json`
         },
         'build': {
             cmd: 'npx ng build --base-href /web-audio-conference-2017/ --prod --subresource-integrity'
@@ -43,14 +44,17 @@ module.exports = (grunt) => {
         },
         'smoke': {
             cmd: env.CI
-                ? "IS_SMOKE_TEST=true npx ng e2e --dev-server-target '' && hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2017"
-                : "webdriver-manager update && IS_SMOKE_TEST=true npx ng e2e --dev-server-target '' --no-webdriver-update && hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2017"
+                ? `IS_SMOKE_TEST=true npx ng e2e --dev-server-target '' && \
+                    npx hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2017`
+                : `webdriver-manager update && \
+                    IS_SMOKE_TEST=true npx ng e2e --dev-server-target '' --no-webdriver-update && \
+                    npx hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2017`
         },
         'test': {
             cmd: 'npx ng test --watch false'
         },
         'verify': {
-            cmd: `bundle-buddy build/web-audio-conference-2017/*.js.map && \
+            cmd: `npx bundle-buddy build/web-audio-conference-2017/*.js.map && \
                 grep -r build/**/*.map -e '/environments/environment.ts'; test $? -eq 1`
         }
     };
