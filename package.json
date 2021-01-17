@@ -79,7 +79,7 @@
         "@types/prismjs": "^1.16.2",
         "axe-core": "^4.1.1",
         "bundle-buddy": "^0.2.2",
-        "commitizen": "^4.2.2",
+        "commitizen": "^4.2.3",
         "content-security-policy-builder": "^2.1.0",
         "cz-conventional-changelog": "^3.3.0",
         "element-shot": "^5.0.8",
