@@ -76,7 +76,7 @@ module.exports = (grunt) => {
             options: {
                 patterns: [
                     {
-                        match: /<meta\shttp-equiv="content-security-policy">/,
+                        match: /<meta\shttp-equiv="content-security-policy"\s*\/?>/,
                         replacement: () => {
                             const html = fs.readFileSync('build/web-audio-conference-2017/index.html', 'utf8'); // eslint-disable-line node/no-sync
                             const regex = /<script[^>]*?>(?<script>.*?)<\/script>/gm;
@@ -90,16 +90,31 @@ module.exports = (grunt) => {
                                 result = regex.exec(html);
                             }
 
+                            const scriptSrcConfig =
+                                'script-src' in cspProductionConfig.directives
+                                    ? Array.isArray(cspProductionConfig.directives['script-src'])
+                                        ? [...cspProductionConfig.directives['script-src'], ...scriptHashes]
+                                        : [cspProductionConfig.directives['script-src'], ...scriptHashes]
+                                    : [...scriptHashes];
                             const cspConfig = {
                                 ...cspProductionConfig,
                                 directives: {
                                     ...cspProductionConfig.directives,
-                                    'script-src':
-                                        'script-src' in cspProductionConfig.directives
-                                            ? Array.isArray(cspProductionConfig.directives['script-src'])
-                                                ? [...cspProductionConfig.directives['script-src'], ...scriptHashes]
-                                                : [cspProductionConfig.directives['script-src'], ...scriptHashes]
-                                            : [...scriptHashes]
+                                    'script-src': scriptSrcConfig.sort((a, b) => {
+                                        if (a.startsWith("'") && b.startsWith("'")) {
+                                            return a.slice(0) < b.slice(0) ? -1 : a.slice(0) > b.slice(0) ? 1 : 0;
+                                        }
+
+                                        if (a.startsWith("'")) {
+                                            return -1;
+                                        }
+
+                                        if (b.startsWith("'")) {
+                                            return 1;
+                                        }
+
+                                        return a < b ? -1 : a > b ? 1 : 0;
+                                    })
                                 }
                             };
                             const cspString = cspBuilder(cspConfig);
