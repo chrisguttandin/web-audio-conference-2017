@@ -56,6 +56,11 @@ jobs:
               with:
                   node-version: 14.x
 
+            - name: Update Chrome
+              run: |
+                  sudo apt-get update
+                  sudo apt-get --only-upgrade install google-chrome-stable
+
             - name: Cache node modules
               uses: actions/cache@v2
               with:
@@ -72,4 +77,4 @@ jobs:
                   GIT_HUB_USER_EMAIL: ${{ secrets.GIT_HUB_USER_EMAIL }}
                   GIT_HUB_USER_NAME: ${{ secrets.GIT_HUB_USER_NAME }}
               name: Deploy website
-              run: grunt deploy
+              run: npx grunt deploy
