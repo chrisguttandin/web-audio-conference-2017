@@ -45,6 +45,7 @@
                     "options": {
                         "aot": true,
                         "assets": ["src/assets"],
+                        "i18nMissingTranslation": "error",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "outputPath": "build/web-audio-conference-2017",
