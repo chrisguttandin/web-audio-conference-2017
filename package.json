@@ -26,7 +26,7 @@
         "hammerjs": "^2.0.8",
         "prismjs": "^1.23.0",
         "rxjs": "~6.6.3",
-        "subscribable-things": "~1.10.1",
+        "subscribable-things": "^1.11.3",
         "tslib": "^2.1.0",
         "zone.js": "~0.11.3"
     },
