@@ -78,3 +78,9 @@ jobs:
                   GIT_HUB_USER_NAME: ${{ secrets.GIT_HUB_USER_NAME }}
               name: Deploy website
               run: npx grunt deploy
+
+            - name: Upload screenshots
+              uses: 'actions/upload-artifact@v2'
+              with:
+                  name: screenshots
+                  path: test/screenshots
