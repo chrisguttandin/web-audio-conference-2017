@@ -79,7 +79,8 @@ jobs:
               name: Deploy website
               run: npx grunt deploy
 
-            - name: Upload screenshots
+            - if: ${{ always() }}
+              name: Upload screenshots
               uses: 'actions/upload-artifact@v2'
               with:
                   name: screenshots
