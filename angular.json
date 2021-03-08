@@ -13,7 +13,7 @@
                                 {
                                     "baseline": "500kb",
                                     "maximumError": "500kb",
-                                    "type": "all"
+                                    "type": "initial"
                                 },
                                 {
                                     "maximumError": "10kb",
