@@ -24,7 +24,7 @@ module.exports = {
         'smoke'
     ],
     e2e: ['sh:e2e'],
-    lint: ['postcss:lint', 'sh:lint-config', 'sh:lint-src', 'sh:lint-test'],
+    lint: ['sh:lint-config', 'sh:lint-src', 'sh:lint-test'],
     monitor: ['sh:monitor'],
     preview: ['sh:preview'],
     smoke: ['sh:smoke'],

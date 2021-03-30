@@ -31,7 +31,8 @@ module.exports = (grunt) => {
         'lint-src': {
             cmd: `htmlhint --rules ${convertConfig(documentConfig)} 'src/**/index.html' && \
                 htmlhint --rules ${convertConfig(templateConfig)} 'src/app/**/*.component.html' && \
-                npx ng lint web-audio-conference-2017 --type-check`
+                npx ng lint web-audio-conference-2017 --type-check && \
+                npx stylelint src/**/*.css --config config/stylelint/config.json`
         },
         'lint-test': {
             cmd: 'npx ng lint web-audio-conference-2017 --configuration test'
