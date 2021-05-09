@@ -57,10 +57,12 @@ module.exports = (grunt) => {
                         replacement: (match) => {
                             let updatedMatch = replaceHashInMatch(grunt, match, 'common', 1);
 
-                            const offset = match === updatedMatch ? 4 : 5;
+                            const matches = match.match(/[1-9]\d*:"sha384-[\d+/A-Za-z]{64}"/g);
 
-                            for (let i = offset; createChunkExpression(i).test(match); i += 1) {
-                                updatedMatch = replaceHashInMatch(grunt, updatedMatch, `${i}`, i);
+                            for (const chunk of matches) {
+                                const index = parseInt(chunk[0].split(':')[0], 10);
+
+                                updatedMatch = replaceHashInMatch(grunt, updatedMatch, `${index}`, index);
                             }
 
                             return updatedMatch;
