@@ -4,6 +4,9 @@ const crypto = require('crypto');
 const fs = require('fs');
 
 // eslint-disable-next-line padding-line-between-statements
+const ENABLE_STYLES_SCRIPT = "document.head.querySelectorAll('link[media=print]').forEach(l=>l.onload=()=>l.media='all')";
+
+// eslint-disable-next-line padding-line-between-statements
 const computeHashOfFile = (filename, algorithm, encoding) => {
     const content = fs.readFileSync(filename, 'utf8'); // eslint-disable-line node/no-sync
 
@@ -49,8 +52,12 @@ module.exports = (grunt) => {
             options: {
                 patterns: [
                     {
-                        match: /""\+\({[^}]*}\[e]\|\|e\)\+"(?:-es(?:2015|5))?\."\+{(?:\d+:"[\da-f]{20}",?)+}/g,
-                        replacement: (match) => match.replace(/^""/g, '"scripts/"')
+                        match: /a\.u=e=>e\+"(?:-es(?:2015|5))?\.[\da-f]{20}.js"/g,
+                        replacement: (match) => match.replace(/a.u=e=>e/g, 'a.u=e=>"scripts/"+e')
+                    },
+                    {
+                        match: /a\.u=e=>e\+"(?:-es(?:2015|5))?\."\+{(?:\d+:"[\da-f]{20}",?)+}/g,
+                        replacement: (match) => match.replace(/a.u=e=>e/g, 'a.u=e=>"scripts/"+e')
                     },
                     {
                         match: /{(?:[1-9]\d*:"sha384-[\d+/A-Za-z]{64}",?)+}/g,
@@ -60,7 +67,7 @@ module.exports = (grunt) => {
                             const matches = match.match(/[1-9]\d*:"sha384-[\d+/A-Za-z]{64}"/g);
 
                             for (const chunk of matches) {
-                                const index = parseInt(chunk[0].split(':')[0], 10);
+                                const index = parseInt(chunk.split(':')[0], 10);
 
                                 updatedMatch = replaceHashInMatch(grunt, updatedMatch, `${index}`, index);
                             }
@@ -82,7 +89,7 @@ module.exports = (grunt) => {
                         replacement: () => {
                             const html = fs.readFileSync('build/web-audio-conference-2017/index.html', 'utf8'); // eslint-disable-line node/no-sync
                             const regex = /<script[^>]*?>(?<script>.*?)<\/script>/gm;
-                            const scriptHashes = [];
+                            const scriptHashes = [`'sha256-${computeHashOfString(ENABLE_STYLES_SCRIPT, 'sha256', 'base64')}'`];
 
                             let result = regex.exec(html);
 
@@ -239,8 +246,24 @@ module.exports = (grunt) => {
             options: {
                 patterns: [
                     {
-                        match: /<link\srel="stylesheet"\shref="(?<filename>styles\.[\da-z]+\.css)"\scrossorigin="anonymous"\sintegrity="sha384-[\d+/A-Za-z]+=*">/g,
-                        replacement: (match, filename) => {
+                        match: /,a\.miniCssF=e=>"(?<filename>styles\.[\da-z]+\.css)",/,
+                        replacement: (match, filename) => match.replace(filename, `styles/${filename}`)
+                    },
+                    {
+                        match: /<link\srel="stylesheet"\shref="(?<filename>styles\.[\da-z]+\.css)"\scrossorigin="anonymous"\sintegrity="sha384-[\d+/A-Za-z]+=*"(?<media>\smedia="print")?[^>]*>/g,
+                        replacement: (_, filename, media) => {
+                            const hash = `sha384-${computeHashOfFile(
+                                `build/web-audio-conference-2017/styles/${filename}`,
+                                'sha384',
+                                'base64'
+                            )}`;
+
+                            return `<script>${ENABLE_STYLES_SCRIPT}</script><link href="styles/${filename}" rel="stylesheet" crossorigin="anonymous" integrity="${hash}"${media}>`;
+                        }
+                    },
+                    {
+                        match: /<link\srel="stylesheet"\shref="(?<filename>styles\.[\da-z]+\.css)">/g,
+                        replacement: (_, filename) => {
                             const hash = `sha384-${computeHashOfFile(
                                 `build/web-audio-conference-2017/styles/${filename}`,
                                 'sha384',
