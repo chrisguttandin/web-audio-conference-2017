@@ -52,12 +52,12 @@ module.exports = (grunt) => {
             options: {
                 patterns: [
                     {
-                        match: /a\.u=e=>e\+"(?:-es(?:2015|5))?\.[\da-f]{20}.js"/g,
-                        replacement: (match) => match.replace(/a.u=e=>e/g, 'a.u=e=>"scripts/"+e')
+                        match: /(?<character>[a-z]+)\.u=e=>e\+"(?:-es(?:2015|5))?\.[\da-f]{20}.js"/g,
+                        replacement: (match, character) => match.replace(/[a-z]+.u=e=>e/g, `${character}.u=e=>"scripts/"+e`)
                     },
                     {
-                        match: /a\.u=e=>e\+"(?:-es(?:2015|5))?\."\+{(?:\d+:"[\da-f]{20}",?)+}/g,
-                        replacement: (match) => match.replace(/a.u=e=>e/g, 'a.u=e=>"scripts/"+e')
+                        match: /(?<character>[a-z]+)\.u=e=>e\+"(?:-es(?:2015|5))?\."\+{(?:\d+:"[\da-f]{20}",?)+}/g,
+                        replacement: (match, character) => match.replace(/[a-z]+.u=e=>e/g, `${character}.u=e=>"scripts/"+e`)
                     },
                     {
                         match: /{(?:[1-9]\d*:"sha384-[\d+/A-Za-z]{64}",?)+}/g,
@@ -258,7 +258,7 @@ module.exports = (grunt) => {
                                 'base64'
                             )}`;
 
-                            return `<script>${ENABLE_STYLES_SCRIPT}</script><link href="styles/${filename}" rel="stylesheet" crossorigin="anonymous" integrity="${hash}"${media}>`;
+                            return `<link href="styles/${filename}" rel="stylesheet" crossorigin="anonymous" integrity="${hash}"${media}><script>${ENABLE_STYLES_SCRIPT}</script>`;
                         }
                     },
                     {
