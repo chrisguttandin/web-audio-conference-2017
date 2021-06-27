@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
         BrowserAnimationsModule,
         BrowserModule,
         HammerModule,
-        ServiceWorkerModule.register('/ngsw-worker.js', { enabled: !ngDevMode })
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: !ngDevMode })
     ]
 })
 export class AppModule {}
