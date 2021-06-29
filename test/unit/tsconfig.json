@@ -1,10 +1,17 @@
 {
+    "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
+    },
     "compilerOptions": {
         "declaration": false,
         "declarationMap": false,
+        "downlevelIteration": true,
         "module": "es2020",
         "outDir": "../../out-tsc/spec",
-        "target": "es2015",
+        "target": "es2017",
         "types": ["jasmine", "node", "../../src/ng-dev-mode"]
     },
     "extends": "tsconfig-holy-grail/src/tsconfig-browser",
