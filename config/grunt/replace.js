@@ -56,8 +56,9 @@ module.exports = (grunt) => {
                         replacement: (match, character) => match.replace(/[a-z]+.u=e=>e/g, `${character}.u=e=>"scripts/"+e`)
                     },
                     {
-                        match: /(?<character>[a-z]+)\.u=e=>e\+"(?:-es(?:2015|5))?\."\+{(?:\d+:"[\da-f]{20}",?)+}/g,
-                        replacement: (match, character) => match.replace(/[a-z]+.u=e=>e/g, `${character}.u=e=>"scripts/"+e`)
+                        match: /(?<character>[a-z]+)\.u=e=>(?<prefix>e|\(\d+===e\?"common":e\))\+"(?:-es(?:2015|5))?\."\+{(?:\d+:"[\da-f]{20}",?)+}/g,
+                        replacement: (match, character, prefix) =>
+                            match.replace(/[a-z]+.u=e=>(?:e|\(\d+===e\?"common":e\))/g, `${character}.u=e=>"scripts/"+${prefix}`)
                     },
                     {
                         match: /{(?:[1-9]\d*:"sha384-[\d+/A-Za-z]{64}",?)+}/g,
