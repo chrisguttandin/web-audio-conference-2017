@@ -8,6 +8,14 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "configurations": {
+                        "development": {
+                            "buildOptimizer": false,
+                            "extractLicenses": false,
+                            "namedChunks": true,
+                            "optimization": false,
+                            "sourceMap": true,
+                            "vendorChunk": true
+                        },
                         "production": {
                             "budgets": [
                                 {
@@ -21,50 +29,33 @@
                                     "type": "anyComponentStyle"
                                 }
                             ],
-                            "buildOptimizer": true,
-                            "extractLicenses": true,
                             "fileReplacements": [
                                 {
                                     "replace": "src/environments/environment.ts",
                                     "with": "src/environments/environment.prod.ts"
                                 }
                             ],
-                            "namedChunks": false,
-                            "ngswConfigPath": "src/ngsw-config.json",
-                            "optimization": true,
                             "outputHashing": "all",
-                            "serviceWorker": true,
                             "sourceMap": {
                                 "hidden": true,
                                 "scripts": true,
                                 "styles": false
-                            },
-                            "vendorChunk": false
+                            }
                         }
                     },
+                    "defaultConfiguration": "production",
                     "options": {
-                        "assets": [
-                            "src/assets"
-                        ],
-                        "buildOptimizer": false,
-                        "extractLicenses": false,
+                        "assets": ["src/assets"],
                         "i18nMissingTranslation": "error",
                         "index": "src/index.html",
                         "main": "src/main.ts",
-                        "namedChunks": true,
-                        "optimization": false,
+                        "ngswConfigPath": "src/ngsw-config.json",
                         "outputPath": "build/web-audio-conference-2017",
                         "polyfills": "src/polyfills.ts",
-                        "scripts": [
-                            "hammerjs/hammer.js"
-                        ],
-                        "sourceMap": true,
-                        "styles": [
-                            "prismjs/themes/prism-okaidia.css",
-                            "src/styles/styles.css"
-                        ],
-                        "tsConfig": "src/tsconfig.json",
-                        "vendorChunk": true
+                        "scripts": ["hammerjs/hammer.js"],
+                        "serviceWorker": true,
+                        "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.css"],
+                        "tsConfig": "src/tsconfig.json"
                     }
                 },
                 "e2e": {
@@ -89,17 +80,12 @@
                     "builder": "@angular-devkit/build-angular:tslint",
                     "configurations": {
                         "test": {
-                            "tsConfig": [
-                                "test/e2e/tsconfig.json",
-                                "test/unit/tsconfig.json"
-                            ],
+                            "tsConfig": ["test/e2e/tsconfig.json", "test/unit/tsconfig.json"],
                             "tslintConfig": "config/tslint/test.json"
                         }
                     },
                     "options": {
-                        "exclude": [
-                            "**/node_modules/**"
-                        ],
+                        "exclude": ["**/node_modules/**"],
                         "tsConfig": "src/tsconfig.json",
                         "tslintConfig": "config/tslint/src.json"
                     }
@@ -107,10 +93,14 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
+                        "development": {
+                            "browserTarget": "web-audio-conference-2017:build:development"
+                        },
                         "production": {
                             "browserTarget": "web-audio-conference-2017:build:production"
                         }
                     },
+                    "defaultConfiguration": "development",
                     "options": {
                         "browserTarget": "web-audio-conference-2017:build",
                         "port": 7733
@@ -119,19 +109,12 @@
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
-                        "assets": [
-                            "src/assets"
-                        ],
+                        "assets": ["src/assets"],
                         "karmaConfig": "config/karma/config.js",
                         "main": "config/karma/test.ts",
                         "polyfills": "src/polyfills.ts",
-                        "scripts": [
-                            "hammerjs/hammer.js"
-                        ],
-                        "styles": [
-                            "prismjs/themes/prism-okaidia.css",
-                            "src/styles/styles.css"
-                        ],
+                        "scripts": ["hammerjs/hammer.js"],
+                        "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.css"],
                         "tsConfig": "test/unit/tsconfig.json"
                     }
                 }
