@@ -1,12 +1,4 @@
 const { env } = require('process');
-const documentConfig = require('../htmlhint/document');
-const templateConfig = require('../htmlhint/template');
-
-// eslint-disable-next-line padding-line-between-statements
-const convertConfig = (config) =>
-    Object.entries(config)
-        .map(([key, value]) => (typeof value === 'string' ? `${key}=${value}` : key))
-        .join(',');
 
 module.exports = (grunt) => {
     const fix = grunt.option('fix') === true;
@@ -29,8 +21,8 @@ module.exports = (grunt) => {
             cmd: `eslint --config config/eslint/config.json --ext .js ${fix ? '--fix ' : ''}--report-unused-disable-directives *.js config/`
         },
         'lint-src': {
-            cmd: `htmlhint --rules ${convertConfig(documentConfig)} 'src/**/index.html' && \
-                htmlhint --rules ${convertConfig(templateConfig)} 'src/app/**/*.component.html' && \
+            cmd: `htmlhint --config config/htmlhint/document.json 'src/**/index.html' && \
+                htmlhint --config config/htmlhint/template.json 'src/app/**/*.component.html' && \
                 npx ng lint web-audio-conference-2017 --type-check && \
                 npx stylelint src/**/*.css --config config/stylelint/config.json`
         },
