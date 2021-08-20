@@ -3,9 +3,7 @@ import { SlidesComponent } from '../../../src/app/slides/slides.component';
 
 describe('SlidesComponent', () => {
     let activatedRoute: any;
-
     let router: any;
-
     let slidesComponent: SlidesComponent;
 
     beforeEach(() => {
@@ -23,7 +21,7 @@ describe('SlidesComponent', () => {
 
         router = {
             events: new BehaviorSubject('a fake router event'),
-            navigate(): void {} // tslint:disable-line:no-empty
+            navigate(): void {} // eslint-disable-line @typescript-eslint/no-empty-function, no-empty-function
         };
 
         spyOn(router, 'navigate').and.callThrough();

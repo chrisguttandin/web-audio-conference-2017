@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class WindowService {
-    get nativeWindow(): null | Window {
+    // eslint-disable-next-line class-methods-use-this
+    public get nativeWindow(): null | Window {
         return typeof window === 'undefined' ? null : window;
     }
 }
