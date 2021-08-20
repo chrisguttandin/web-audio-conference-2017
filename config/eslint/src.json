@@ -2,5 +2,33 @@
     "env": {
         "browser": true
     },
-    "extends": "eslint-config-holy-grail"
+    "extends": "eslint-config-holy-grail",
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "globals": {
+                "ngDevMode": "readonly"
+            },
+            "rules": {
+                "@angular-eslint/component-selector": [
+                    "error",
+                    {
+                        "prefix": "wac",
+                        "style": "kebab-case",
+                        "type": "element"
+                    }
+                ],
+                "@angular-eslint/directive-selector": [
+                    "error",
+                    {
+                        "prefix": "wac",
+                        "style": "camelCase",
+                        "type": "attribute"
+                    }
+                ],
+                "node/file-extension-in-import": "off",
+                "new-cap": "off"
+            }
+        }
+    ]
 }
