@@ -42,7 +42,7 @@
         "@hint/connector-puppeteer": "^2.5.9",
         "@hint/formatter-stylish": "^3.1.23",
         "@hint/hint-amp-validator": "^2.10.12",
-        "@hint/hint-apple-touch-icons": "^4.0.6",
+        "@hint/hint-apple-touch-icons": "^4.0.7",
         "@hint/hint-axe": "^4.4.4",
         "@hint/hint-button-type": "^3.0.6",
         "@hint/hint-content-type": "^4.2.10",
