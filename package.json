@@ -45,7 +45,7 @@
         "@hint/hint-apple-touch-icons": "^4.0.7",
         "@hint/hint-axe": "^4.4.5",
         "@hint/hint-button-type": "^3.0.7",
-        "@hint/hint-content-type": "^4.2.10",
+        "@hint/hint-content-type": "^4.2.11",
         "@hint/hint-disown-opener": "^4.0.6",
         "@hint/hint-highest-available-document-mode": "^5.0.6",
         "@hint/hint-html-checker": "^3.3.10",
