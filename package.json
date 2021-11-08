@@ -58,7 +58,7 @@
         "@hint/hint-meta-charset-utf-8": "^4.0.9",
         "@hint/hint-meta-viewport": "^5.0.9",
         "@hint/hint-minified-js": "^2.4.13",
-        "@hint/hint-no-bom": "^4.2.11",
+        "@hint/hint-no-bom": "^4.2.13",
         "@hint/hint-no-broken-links": "^4.2.11",
         "@hint/hint-no-disallowed-headers": "^3.1.6",
         "@hint/hint-no-friendly-error-pages": "^3.3.11",
