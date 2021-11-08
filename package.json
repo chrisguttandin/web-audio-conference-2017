@@ -78,7 +78,7 @@
         "@types/jasmine": "~3.8.2",
         "@types/node": "^12.20.36",
         "@types/prismjs": "^1.16.6",
-        "axe-core": "^4.3.4",
+        "axe-core": "^4.3.5",
         "bundle-buddy": "^0.2.2",
         "commitizen": "^4.2.4",
         "content-security-policy-builder": "^2.1.0",
