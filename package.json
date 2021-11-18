@@ -40,7 +40,7 @@
         "@commitlint/cli": "^15.0.0",
         "@commitlint/config-angular": "^15.0.0",
         "@hint/connector-puppeteer": "^2.5.12",
-        "@hint/formatter-stylish": "^3.1.24",
+        "@hint/formatter-stylish": "^3.1.25",
         "@hint/hint-amp-validator": "^2.10.14",
         "@hint/hint-apple-touch-icons": "^4.0.9",
         "@hint/hint-axe": "^4.4.7",
