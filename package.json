@@ -54,7 +54,7 @@
         "@hint/hint-manifest-app-name": "^2.4.15",
         "@hint/hint-manifest-exists": "^2.4.15",
         "@hint/hint-manifest-file-extension": "^3.0.10",
-        "@hint/hint-manifest-is-valid": "^3.4.5",
+        "@hint/hint-manifest-is-valid": "^3.4.6",
         "@hint/hint-meta-charset-utf-8": "^4.0.9",
         "@hint/hint-meta-viewport": "^5.0.9",
         "@hint/hint-minified-js": "^2.4.13",
