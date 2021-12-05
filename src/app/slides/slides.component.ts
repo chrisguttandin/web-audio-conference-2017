@@ -1,8 +1,7 @@
 import { transition, trigger, useAnimation } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, HostBinding, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { EMPTY, Subscription, from } from 'rxjs';
-import { catchError, filter } from 'rxjs/operators';
+import { EMPTY, Subscription, catchError, filter, from } from 'rxjs';
 import { mediaQueryMatch } from 'subscribable-things';
 import { WindowService } from '../window.service';
 import { slideAnimation } from './slide.animation';
