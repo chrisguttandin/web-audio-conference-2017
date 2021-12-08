@@ -9,6 +9,7 @@
         "declaration": false,
         "declarationMap": false,
         "downlevelIteration": true,
+        "lib": ["dom", "es2020"],
         "module": "es2020",
         "outDir": "../../out-tsc/spec",
         "target": "es2017",
