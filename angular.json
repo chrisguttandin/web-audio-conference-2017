@@ -1,5 +1,11 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "cli": {
+        "cache": {
+            "enabled": true,
+            "environment": "all"
+        }
+    },
     "defaultProject": "web-audio-conference-2017",
     "newProjectRoot": "projects",
     "projects": {
@@ -81,12 +87,12 @@
                     "configurations": {
                         "test": {
                             "eslintConfig": "config/eslint/test.json",
-                            "lintFilePatterns": ["test/**/*.ts", "test/**/*.html"]
+                            "lintFilePatterns": ["test/**/*.html", "test/**/*.ts"]
                         }
                     },
                     "options": {
                         "eslintConfig": "config/eslint/src.json",
-                        "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+                        "lintFilePatterns": ["src/**/*.html", "src/**/*.ts"]
                     }
                 },
                 "serve": {
