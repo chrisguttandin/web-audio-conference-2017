@@ -32,6 +32,7 @@ import { SlidesComponent } from './slides.component';
         SlideFourteenComponent,
         SlideNineComponent,
         SlideOneComponent,
+        SlidesComponent,
         SlideSevenComponent,
         SlideSeventeenComponent,
         SlideSixComponent,
@@ -40,8 +41,7 @@ import { SlidesComponent } from './slides.component';
         SlideThirteenComponent,
         SlideThreeComponent,
         SlideTwelveComponent,
-        SlideTwoComponent,
-        SlidesComponent
+        SlideTwoComponent
     ],
     imports: [CommonModule, SlidesRoutingModule]
 })
