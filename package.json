@@ -96,7 +96,7 @@
         "grunt-replace": "^2.0.2",
         "grunt-sh": "^0.2.0",
         "hint": "^6.1.9",
-        "htmlhint": "^1.1.0",
+        "htmlhint": "^1.1.2",
         "husky": "^7.0.4",
         "jasmine-core": "~3.10.1",
         "jasmine-spec-reporter": "~5.0.2",
