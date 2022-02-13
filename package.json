@@ -38,7 +38,7 @@
         "@angular/compiler-cli": "~13.2.2",
         "@angular/language-service": "~13.2.2",
         "@commitlint/cli": "^16.2.1",
-        "@commitlint/config-angular": "^16.0.0",
+        "@commitlint/config-angular": "^16.2.1",
         "@hint/connector-puppeteer": "^2.5.12",
         "@hint/formatter-stylish": "^3.1.25",
         "@hint/hint-amp-validator": "^2.10.15",
