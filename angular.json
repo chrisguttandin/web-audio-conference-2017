@@ -25,13 +25,13 @@
                         "production": {
                             "budgets": [
                                 {
-                                    "baseline": "500kb",
-                                    "maximumError": "500kb",
+                                    "maximumError": "1mb",
+                                    "maximumWarning": "500kb",
                                     "type": "initial"
                                 },
                                 {
-                                    "maximumError": "10kb",
-                                    "maximumWarning": "6kb",
+                                    "maximumError": "4kb",
+                                    "maximumWarning": "2kb",
                                     "type": "anyComponentStyle"
                                 }
                             ],
@@ -132,6 +132,9 @@
         }
     },
     "schematics": {
+        "@schematics/angular:application": {
+            "strict": true
+        },
         "@schematics/angular:class": {
             "skipTests": true
         },
