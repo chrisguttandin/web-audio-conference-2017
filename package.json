@@ -89,7 +89,7 @@
         "grunt": "^1.5.2",
         "grunt-axe-webdriver": "^1.1.0",
         "grunt-cli": "^1.4.3",
-        "grunt-contrib-clean": "^2.0.0",
+        "grunt-contrib-clean": "^2.0.1",
         "grunt-contrib-copy": "^1.0.0",
         "grunt-contrib-htmlmin": "^3.1.0",
         "grunt-gh-pages": "^4.0.0",
