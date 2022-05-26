@@ -84,7 +84,7 @@
         "content-security-policy-builder": "^2.1.1",
         "cz-conventional-changelog": "^3.3.0",
         "element-shot": "^6.0.8",
-        "eslint": "^8.14.0",
+        "eslint": "^8.16.0",
         "eslint-config-holy-grail": "^52.0.10",
         "grunt": "^1.5.2",
         "grunt-axe-webdriver": "^1.1.0",
