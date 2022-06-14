@@ -41,7 +41,6 @@
         "@commitlint/config-angular": "^17.0.0",
         "@hint/connector-puppeteer": "^2.5.15",
         "@hint/formatter-stylish": "^3.1.28",
-        "@hint/hint-amp-validator": "^2.10.18",
         "@hint/hint-apple-touch-icons": "^4.0.13",
         "@hint/hint-axe": "^4.4.11",
         "@hint/hint-button-type": "^3.0.13",
