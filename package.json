@@ -67,7 +67,7 @@
         "@hint/hint-no-protocol-relative-urls": "^3.0.15",
         "@hint/hint-no-vulnerable-javascript-libraries": "^2.12.14",
         "@hint/hint-sri": "^4.0.15",
-        "@hint/hint-ssllabs": "^2.4.17",
+        "@hint/hint-ssllabs": "^2.4.19",
         "@hint/hint-strict-transport-security": "^3.0.13",
         "@hint/hint-stylesheet-limits": "^3.3.17",
         "@hint/hint-validate-set-cookie-header": "^3.0.13",
