@@ -48,7 +48,7 @@
         "@hint/hint-disown-opener": "^4.0.15",
         "@hint/hint-highest-available-document-mode": "^5.0.15",
         "@hint/hint-html-checker": "^3.3.19",
-        "@hint/hint-http-cache": "^4.0.13",
+        "@hint/hint-http-cache": "^4.0.15",
         "@hint/hint-image-optimization-cloudinary": "^3.2.17",
         "@hint/hint-manifest-app-name": "^2.4.19",
         "@hint/hint-manifest-exists": "^2.4.19",
