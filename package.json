@@ -113,7 +113,7 @@
         "stylelint": "^14.9.1",
         "stylelint-config-holy-grail": "^8.0.1",
         "ts-node": "~8.3.0",
-        "tsconfig-holy-grail": "^11.1.32",
+        "tsconfig-holy-grail": "^11.1.34",
         "typescript": "~4.6.4",
         "webpack-bundle-analyzer": "^4.5.0"
     },
