@@ -9,7 +9,6 @@
         "stylish"
     ],
     "hints": {
-        "amp-validator": "off",
         "apple-touch-icons": "off",
         "axe/aria": "error",
         "axe/color": "error",
