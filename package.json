@@ -33,7 +33,7 @@
     "description": "My talk at the Web Audio Conference 2017.",
     "devDependencies": {
         "@angular-devkit/build-angular": "~13.3.7",
-        "@angular-eslint/builder": "^13.2.1",
+        "@angular-eslint/builder": "^13.5.0",
         "@angular/cli": "^13.3.7",
         "@angular/compiler-cli": "~13.3.10",
         "@angular/language-service": "~13.3.10",
