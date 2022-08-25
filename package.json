@@ -84,7 +84,7 @@
         "cz-conventional-changelog": "^3.3.0",
         "element-shot": "^6.0.9",
         "eslint": "^8.22.0",
-        "eslint-config-holy-grail": "^52.0.20",
+        "eslint-config-holy-grail": "^52.0.28",
         "grunt": "^1.5.3",
         "grunt-axe-webdriver": "^1.1.0",
         "grunt-cli": "^1.4.3",
