@@ -2,4 +2,4 @@
 
 **My talk at the Web Audio Conference 2017.**
 
-To view the slides just navigate to: [bit.ly/wac-2017](https://bit.ly/wac-2017).
+To view the slides navigate to: [bit.ly/wac-2017](https://bit.ly/wac-2017).
