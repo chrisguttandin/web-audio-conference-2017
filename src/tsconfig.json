@@ -13,7 +13,7 @@
         "lib": ["dom", "es2020"],
         "module": "es2020",
         "outDir": "../out-tsc/app",
-        "target": "es2017"
+        "target": "es2020"
     },
     "extends": "tsconfig-holy-grail/src/tsconfig-browser",
     "files": ["main.ts", "polyfills.ts"],
