@@ -1,50 +1,47 @@
-import { Key, browser, by, element, logging } from 'protractor';
-import { HomePage } from './home.po';
+import { test, expect, ConsoleMessage } from '@playwright/test';
+import { Home } from './home.po';
 
-describe('/', () => {
-    let page: HomePage;
+let home: Home;
+let removeListener: () => ConsoleMessage[];
 
-    afterEach(async () => {
-        try {
-            // Assert that there are no errors emitted from the browser
-            const logs = await browser.manage().logs().get(logging.Type.BROWSER);
+test.afterEach(() => {
+    const consoleMessages = removeListener();
+    const severeConsoleMessages = consoleMessages.filter((consoleMessage) => !['info', 'log', 'warning'].includes(consoleMessage.type()));
 
-            expect(logs).not.toContain(
-                jasmine.objectContaining(<Partial<logging.Entry>>{
-                    level: logging.Level.SEVERE
-                })
-            );
-        } catch (err) {
-            // @todo The driver for Safari does not support to retrieve the logs.
-            if (err.name === 'UnsupportedOperationError') {
-                console.warn('The driver for Safari does not support to retrieve the logs.'); // eslint-disable-line no-console
-            } else {
-                throw err;
-            }
-        }
-    });
+    // eslint-disable-next-line no-console
+    severeConsoleMessages.forEach((consoleMessage) => console.log(`${consoleMessage.type()}: ${consoleMessage.text()}`));
 
-    beforeEach(() => {
-        page = new HomePage();
-    });
+    expect(severeConsoleMessages).toEqual([]);
+});
 
-    it('should display the correct headline', async () => {
-        await page.navigateTo();
+test.beforeEach(async ({ page }) => {
+    const consoleMessages: ConsoleMessage[] = [];
+    const listener = (consoleMessage) => consoleMessages.push(consoleMessage);
 
-        expect(await page.getHeadline()).toEqual('Noiseless Web Audio tests');
-    });
+    page.addListener('console', listener);
 
-    it('should go to the next slide', async () => {
-        await page.navigateTo();
+    removeListener = () => {
+        page.addListener('console', listener);
 
-        await element(by.tagName('body')).sendKeys(Key.ARROW_RIGHT);
+        return consoleMessages;
+    };
 
-        /*
-         * @todo Unfortunately an arbitrary call browser.sleep() is used here as both element(by.tagName('body')).allowAnimations(false)
-         * and browser.waitForAngular() have no effect.
-         */
-        await browser.sleep(1000);
+    home = new Home(page);
 
-        expect(await page.getSubHeadline()).toEqual('About me');
-    });
+    await home.navigateTo();
+});
+
+test('should display the correct headline', async () => {
+    await expect(home.getHeadline()).toHaveText('Noiseless Web Audio tests');
+});
+
+test('should go to the first slide', async ({ page }) => {
+    await expect(page).toHaveURL(/\/slides\/1$/);
+});
+
+test('should go to the next slide', async ({ page }) => {
+    await page.keyboard.press('ArrowRight');
+    await page.waitForURL(/\/slides\/2$/);
+
+    await expect(home.getSubHeadline()).toHaveText('About me');
 });

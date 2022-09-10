@@ -56,11 +56,6 @@ jobs:
               with:
                   node-version: 16.x
 
-            - name: Update Chrome
-              run: |
-                  sudo apt-get update
-                  sudo apt-get --only-upgrade install google-chrome-stable
-
             - name: Cache node modules
               uses: actions/cache@v2
               with:
@@ -79,9 +74,12 @@ jobs:
               name: Deploy website
               run: npx grunt deploy
 
-            - if: ${{ always() }}
-              name: Upload screenshots
+            - if: failure()
+              name: Upload report and results
               uses: 'actions/upload-artifact@v2'
               with:
-                  name: screenshots
-                  path: test/screenshots
+                  name: playwright-report-and-results
+                  path: |
+                      playwright-report/
+                      playwright-results/
+                      test/screenshots/
