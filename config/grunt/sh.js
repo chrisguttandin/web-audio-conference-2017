@@ -1,5 +1,3 @@
-const { env } = require('process');
-
 module.exports = (grunt) => {
     const fix = grunt.option('fix') === true;
 
@@ -15,7 +13,7 @@ module.exports = (grunt) => {
             cmd: 'npx ng test'
         },
         'e2e': {
-            cmd: env.CI ? 'npx ng e2e' : 'webdriver-manager update && npx ng e2e --no-webdriver-update'
+            cmd: 'npx playwright test --config config/playwright/config.ts'
         },
         'lint-config': {
             cmd: `eslint --config config/eslint/config.json --ext .js ${fix ? '--fix ' : ''}--report-unused-disable-directives *.js config/`
@@ -36,12 +34,9 @@ module.exports = (grunt) => {
             cmd: 'npx ng serve --configuration production'
         },
         'smoke': {
-            cmd: env.CI
-                ? `IS_SMOKE_TEST=true npx ng e2e --dev-server-target '' && \
-                    npx hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2017`
-                : `webdriver-manager update && \
-                    IS_SMOKE_TEST=true npx ng e2e --dev-server-target '' --no-webdriver-update && \
-                    npx hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2017`
+            cmd: `npx playwright install --with-deps && \
+                IS_SMOKE_TEST=true npx playwright test --config config/playwright/config.ts && \
+                npx hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2017`
         },
         'test': {
             cmd: 'npx ng test --watch false'
