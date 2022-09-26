@@ -64,18 +64,6 @@
                         "tsConfig": "src/tsconfig.json"
                     }
                 },
-                "e2e": {
-                    "builder": "@angular-devkit/build-angular:protractor",
-                    "configurations": {
-                        "production": {
-                            "devServerTarget": "web-audio-conference-2017:serve:production"
-                        }
-                    },
-                    "options": {
-                        "devServerTarget": "web-audio-conference-2017:serve",
-                        "protractorConfig": "config/protractor/e2e.js"
-                    }
-                },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
