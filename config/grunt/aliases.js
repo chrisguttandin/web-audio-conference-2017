@@ -1,7 +1,6 @@
 module.exports = {
     analyze: ['sh:analyze'],
-    continuous: ['sh:continuous'],
-    deploy: [
+    build: [
         'sh:build',
         'sh:verify',
         'clean:source-maps',
@@ -11,10 +10,9 @@ module.exports = {
         'clean:runtime',
         'replace:csp-production',
         'htmlmin',
-        'replace:manifest',
-        'gh-pages:deploy',
-        'smoke'
+        'replace:manifest'
     ],
+    continuous: ['sh:continuous'],
     e2e: ['sh:e2e'],
     lint: ['sh:lint-config', 'sh:lint-src', 'sh:lint-test'],
     monitor: ['sh:monitor'],
