@@ -4,11 +4,14 @@ on:
     push:
         branches:
             - master
-        tags:
-            - 'v*'
     pull_request:
         branches:
             - master
+
+permissions:
+    contents: read
+    id-token: write
+    pages: write
 
 jobs:
     build:
@@ -16,15 +19,15 @@ jobs:
 
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
             - name: Install Node.js 16.x
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v3
               with:
                   node-version: 16.x
 
             - name: Cache node modules
-              uses: actions/cache@v2
+              uses: actions/cache@v3
               with:
                   path: ~/.npm
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -41,7 +44,11 @@ jobs:
               run: npm test
 
     deploy:
-        if: startsWith(github.ref, 'refs/tags/v')
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
+        if: github.ref_name == 'master'
 
         needs: build
 
@@ -49,15 +56,15 @@ jobs:
 
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
             - name: Install Node.js 16.x
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v3
               with:
                   node-version: 16.x
 
             - name: Cache node modules
-              uses: actions/cache@v2
+              uses: actions/cache@v3
               with:
                   path: ~/.npm
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -67,16 +74,27 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
-            - env:
-                  GIT_HUB_ACCESS_TOKEN: ${{ secrets.GIT_HUB_ACCESS_TOKEN }}
-                  GIT_HUB_USER_EMAIL: ${{ secrets.GIT_HUB_USER_EMAIL }}
-                  GIT_HUB_USER_NAME: ${{ secrets.GIT_HUB_USER_NAME }}
-              name: Deploy website
-              run: npx grunt deploy
+            - name: Build website
+              run: grunt build
+
+            - name: Configure GitHub Pages
+              uses: actions/configure-pages@v2
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v1
+              with:
+                  path: ./build/web-audio-conference-2017
+
+            - id: deployment
+              name: Deploy to GitHub Pages
+              uses: actions/deploy-pages@v1
+
+            - name: Run smoke tests
+              run: grunt smoke
 
             - if: failure()
               name: Upload report and results
-              uses: 'actions/upload-artifact@v2'
+              uses: actions/upload-artifact@v2
               with:
                   name: playwright-report-and-results
                   path: |
