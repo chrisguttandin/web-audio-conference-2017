@@ -75,7 +75,7 @@ jobs:
               run: npm ci
 
             - name: Build website
-              run: grunt build
+              run: npx grunt build
 
             - name: Configure GitHub Pages
               uses: actions/configure-pages@v2
@@ -90,7 +90,7 @@ jobs:
               uses: actions/deploy-pages@v1
 
             - name: Run smoke tests
-              run: grunt smoke
+              run: npx grunt smoke
 
             - if: failure()
               name: Upload report and results
