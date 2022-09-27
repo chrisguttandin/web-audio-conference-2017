@@ -13,7 +13,8 @@ module.exports = (grunt) => {
             cmd: 'npx ng test'
         },
         'e2e': {
-            cmd: 'npx playwright test --config config/playwright/config.ts'
+            cmd: `npx playwright install --with-deps && \
+                npx playwright test --config config/playwright/config.ts`
         },
         'lint-config': {
             cmd: `eslint --config config/eslint/config.json --ext .js ${fix ? '--fix ' : ''}--report-unused-disable-directives *.js config/`
