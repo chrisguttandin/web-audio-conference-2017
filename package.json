@@ -99,7 +99,6 @@
         "htmlhint": "^1.1.4",
         "husky": "^8.0.1",
         "jasmine-core": "~4.3.0",
-        "jasmine-spec-reporter": "~5.0.2",
         "karma": "~6.4.0",
         "karma-chrome-launcher": "~3.1.1",
         "karma-coverage": "~2.2.0",
