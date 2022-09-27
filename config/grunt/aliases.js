@@ -1,5 +1,4 @@
 module.exports = {
-    a11y: ['axe-webdriver'],
     analyze: ['sh:analyze'],
     continuous: ['sh:continuous'],
     deploy: [
