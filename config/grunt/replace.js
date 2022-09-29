@@ -18,19 +18,6 @@ const computeHashOfString = (string, algorithm, encoding) => {
 
 module.exports = (grunt) => {
     return {
-        'bundle': {
-            files: {
-                './': ['build/web-audio-conference-2017/main*.js']
-            },
-            options: {
-                patterns: [
-                    {
-                        match: /"\/ngsw-worker\.js"/g,
-                        replacement: '"/web-audio-conference-2017/ngsw-worker.js"'
-                    }
-                ]
-            }
-        },
         'csp-production': {
             files: {
                 'build/web-audio-conference-2017/index.html': ['build/web-audio-conference-2017/index.html']
