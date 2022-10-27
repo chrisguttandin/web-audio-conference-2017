@@ -43,7 +43,7 @@ module.exports = (config) => {
                     base: 'SauceLabs',
                     browserName: 'chrome',
                     captureTimeout: 300,
-                    platform: 'macOS 11.00'
+                    platform: 'macOS 12'
                 }
             },
 
