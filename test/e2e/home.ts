@@ -21,7 +21,7 @@ test.beforeEach(async ({ page }) => {
     page.addListener('console', listener);
 
     removeListener = () => {
-        page.addListener('console', listener);
+        page.removeListener('console', listener);
 
         return consoleMessages;
     };
