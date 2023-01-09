@@ -28,17 +28,15 @@ export class PrismComponent implements AfterViewInit, OnChanges {
         Prism.highlightElement(this._element.nativeElement, false);
     }
 
-    public ngOnChanges(changes: SimpleChanges): void {
-        if (changes.language !== undefined) {
-            const change = changes.language;
-
-            if (!change.firstChange) {
-                this._renderer2.removeClass(this._element.nativeElement, `language-${change.previousValue}`);
+    public ngOnChanges({ language }: SimpleChanges): void {
+        if (language !== undefined) {
+            if (!language.firstChange) {
+                this._renderer2.removeClass(this._element.nativeElement, `language-${language.previousValue}`);
             }
 
-            this._renderer2.addClass(this._element.nativeElement, `language-${change.currentValue}`);
+            this._renderer2.addClass(this._element.nativeElement, `language-${language.currentValue}`);
 
-            if (!change.firstChange) {
+            if (!language.firstChange) {
                 Prism.highlightElement(this._element.nativeElement, false);
             }
         }
