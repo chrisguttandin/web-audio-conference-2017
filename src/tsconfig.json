@@ -10,12 +10,16 @@
         "declaration": false,
         "declarationMap": false,
         "downlevelIteration": true,
-        "lib": ["dom", "es2020"],
-        "module": "es2020",
+        "lib": ["dom", "es2022"],
+        "module": "es2022",
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": true,
         "outDir": "../out-tsc/app",
-        "target": "es2020"
+        "target": "es2022",
+        "useDefineForClassFields": false,
+        "useUnknownInCatchVariables": true
     },
     "extends": "tsconfig-holy-grail/src/tsconfig-browser",
-    "files": ["main.ts", "polyfills.ts"],
+    "files": ["main.ts"],
     "include": ["**/*.d.ts"]
 }

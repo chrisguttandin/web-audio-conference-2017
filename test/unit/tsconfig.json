@@ -6,16 +6,20 @@
         "strictTemplates": true
     },
     "compilerOptions": {
+        "baseUrl": "./",
         "declaration": false,
         "declarationMap": false,
         "downlevelIteration": true,
-        "lib": ["dom", "es2020"],
-        "module": "es2020",
+        "lib": ["dom", "es2022"],
+        "module": "es2022",
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": true,
         "outDir": "../../out-tsc/spec",
-        "target": "es2020",
-        "types": ["jasmine", "node", "../../src/ng-dev-mode"]
+        "target": "es2022",
+        "types": ["jasmine", "../../src/ng-dev-mode"],
+        "useDefineForClassFields": false,
+        "useUnknownInCatchVariables": true
     },
     "extends": "tsconfig-holy-grail/src/tsconfig-browser",
-    "files": ["../../config/karma/test.ts", "../../src/polyfills.ts"],
     "include": ["**/*.ts"]
 }
