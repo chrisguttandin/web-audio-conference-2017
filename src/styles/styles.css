@@ -6,7 +6,7 @@ html {
 
 body {
     background-color: #333;
-    color: #FFD;
+    color: #ffd;
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     font-size: 8vw;
     height: 75vw;
@@ -15,20 +15,13 @@ body {
     width: 100%;
 }
 
-body h1:first-child,
-body h2:first-child {
-    margin-top: 0;
-}
-
 @media (min-aspect-ratio: 4/3) {
-
     body {
         font-size: 10.666vh;
         height: 100%;
         margin: 0 auto;
         width: 133vh;
     }
-
 }
 
 a {
@@ -50,6 +43,11 @@ h1 {
 h2 {
     font-size: 80%;
     letter-spacing: -0.005em;
+}
+
+body h1:first-child,
+body h2:first-child {
+    margin-top: 0;
 }
 
 ul {
