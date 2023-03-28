@@ -39,7 +39,7 @@ const config: PlaywrightTestConfig = {
     retries: env.CI ? 2 : 0,
     snapshotDir: '../../test/screenshots',
     testDir: '../../test',
-    testMatch: /(e2e|regression)\/.*\.ts/,
+    testMatch: /(e2e|regression)\/(?!.*\.po\.ts$).*\.ts$/,
     use: {
         baseURL: env.IS_SMOKE_TEST ? 'https://chrisguttandin.github.io/web-audio-conference-2017/' : 'http://localhost:7733',
         trace: 'on-first-retry'
