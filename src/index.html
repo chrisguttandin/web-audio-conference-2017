@@ -8,7 +8,8 @@
         <meta content="#333" name="theme-color" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta http-equiv="content-security-policy" />
-        <script>(function(){var r;if(sessionStorage){if(sessionStorage.redirect){r=sessionStorage.redirect;delete sessionStorage.redirect;history.replaceState(null,null,r)}}})()</script>
+        <!-- prettier-ignore -->
+        <script>const s=sessionStorage;s&&s.r&&(history.replaceState(null,null,s.r),delete s.r)</script>
         <title>Web Audio Conference 2017</title>
     </head>
     <body>
