@@ -34,7 +34,11 @@ module.exports = (grunt) => {
                             let result = regex.exec(html);
 
                             while (result !== null) {
-                                scriptHashes.push(`'sha256-${computeHashOfString(result.groups.script, 'sha256', 'base64')}'`);
+                                const script = result.groups.script;
+
+                                if (script.trim() !== '') {
+                                    scriptHashes.push(`'sha256-${computeHashOfString(script, 'sha256', 'base64')}'`);
+                                }
 
                                 result = regex.exec(html);
                             }
