@@ -14,7 +14,7 @@ import * as Prism from 'prismjs';
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: 'wac-prism',
-    styleUrls: ['./prism.component.css'],
+    styleUrls: ['./prism.component.scss'],
     templateUrl: './prism.component.html'
 })
 export class PrismComponent implements AfterViewInit, OnChanges {

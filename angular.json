@@ -54,7 +54,7 @@
                         "polyfills": ["zone.js"],
                         "scripts": ["hammerjs/hammer.js"],
                         "serviceWorker": true,
-                        "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.css"],
+                        "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.scss"],
                         "tsConfig": "src/tsconfig.json"
                     }
                 },
@@ -100,7 +100,7 @@
                         "karmaConfig": "config/karma/config.js",
                         "polyfills": ["zone.js", "zone.js/testing"],
                         "scripts": ["hammerjs/hammer.js"],
-                        "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.css"],
+                        "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.scss"],
                         "tsConfig": "test/unit/tsconfig.json"
                     }
                 }
@@ -125,7 +125,7 @@
             "inlineTemplate": false,
             "prefix": "wac",
             "skipTests": true,
-            "style": "css"
+            "style": "scss"
         },
         "@schematics/angular:directive": {
             "prefix": "wac",

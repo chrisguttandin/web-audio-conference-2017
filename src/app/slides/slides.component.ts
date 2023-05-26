@@ -11,7 +11,7 @@ const NO_TRANSITION_PARAMS = { duration: '0s', enterTransform: 'none', leaveTran
 @Component({
     animations: [trigger('transition', [transition('* => *', [useAnimation(slideAnimation)])])],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    styleUrls: ['./slides.component.css'],
+    styleUrls: ['./slides.component.scss'],
     templateUrl: './slides.component.html'
 })
 export class SlidesComponent implements OnDestroy, OnInit {
