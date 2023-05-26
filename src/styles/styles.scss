@@ -1,3 +1,7 @@
+@use '@fontsource/montserrat/scss/mixins' as montserrat;
+
+@include montserrat.faces($subsets: latin latin-ext, $weights: 400);
+
 html {
     height: 100%;
     margin: 0;

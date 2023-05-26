@@ -66,18 +66,6 @@
     "hintsTimeout": 120000,
     "ignoredUrls": [
         {
-            "domain": ".*fonts\\.googleapis\\.com/.*",
-            "hints": [
-                "*"
-            ]
-        },
-        {
-            "domain": ".*fonts\\.gstatic\\.com/.*",
-            "hints": [
-                "*"
-            ]
-        },
-        {
             "domain": ".*github\\.io.*.ico$",
             "hints": [
                 "content-type"
