@@ -76,7 +76,7 @@
         "@hint/parser-manifest": "^2.3.19",
         "@playwright/test": "^1.39.0",
         "@types/jasmine": "~4.3.6",
-        "@types/prismjs": "^1.26.2",
+        "@types/prismjs": "^1.26.3",
         "axe-core": "^4.8.2",
         "bundle-buddy": "^0.2.2",
         "commitizen": "^4.3.0",
