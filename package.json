@@ -83,7 +83,7 @@
         "content-security-policy-builder": "^2.1.1",
         "cz-conventional-changelog": "^3.3.0",
         "eslint": "^8.53.0",
-        "eslint-config-holy-grail": "^57.2.23",
+        "eslint-config-holy-grail": "^57.2.24",
         "grunt": "^1.6.1",
         "grunt-cli": "^1.4.3",
         "grunt-contrib-clean": "^2.0.1",
