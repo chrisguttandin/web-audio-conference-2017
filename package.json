@@ -106,7 +106,7 @@
         "prettier": "^3.2.4",
         "puppeteer": "^21.7.0",
         "stylelint": "^15.11.0",
-        "stylelint-config-holy-grail": "^11.0.13",
+        "stylelint-config-holy-grail": "^11.0.14",
         "tsconfig-holy-grail": "^14.0.8",
         "typescript": "~5.1.6",
         "webpack-bundle-analyzer": "^4.10.1"
