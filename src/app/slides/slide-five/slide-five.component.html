@@ -1,6 +1,8 @@
 <h2>Backporting the new API</h2>
-<wac-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->if (!audioBufferSourceNode.noteOn) &#123;
-    audioBufferSourceNode.noteOn = (when) =&gt; &#123;
+<wac-prism language="javascript" ngPreserveWhitespaces
+    ><!-- htmlmin:ignore --><!-- prettier-ignore -->if (!audioBufferSourceNode.noteOn) &lbrace;
+    audioBufferSourceNode.noteOn = (when) =&gt; &lbrace;
         audioBufferSourceNode.start(when);
-    &#125;;
-&#125;<!-- htmlmin:ignore --></wac-prism>
+    &rbrace;;
+&rbrace;<!-- htmlmin:ignore --></wac-prism
+>

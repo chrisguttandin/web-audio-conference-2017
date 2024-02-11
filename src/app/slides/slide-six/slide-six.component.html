@@ -1,14 +1,16 @@
 <h2>Implementing the new API</h2>
-<wac-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->if (!audioBufferSourceNode.start) &#123;
-    audioBufferSourceNode.start = (when, offset, duration) =&gt; &#123;
-        if (offset || duration) &#123;
+<wac-prism language="javascript" ngPreserveWhitespaces
+    ><!-- htmlmin:ignore --><!-- prettier-ignore -->if (!audioBufferSourceNode.start) &lbrace;
+    audioBufferSourceNode.start = (when, offset, duration) =&gt; &lbrace;
+        if (offset || duration) &lbrace;
             audioBufferSourceNode.noteGrainOn(
                 when || 0,
                 offset,
                 duration
             );
-        &#125; else &#123;
+        &rbrace; else &lbrace;
             audioBufferSourceNode.noteOn(when || 0);
-        &#125;
-    &#125;;
-&#125;<!-- htmlmin:ignore --></wac-prism>
+        &rbrace;
+    &rbrace;;
+&rbrace;<!-- htmlmin:ignore --></wac-prism
+>

@@ -1,8 +1,10 @@
 <h2>AudioContext monkeypatch</h2>
-<wac-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->if (window.hasOwnProperty('webkitAudioContext') &&
-        !window.hasOwnProperty('AudioContext')) &#123;
+<wac-prism language="javascript" ngPreserveWhitespaces
+    ><!-- htmlmin:ignore --><!-- prettier-ignore -->if (window.hasOwnProperty('webkitAudioContext') &&
+        !window.hasOwnProperty('AudioContext')) &lbrace;
     window.AudioContext = webkitAudioContext;
-&#125;<!-- htmlmin:ignore --></wac-prism>
+&rbrace;<!-- htmlmin:ignore --></wac-prism
+>
 <ul>
     <li>generally avoid assigning something to the global scope</li>
 </ul>

@@ -1,9 +1,11 @@
 <h2>Fixes work forever</h2>
-<wac-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->if (analyserNode.getFloatTimeDomainData === undefined) &#123;
-    analyserNode.getFloatTimeDomainData = (array) =&gt; &#123;
+<wac-prism language="javascript" ngPreserveWhitespaces
+    ><!-- htmlmin:ignore --><!-- prettier-ignore -->if (analyserNode.getFloatTimeDomainData === undefined) &lbrace;
+    analyserNode.getFloatTimeDomainData = (array) =&gt; &lbrace;
         // ... implementation of missing behaviour
-    &#125;
-&#125;;<!-- htmlmin:ignore --></wac-prism>
+    &rbrace;
+&rbrace;;<!-- htmlmin:ignore --></wac-prism
+>
 <ul>
     <li>it's impossible to find out if the fix is still necessary</li>
 </ul>

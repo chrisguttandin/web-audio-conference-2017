@@ -1,8 +1,10 @@
 <h2>Integration test</h2>
-<wac-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->import &#123; AudioContext &#125; from 'audio-context-polyfill';
+<wac-prism language="javascript" ngPreserveWhitespaces
+    ><!-- htmlmin:ignore --><!-- prettier-ignore -->import &lbrace; AudioContext &rbrace; from 'audio-context-polyfill';
 
-it('should have a createGain() method', () =&gt; &#123;
+it('should have a createGain() method', () =&gt; &lbrace;
     const audioContext = new AudioContext();
 
     expect(audioContext.createGain).to.be.a('function');
-&#125;);<!-- htmlmin:ignore --></wac-prism>
+&rbrace;);<!-- htmlmin:ignore --></wac-prism
+>

@@ -1,6 +1,8 @@
 <h2>Expectation test</h2>
-<wac-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->it('should have no createGain() method', () =&gt; &#123;
+<wac-prism language="javascript" ngPreserveWhitespaces
+    ><!-- htmlmin:ignore --><!-- prettier-ignore -->it('should have no createGain() method', () =&gt; &lbrace;
     const audioContext = new AudioContext();
 
     expect(audioContext.createGain).to.be.undefined;
-&#125;);<!-- htmlmin:ignore --></wac-prism>
+&rbrace;);<!-- htmlmin:ignore --></wac-prism
+>

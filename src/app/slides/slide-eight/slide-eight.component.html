@@ -1,8 +1,10 @@
 <h2>Patching the prototype</h2>
-<wac-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->if (!AudioContext.prototype.hasOwnProperty('createGain')) &#123;
+<wac-prism language="javascript" ngPreserveWhitespaces
+    ><!-- htmlmin:ignore --><!-- prettier-ignore -->if (!AudioContext.prototype.hasOwnProperty('createGain')) &lbrace;
     AudioContext.prototype.createGain
         = AudioContext.prototype.createGainNode;
-&#125;<!-- htmlmin:ignore --></wac-prism>
+&rbrace;<!-- htmlmin:ignore --></wac-prism
+>
 <ul>
     <li>generally avoid patching native prototypes</li>
 </ul>
