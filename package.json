@@ -104,7 +104,7 @@
         "lint-staged": "^15.2.2",
         "load-grunt-config": "^4.0.1",
         "prettier": "^3.2.5",
-        "puppeteer": "^21.7.0",
+        "puppeteer": "^22.0.0",
         "stylelint": "^15.11.0",
         "stylelint-config-holy-grail": "^11.0.14",
         "tsconfig-holy-grail": "^14.0.8",
