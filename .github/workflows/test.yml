@@ -19,15 +19,15 @@ jobs:
 
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Install Node.js 20.x
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: 20.x
 
             - name: Cache node modules
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               with:
                   path: ~/.npm
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -56,15 +56,15 @@ jobs:
 
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Install Node.js 20.x
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: 20.x
 
             - name: Cache node modules
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               with:
                   path: ~/.npm
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -78,23 +78,23 @@ jobs:
               run: npx grunt build
 
             - name: Configure GitHub Pages
-              uses: actions/configure-pages@v3
+              uses: actions/configure-pages@v4
 
             - name: Upload artifact
-              uses: actions/upload-pages-artifact@v1
+              uses: actions/upload-pages-artifact@v3
               with:
                   path: ./build/web-audio-conference-2017
 
             - id: deployment
               name: Deploy to GitHub Pages
-              uses: actions/deploy-pages@v1
+              uses: actions/deploy-pages@v4
 
             - name: Run smoke tests
               run: npx grunt smoke
 
             - if: failure()
               name: Upload report and results
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: playwright-report-and-results
                   path: |
