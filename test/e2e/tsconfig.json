@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "types": ["node"]
+    },
+    "extends": "tsconfig-holy-grail/src/tsconfig-browser",
+    "include": ["**/*.ts"]
+}
