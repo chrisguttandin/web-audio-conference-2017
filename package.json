@@ -29,7 +29,7 @@
         "rxjs": "~7.8.1",
         "subscribable-things": "^2.1.30",
         "tslib": "^2.6.2",
-        "zone.js": "~0.13.1"
+        "zone.js": "^0.14.4"
     },
     "description": "My talk at the Web Audio Conference 2017.",
     "devDependencies": {
