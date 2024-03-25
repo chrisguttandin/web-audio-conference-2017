@@ -6,7 +6,9 @@ let removeListener: () => ConsoleMessage[];
 
 test.afterEach(() => {
     const consoleMessages = removeListener();
-    const severeConsoleMessages = consoleMessages.filter((consoleMessage) => !['info', 'log', 'warning'].includes(consoleMessage.type()));
+    const severeConsoleMessages = consoleMessages.filter(
+        (consoleMessage) => !['debug', 'info', 'log', 'warning'].includes(consoleMessage.type())
+    );
 
     // eslint-disable-next-line no-console
     severeConsoleMessages.forEach((consoleMessage) => console.log(`${consoleMessage.type()}: ${consoleMessage.text()}`));
