@@ -42,6 +42,7 @@ test('should go to the first slide', async ({ page }) => {
 });
 
 test('should go to the next slide', async ({ page }) => {
+    await page.waitForURL(/\/slides\/1$/);
     await page.keyboard.press('ArrowRight');
     await page.waitForURL(/\/slides\/2$/);
 
