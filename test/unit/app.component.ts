@@ -1,13 +1,13 @@
+import { provideNoopAnimations } from '@angular/platform-browser/animations';
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from '../../src/app/app.component';
-import { AppModule } from '../../src/app/app.module';
 
 describe('AppComponent', () => {
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            imports: [AppModule, RouterTestingModule]
-        });
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [AppComponent],
+            providers: [provideNoopAnimations()]
+        }).compileComponents();
     });
 
     it('should create the app', () => {
