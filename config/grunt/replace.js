@@ -89,7 +89,7 @@ module.exports = (grunt) => {
         },
         'manifest': {
             files: {
-                './': ['build/tpac-2022/browser/ngsw.json']
+                './': ['build/web-audio-conference-2017/browser/ngsw.json']
             },
             options: {
                 patterns: [
