@@ -93,6 +93,7 @@
         "grunt-replace": "^2.0.2",
         "grunt-sh": "^0.2.1",
         "hint": "^7.1.11",
+        "html-minifier": "^4.0.0",
         "htmlhint": "^1.1.4",
         "husky": "^8.0.3",
         "jasmine-core": "~5.1.2",
