@@ -37,6 +37,7 @@
         "@angular-eslint/builder": "^17.3.0",
         "@angular/cli": "^17.3.5",
         "@angular/compiler-cli": "^17.3.5",
+        "@angular/platform-server": "^17.3.5",
         "@commitlint/cli": "^19.2.2",
         "@commitlint/config-angular": "^19.2.2",
         "@hint/connector-puppeteer": "^2.5.24",
