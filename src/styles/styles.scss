@@ -1,6 +1,6 @@
 @use '@fontsource/montserrat/scss/mixins' as montserrat;
 
-@include montserrat.faces($subsets: latin latin-ext, $weights: 400);
+@include montserrat.faces($directory: '@fontsource/montserrat/files/', $subsets: latin latin-ext, $weights: 400);
 
 html {
     height: 100%;

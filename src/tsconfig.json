@@ -20,6 +20,6 @@
         "useUnknownInCatchVariables": true
     },
     "extends": "tsconfig-holy-grail/src/tsconfig-browser",
-    "files": ["main.ts"],
+    "files": ["main.ts", "main.server.ts", "server.ts"],
     "include": ["environments/**.ts", "**/*.d.ts"]
 }

@@ -5,15 +5,13 @@
         "web-audio-conference-2017": {
             "architect": {
                 "build": {
-                    "builder": "@angular-devkit/build-angular:browser",
+                    "builder": "@angular-builders/custom-esbuild:application",
                     "configurations": {
                         "development": {
-                            "buildOptimizer": false,
                             "extractLicenses": false,
                             "namedChunks": true,
                             "optimization": false,
-                            "sourceMap": true,
-                            "vendorChunk": true
+                            "sourceMap": true
                         },
                         "production": {
                             "budgets": [
@@ -34,6 +32,7 @@
                                     "with": "src/environments/environment.prod.ts"
                                 }
                             ],
+                            "indexHtmlTransformer": "config/esbuild/transform.mjs",
                             "outputHashing": "all",
                             "sourceMap": {
                                 "hidden": true,
@@ -45,14 +44,18 @@
                     "defaultConfiguration": "production",
                     "options": {
                         "assets": ["src/assets"],
+                        "browser": "src/main.ts",
                         "i18nMissingTranslation": "error",
                         "index": "src/index.html",
-                        "main": "src/main.ts",
-                        "ngswConfigPath": "src/ngsw-config.json",
                         "outputPath": "build/web-audio-conference-2017",
                         "polyfills": ["zone.js"],
+                        "prerender": true,
                         "scripts": ["hammerjs/hammer.js"],
-                        "serviceWorker": true,
+                        "server": "src/main.server.ts",
+                        "serviceWorker": "src/ngsw-config.json",
+                        "ssr": {
+                            "entry": "src/server.ts"
+                        },
                         "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.scss"],
                         "tsConfig": "src/tsconfig.json"
                     }
@@ -77,7 +80,7 @@
                     }
                 },
                 "serve": {
-                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "builder": "@angular-builders/custom-esbuild:dev-server",
                     "configurations": {
                         "development": {
                             "buildTarget": "web-audio-conference-2017:build:development"
@@ -99,7 +102,6 @@
                         "karmaConfig": "config/karma/config.js",
                         "polyfills": ["zone.js", "zone.js/testing"],
                         "scripts": ["hammerjs/hammer.js"],
-                        "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.scss"],
                         "tsConfig": "test/unit/tsconfig.json"
                     }
                 }

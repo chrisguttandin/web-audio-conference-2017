@@ -43,8 +43,8 @@ module.exports = (grunt) => {
             cmd: 'npx ng test --watch false'
         },
         'verify': {
-            cmd: `npx bundle-buddy build/web-audio-conference-2017/*.js.map && \
-                grep -r build/**/*.map -e '/environments/environment.ts'; test $? -eq 1`
+            cmd: `npx bundle-buddy build/web-audio-conference-2017/browser/*.js.map && \
+                grep -r build/web-audio-conference-2017/browser/*.js.map -e '/environments/environment.ts'; test $? -eq 1`
         }
     };
 };
