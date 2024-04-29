@@ -82,7 +82,7 @@
         "axe-core": "^4.9.0",
         "bundle-buddy": "^0.2.2",
         "commitizen": "^4.3.0",
-        "content-security-policy-builder": "^2.1.1",
+        "content-security-policy-builder": "^2.2.0",
         "cz-conventional-changelog": "^3.3.0",
         "eslint": "^8.57.0",
         "eslint-config-holy-grail": "^59.0.6",
