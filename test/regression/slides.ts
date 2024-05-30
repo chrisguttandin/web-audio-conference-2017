@@ -36,14 +36,28 @@ for (let slide = 1; slide < 18; slide += 1) {
                 if (browserName === 'chromium') {
                     await page.goto(path);
 
-                    const registration = await page.evaluate(() => navigator.serviceWorker.getRegistration());
-
-                    expect(registration).toBeDefined();
+                    expect(await page.evaluate(() => navigator.serviceWorker.getRegistration())).toBeDefined();
 
                     await expect(page).toHaveScreenshot(name, {
                         fullPage: true
                     });
                 }
+            });
+        });
+
+        test.describe('without JavaScript', () => {
+            test.use({ javaScriptEnabled: false });
+
+            test('should look the same', async ({ browserName, page }) => {
+                await page.goto(path);
+
+                if (browserName !== 'firefox') {
+                    expect(await page.evaluate(() => navigator.serviceWorker.getRegistration())).toBeUndefined();
+                }
+
+                await expect(page).toHaveScreenshot(name, {
+                    fullPage: true
+                });
             });
         });
     });
