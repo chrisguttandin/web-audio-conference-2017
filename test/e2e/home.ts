@@ -7,7 +7,7 @@ let removeListener: () => ConsoleMessage[];
 test.afterEach(() => {
     const consoleMessages = removeListener();
     const severeConsoleMessages = consoleMessages.filter(
-        (consoleMessage) => !['debug', 'info', 'log', 'warn', 'warning'].includes(consoleMessage.type())
+        (consoleMessage) => !['debug', 'info', 'log', 'warning'].includes(consoleMessage.type())
     );
 
     // eslint-disable-next-line no-console
