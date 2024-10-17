@@ -79,7 +79,7 @@
         "@playwright/test": "^1.48.1",
         "@types/jasmine": "~5.1.4",
         "@types/prismjs": "^1.26.4",
-        "axe-core": "^4.10.0",
+        "axe-core": "^4.10.1",
         "bundle-buddy": "^0.2.2",
         "commitizen": "^4.3.0",
         "content-security-policy-builder": "^2.2.0",
