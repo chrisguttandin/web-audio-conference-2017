@@ -5,7 +5,6 @@ import { PrismComponent } from '../prism/prism.component';
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [PrismComponent],
     selector: 'wac-slide-six',
-    standalone: true,
     templateUrl: './slide-six.component.html'
 })
 export class SlideSixComponent {}
