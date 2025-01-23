@@ -49,9 +49,7 @@
                         "index": "src/index.html",
                         "outputPath": "build/web-audio-conference-2017",
                         "polyfills": ["zone.js"],
-                        "prerender": {
-                            "routesFile": "src/routes.txt"
-                        },
+                        "prerender": true,
                         "scripts": ["hammerjs/hammer.js"],
                         "server": "src/main.server.ts",
                         "serviceWorker": "src/ngsw-config.json",
