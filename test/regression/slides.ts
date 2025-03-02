@@ -60,5 +60,30 @@ for (let slide = 1; slide < 18; slide += 1) {
                 });
             });
         });
+
+        test.describe('without font synthesis', () => {
+            test('should look the same', async ({ browserName, page }) => {
+                await page.goto(path);
+                await page.locator('html').evaluate(({ style }) => (style.fontSynthesis = 'none'));
+
+                if (
+                    env.CI === 'true' &&
+                    env.IS_SMOKE_TEST === 'true' &&
+                    browserName === 'chromium' &&
+                    [4, 5, 6, 8, 9, 10, 11, 12].includes(slide)
+                ) {
+                    await expect(page).not.toHaveScreenshot(name, {
+                        fullPage: true
+                    });
+                    await expect(page).toHaveScreenshot(`slide-${slide}-without-font-synthesis-should-look-the-same-1.png`, {
+                        fullPage: true
+                    });
+                } else {
+                    await expect(page).toHaveScreenshot(name, {
+                        fullPage: true
+                    });
+                }
+            });
+        });
     });
 }
