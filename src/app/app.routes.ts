@@ -2,22 +2,17 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        loadChildren: () => import('./slides'),
-        path: 'slides'
-    },
-    {
-        path: '',
-        pathMatch: 'prefix',
-        redirectTo: 'slides'
-    },
-    {
         children: [
             {
-                loadComponent: () => import('./slides/slide-one/slide-one.component').then(({ SlideOneComponent }) => SlideOneComponent),
-                path: ''
+                loadChildren: () => import('./slides'),
+                path: 'slides'
+            },
+            {
+                path: '**',
+                redirectTo: 'slides'
             }
         ],
-        loadComponent: () => import('./slides/slides.component').then(({ SlidesComponent }) => SlidesComponent),
-        path: ''
+        path: '',
+        pathMatch: 'prefix'
     }
 ];
