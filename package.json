@@ -41,7 +41,7 @@
         "@angular/platform-server": "^19.2.1",
         "@angular/ssr": "^19.2.1",
         "@commitlint/cli": "^19.8.0",
-        "@commitlint/config-angular": "^19.7.1",
+        "@commitlint/config-angular": "^19.8.0",
         "@hint/connector-puppeteer": "^2.5.25",
         "@hint/formatter-stylish": "^3.1.36",
         "@hint/hint-apple-touch-icons": "^4.0.23",
