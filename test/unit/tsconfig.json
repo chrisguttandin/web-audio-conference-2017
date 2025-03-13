@@ -16,7 +16,7 @@
         "noPropertyAccessFromIndexSignature": true,
         "outDir": "../../out-tsc/spec",
         "target": "es2022",
-        "types": ["jasmine", "../../src/ng-dev-mode"],
+        "types": ["jasmine"],
         "useDefineForClassFields": false,
         "useUnknownInCatchVariables": true
     },
