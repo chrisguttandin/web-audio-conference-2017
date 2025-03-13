@@ -104,7 +104,7 @@
         "karma-jasmine": "~5.1.0",
         "karma-jasmine-html-reporter": "~2.1.0",
         "karma-sauce-launcher": "^4.3.6",
-        "lint-staged": "^15.4.3",
+        "lint-staged": "^15.5.0",
         "load-grunt-config": "^4.0.1",
         "prettier": "^3.5.3",
         "puppeteer": "^24.4.0",
