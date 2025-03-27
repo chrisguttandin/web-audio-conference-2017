@@ -14,12 +14,6 @@ module.exports = () => {
             cmd: `npx playwright install --with-deps && \
                 npx playwright test --config config/playwright/config.ts`
         },
-        'monitor': {
-            cmd: 'npx ng serve'
-        },
-        'preview': {
-            cmd: 'npx ng serve --configuration production'
-        },
         'rimraf-source-maps': {
             cmd: 'rimraf build/web-audio-conference-2017/browser/**.map'
         },

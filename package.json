@@ -129,7 +129,9 @@
         "lint:config": "eslint --config config/eslint/config.json --ext .cjs --ext .js --ext .mjs --report-unused-disable-directives config/",
         "lint:src": "htmlhint --config config/htmlhint/document.json 'src/**/index.html' && htmlhint --config config/htmlhint/template.json 'src/app/**/*.component.html' && npx ng lint web-audio-conference-2017 && npx stylelint 'src/**/*.scss' --config config/stylelint/config.json",
         "lint:test": "npx ng lint web-audio-conference-2017 --configuration test",
+        "monitor": "npx ng serve",
         "prepare": "husky",
+        "preview": "npx ng serve --configuration production",
         "test": "npm run lint && grunt test"
     },
     "version": "1.9.72"
