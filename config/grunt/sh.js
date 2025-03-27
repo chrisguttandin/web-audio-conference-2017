@@ -1,6 +1,4 @@
-module.exports = (grunt) => {
-    const fix = grunt.option('fix') === true;
-
+module.exports = () => {
     return {
         'analyze': {
             cmd: `npx ng build --configuration production --source-map --stats-json && \
@@ -15,18 +13,6 @@ module.exports = (grunt) => {
         'e2e': {
             cmd: `npx playwright install --with-deps && \
                 npx playwright test --config config/playwright/config.ts`
-        },
-        'lint-config': {
-            cmd: `eslint --config config/eslint/config.json --ext .js ${fix ? '--fix ' : ''}--report-unused-disable-directives *.js config/`
-        },
-        'lint-src': {
-            cmd: `htmlhint --config config/htmlhint/document.json 'src/**/index.html' && \
-                htmlhint --config config/htmlhint/template.json 'src/app/**/*.component.html' && \
-                npx ng lint web-audio-conference-2017 && \
-                npx stylelint 'src/**/*.scss' --config config/stylelint/config.json`
-        },
-        'lint-test': {
-            cmd: 'npx ng lint web-audio-conference-2017 --configuration test'
         },
         'monitor': {
             cmd: 'npx ng serve'
