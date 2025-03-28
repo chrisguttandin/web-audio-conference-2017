@@ -70,7 +70,7 @@ module.exports = (grunt) => {
                                     })
                                 }
                             };
-                            const cspString = cspBuilder(cspConfig);
+                            const cspString = cspBuilder.default(cspConfig);
 
                             return `<meta content="${cspString}" http-equiv="content-security-policy">`;
                         }
