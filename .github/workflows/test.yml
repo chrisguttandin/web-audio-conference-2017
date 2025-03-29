@@ -90,7 +90,7 @@ jobs:
               uses: actions/deploy-pages@v4
 
             - name: Run smoke tests
-              run: npx grunt smoke
+              run: npm run test:smoke
 
             - if: failure()
               name: Upload report and results

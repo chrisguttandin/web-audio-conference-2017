@@ -125,6 +125,7 @@
         "url": "https://github.com/chrisguttandin/web-audio-conference-2017.git"
     },
     "scripts": {
+        "continuous": "npx ng test",
         "lint": "npm run lint:config && npm run lint:src && npm run lint:test",
         "lint:config": "eslint --config config/eslint/config.json --ext .cjs --ext .js --ext .mjs --report-unused-disable-directives config/",
         "lint:src": "htmlhint --config config/htmlhint/document.json 'src/**/index.html' && htmlhint --config config/htmlhint/template.json 'src/app/**/*.component.html' && npx ng lint web-audio-conference-2017 && npx stylelint 'src/**/*.scss' --config config/stylelint/config.json",
@@ -132,7 +133,10 @@
         "monitor": "npx ng serve",
         "prepare": "husky",
         "preview": "npx ng serve --configuration production",
-        "test": "npm run lint && grunt test"
+        "test": "npm run lint && npm run test:unit",
+        "test:e2e": "npx playwright install --with-deps && npx playwright test --config config/playwright/config.ts",
+        "test:smoke": "npx playwright install --with-deps && IS_SMOKE_TEST=true npx playwright test --config config/playwright/config.ts && npx hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2017",
+        "test:unit": "npx ng test --watch false"
     },
     "version": "1.9.72"
 }
