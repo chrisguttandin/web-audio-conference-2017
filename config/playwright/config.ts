@@ -47,7 +47,7 @@ const config: PlaywrightTestConfig = {
     webServer: env.IS_SMOKE_TEST
         ? undefined
         : {
-              command: 'npx ng serve',
+              command: 'npm run monitor',
               port: 7733
           },
     workers: env.CI ? 1 : undefined
