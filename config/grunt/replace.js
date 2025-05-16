@@ -78,7 +78,7 @@ module.exports = (grunt) => {
                     {
                         match: /<link\srel="stylesheet"\shref="(?<filename>styles-[\dA-Z]+\.css)"\scrossorigin="anonymous"\sintegrity="(?<hash>sha384-[\d+/A-Za-z]+=*)"(?<media>\smedia="print")?[^>]*>/g,
                         replacement: (_, filename, hash, media) =>
-                            `<link crossorigin="anonymous" href="${filename}" rel="stylesheet" integrity="${hash}"${media}>`
+                            `<link crossorigin="anonymous" href="${filename}" rel="stylesheet" integrity="${hash}"${media ?? ''}>`
                     },
                     {
                         match: /<\/head>/,
