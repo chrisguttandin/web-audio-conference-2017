@@ -110,7 +110,7 @@
         "puppeteer": "^24.8.2",
         "rimraf": "^6.0.1",
         "stylelint": "^16.19.1",
-        "stylelint-config-holy-grail": "^12.0.23",
+        "stylelint-config-holy-grail": "^12.0.24",
         "tsconfig-holy-grail": "^15.0.2",
         "typescript": "~5.7.3",
         "webpack-bundle-analyzer": "^4.10.2"
