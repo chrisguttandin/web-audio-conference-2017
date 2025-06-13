@@ -108,7 +108,7 @@
         "prettier": "^3.5.3",
         "puppeteer": "^24.10.1",
         "rimraf": "^6.0.1",
-        "stylelint": "^16.19.1",
+        "stylelint": "^16.20.0",
         "stylelint-config-holy-grail": "^12.0.24",
         "tsconfig-holy-grail": "^15.0.2",
         "typescript": "~5.7.3",
