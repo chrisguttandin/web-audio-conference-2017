@@ -3,6 +3,10 @@ import { Locator, Page, Response } from '@playwright/test';
 export class Home {
     constructor(private _page: Page) {}
 
+    public getAppComponent(): Locator {
+        return this._page.locator('wac-app');
+    }
+
     public getHeadline(): Locator {
         return this._page.locator('wac-app h1');
     }
