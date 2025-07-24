@@ -5,6 +5,12 @@
     "extends": "eslint-config-holy-grail",
     "overrides": [
         {
+            "files": ["*.html"],
+            "rules": {
+                "padding-line-between-statements": "off"
+            }
+        },
+        {
             "files": ["*.ts"],
             "globals": {
                 "ngDevMode": "readonly"
