@@ -94,7 +94,7 @@
         "grunt-sh": "^0.2.1",
         "hint": "^7.1.13",
         "html-minifier": "^4.0.0",
-        "htmlhint": "^1.6.3",
+        "htmlhint": "^1.7.0",
         "husky": "^9.1.7",
         "jasmine-core": "~5.6.0",
         "karma": "~6.4.4",
