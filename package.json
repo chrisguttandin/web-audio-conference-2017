@@ -107,7 +107,7 @@
         "load-grunt-config": "^4.0.1",
         "prettier": "^3.6.2",
         "puppeteer": "^24.28.0",
-        "rimraf": "^6.0.1",
+        "rimraf": "^6.1.0",
         "stylelint": "^16.25.0",
         "stylelint-config-holy-grail": "^12.0.28",
         "tsconfig-holy-grail": "^15.0.2",
