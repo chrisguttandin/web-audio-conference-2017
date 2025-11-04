@@ -77,7 +77,7 @@
         "@hint/hint-x-content-type-options": "^4.0.23",
         "@hint/parser-javascript": "^3.1.25",
         "@hint/parser-manifest": "^2.3.20",
-        "@playwright/test": "^1.56.0",
+        "@playwright/test": "^1.56.1",
         "@types/jasmine": "~5.1.9",
         "@types/prismjs": "^1.26.5",
         "axe-core": "^4.10.3",
