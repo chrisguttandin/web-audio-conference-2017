@@ -94,7 +94,7 @@
         "grunt-sh": "^0.2.1",
         "hint": "^7.1.13",
         "html-minifier": "^4.0.0",
-        "htmlhint": "^1.8.0",
+        "htmlhint": "^1.9.2",
         "husky": "^9.1.7",
         "lint-staged": "^16.2.7",
         "load-grunt-config": "^4.0.1",
