@@ -99,7 +99,7 @@
         "lint-staged": "^16.4.0",
         "load-grunt-config": "^4.0.1",
         "prettier": "^3.8.3",
-        "puppeteer": "^24.31.0",
+        "puppeteer": "^24.42.0",
         "rimraf": "^6.1.2",
         "stylelint": "^16.26.0",
         "stylelint-config-holy-grail": "^12.0.28",
