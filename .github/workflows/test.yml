@@ -27,7 +27,7 @@ jobs:
                   node-version: 22.x
 
             - name: Cache node modules
-              uses: actions/cache@v4
+              uses: actions/cache@v5
               with:
                   path: ~/.npm
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -64,7 +64,7 @@ jobs:
                   node-version: 22.x
 
             - name: Cache node modules
-              uses: actions/cache@v4
+              uses: actions/cache@v5
               with:
                   path: ~/.npm
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -78,16 +78,16 @@ jobs:
               run: npx grunt build
 
             - name: Configure GitHub Pages
-              uses: actions/configure-pages@v5
+              uses: actions/configure-pages@v6
 
             - name: Upload artifact
-              uses: actions/upload-pages-artifact@v4
+              uses: actions/upload-pages-artifact@v5
               with:
                   path: ./build/web-audio-conference-2017/browser
 
             - id: deployment
               name: Deploy to GitHub Pages
-              uses: actions/deploy-pages@v4
+              uses: actions/deploy-pages@v5
 
             - name: Run smoke tests
               run: |
@@ -98,7 +98,7 @@ jobs:
 
             - if: failure()
               name: Upload report and results
-              uses: actions/upload-artifact@v5
+              uses: actions/upload-artifact@v7
               with:
                   name: playwright-report-and-results
                   path: |
