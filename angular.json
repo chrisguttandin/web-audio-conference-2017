@@ -64,7 +64,7 @@
                     }
                 },
                 "extract-i18n": {
-                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "builder": "@angular/build:extract-i18n",
                     "options": {
                         "buildTarget": "web-audio-conference-2017:build"
                     }
@@ -98,7 +98,7 @@
                     }
                 },
                 "test": {
-                    "builder": "@angular-devkit/build-angular:karma",
+                    "builder": "@angular/build:karma",
                     "options": {
                         "assets": ["src/assets"],
                         "include": ["../test/unit/**/*.ts"],
@@ -129,23 +129,38 @@
             "inlineTemplate": false,
             "prefix": "wac",
             "skipTests": true,
-            "style": "scss"
+            "style": "scss",
+            "type": "component"
         },
         "@schematics/angular:directive": {
             "prefix": "wac",
+            "skipTests": true,
+            "type": "directive"
+        },
+        "@schematics/angular:guard": {
+            "typeSeparator": "."
+        },
+        "@schematics/angular:interceptor": {
+            "typeSeparator": ".",
             "skipTests": true
         },
         "@schematics/angular:interface": {
             "prefix": "I"
         },
         "@schematics/angular:module": {
-            "skipTests": true
+            "skipTests": true,
+            "typeSeparator": "."
         },
         "@schematics/angular:pipe": {
-            "skipTests": true
+            "skipTests": true,
+            "typeSeparator": "."
+        },
+        "@schematics/angular:resolver": {
+            "typeSeparator": "."
         },
         "@schematics/angular:service": {
-            "skipTests": true
+            "skipTests": true,
+            "type": "service"
         }
     },
     "version": 1
