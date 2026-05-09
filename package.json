@@ -33,7 +33,7 @@
     },
     "description": "My talk at the Web Audio Conference 2017.",
     "devDependencies": {
-        "@angular-builders/custom-esbuild": "^19.1.0",
+        "@angular-builders/custom-esbuild": "^20.0.0",
         "@angular-eslint/builder": "^19.4.0",
         "@angular/build": "^20.3.25",
         "@angular/cli": "^20.3.25",
