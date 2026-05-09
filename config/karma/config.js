@@ -19,13 +19,13 @@ module.exports = (config) => {
             subdir: '.'
         },
 
-        frameworks: ['@angular-devkit/build-angular', 'jasmine'],
+        frameworks: ['jasmine'],
 
         jasmineHtmlReporter: {
             suppressAll: true
         },
 
-        plugins: ['@angular-devkit/build-angular/plugins/karma', 'karma-*'],
+        plugins: ['karma-*'],
 
         reporters: ['progress', 'kjhtml'],
 
