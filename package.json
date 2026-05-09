@@ -96,7 +96,6 @@
         "html-minifier": "^4.0.0",
         "htmlhint": "^1.8.0",
         "husky": "^9.1.7",
-        "karma-sauce-launcher": "^4.3.6",
         "lint-staged": "^16.2.7",
         "load-grunt-config": "^4.0.1",
         "prettier": "^3.6.2",
