@@ -1,5 +1,6 @@
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
 import { TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { AppComponent } from '../../src/app/app.component';
 
 describe('AppComponent', () => {

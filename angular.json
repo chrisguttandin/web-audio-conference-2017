@@ -98,13 +98,11 @@
                     }
                 },
                 "test": {
-                    "builder": "@angular/build:karma",
+                    "builder": "@angular/build:unit-test",
                     "options": {
-                        "assets": ["src/assets"],
+                        "browsers": ["chrome"],
+                        "headless": true,
                         "include": ["../test/unit/**/*.ts"],
-                        "karmaConfig": "config/karma/config.js",
-                        "polyfills": ["zone.js", "zone.js/testing"],
-                        "scripts": ["hammerjs/hammer.js"],
                         "tsConfig": "test/unit/tsconfig.json"
                     }
                 }
