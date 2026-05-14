@@ -37,10 +37,7 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
-            - env:
-                  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
-                  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
-              name: Run tests
+            - name: Run tests
               run: npm test
 
     deploy:
