@@ -36,7 +36,7 @@
         "@angular-builders/custom-esbuild": "^21.0.3",
         "@angular-eslint/builder": "^21.3.1",
         "@angular/build": "^21.2.9",
-        "@angular/cli": "^21.2.9",
+        "@angular/cli": "^21.2.10",
         "@angular/compiler-cli": "^21.2.11",
         "@angular/platform-server": "^21.2.11",
         "@angular/ssr": "^21.2.9",
