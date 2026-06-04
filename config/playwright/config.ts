@@ -1,8 +1,8 @@
-import type { PlaywrightTestConfig } from '@playwright/test';
-import { devices } from '@playwright/test';
-import { env } from 'process';
+import { env } from 'node:process';
+import { defineConfig, devices } from '@playwright/test';
 
-const config: PlaywrightTestConfig = {
+// eslint-disable-next-line import/no-default-export
+export default defineConfig({
     expect: {
         timeout: 20000,
         toHaveScreenshot: {
@@ -12,7 +12,7 @@ const config: PlaywrightTestConfig = {
             threshold: 0
         }
     },
-    forbidOnly: !!env.CI,
+    forbidOnly: env.CI === 'true',
     fullyParallel: true,
     outputDir: '../../playwright-results',
     projects: [
@@ -36,21 +36,19 @@ const config: PlaywrightTestConfig = {
         }
     ],
     reporter: 'html',
-    retries: env.CI ? 2 : 0,
+    retries: env.CI === 'true' ? 2 : 0,
     snapshotDir: '../../test/screenshots',
     testDir: '../../test',
-    testMatch: /(e2e|regression)\/(?!.*\.po\.ts$).*\.ts$/,
+    testMatch: /(?:e2e|regression)\/(?!.*\.po\.ts$).*\.ts$/,
     use: {
-        baseURL: env.IS_SMOKE_TEST ? 'https://chrisguttandin.github.io/web-audio-conference-2017/' : 'http://localhost:7733',
+        baseURL: env.IS_SMOKE_TEST === 'true' ? 'https://chrisguttandin.github.io/web-audio-conference-2017/' : 'http://localhost:7733',
         trace: 'on-first-retry'
     },
-    webServer: env.IS_SMOKE_TEST
+    webServer: env.IS_SMOKE_TEST === 'true'
         ? undefined
         : {
               command: 'npm run monitor',
               port: 7733
           },
-    workers: env.CI ? 1 : undefined
-};
-
-export default config;
+    workers: env.CI === 'true' ? 1 : undefined
+});
