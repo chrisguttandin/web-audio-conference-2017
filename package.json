@@ -38,7 +38,7 @@
         "@angular/cli": "^21.2.13",
         "@angular/compiler-cli": "^21.2.15",
         "@angular/platform-server": "^21.2.15",
-        "@angular/ssr": "^21.2.13",
+        "@angular/ssr": "^21.2.18",
         "@commitlint/cli": "^21.0.2",
         "@commitlint/config-angular": "^21.0.2",
         "@hint/connector-puppeteer": "^2.5.25",
