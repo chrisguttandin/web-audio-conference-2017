@@ -78,7 +78,7 @@
         "@hint/parser-manifest": "^2.3.20",
         "@playwright/test": "^1.61.1",
         "@types/prismjs": "^1.26.6",
-        "@vitest/browser-webdriverio": "^4.1.8",
+        "@vitest/browser-webdriverio": "^4.1.10",
         "angular-eslint": "^21.4.0",
         "axe-core": "^4.12.1",
         "bundle-buddy": "^0.2.2",
