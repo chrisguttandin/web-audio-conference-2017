@@ -113,6 +113,7 @@
     "license": "MIT",
     "main": "src/index.html",
     "name": "web-audio-conference-2017",
+    "packageManager": "npm@12",
     "private": true,
     "repository": {
         "type": "git",
