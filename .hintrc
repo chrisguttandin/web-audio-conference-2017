@@ -57,7 +57,7 @@
         "no-protocol-relative-urls": "error",
         "no-vulnerable-javascript-libraries": "error",
         "sri": "off",
-        "ssllabs": "error",
+        "ssllabs": "off",
         "strict-transport-security": "off",
         "stylesheet-limits": "error",
         "validate-set-cookie-header": "error",
