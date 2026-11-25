@@ -96,7 +96,7 @@
         "html-minifier": "^4.0.0",
         "htmlhint": "^1.9.2",
         "husky": "^9.1.7",
-        "lint-staged": "^17.6.0",
+        "lint-staged": "^17.6.1",
         "load-grunt-config": "^4.0.1",
         "prettier": "^3.9.10",
         "puppeteer": "^24.43.1",
